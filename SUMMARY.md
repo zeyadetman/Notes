@@ -16,3 +16,5 @@
   * [Job Tracking Template](google-sheet-templates/job-tracking-template.md)
 * [Databases](databases/README.md)
   * [Tools](databases/tools.md)
+* [MacOS](macos/README.md)
+  * [Setup your machine for development](macos/setup-your-machine-for-development.md)
