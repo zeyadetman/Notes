@@ -13,3 +13,4 @@
   * [Simple Year Resolution](google-sheet-templates/simple-year-resolution.md)
   * [Budget Tracking Template](google-sheet-templates/budget-tracking-template.md)
   * [Home Workout Plan](google-sheet-templates/home-workout-plan.md)
+  * [Job Tracking Template](google-sheet-templates/job-tracking-template.md)
