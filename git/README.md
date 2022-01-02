@@ -1,7 +1,3 @@
-# Git Log
+# Git
 
-### Git Log
-
-#### Search commits for specific word
-
-`git log -S "import { blabla }" --oneline`
+This section for `git` notes that I find it useful in my career.
