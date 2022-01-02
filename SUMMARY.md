@@ -6,3 +6,4 @@
   * [Git Bisect](git/git-bisect.md)
 * [Problem Solving](problem-solving/README.md)
   * [Sorting Algorithms Resources](problem-solving/sorting-algorithms-resources.md)
+  * [C++ notes for PS](problem-solving/c++-notes-for-ps.md)
