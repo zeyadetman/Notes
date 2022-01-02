@@ -4,4 +4,5 @@
 
 ## git
 
-* [Git Log](git/git-log.md)
+* [Git Log](git/git-log/README.md)
+  * [Page 1](git/git-log/page-1.md)
