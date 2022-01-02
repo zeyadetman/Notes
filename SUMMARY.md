@@ -7,3 +7,5 @@
 * [Problem Solving](problem-solving/README.md)
   * [Sorting Algorithms Resources](problem-solving/sorting-algorithms-resources.md)
   * [C++ notes for PS](problem-solving/c++-notes-for-ps.md)
+  * [Problems' solutions](https://github.com/zeyadetman/Problem-Solving/tree/master/Problems%20Solution)
+  * [Me on Problem Solving sites](problem-solving/me-on-problem-solving-sites.md)
