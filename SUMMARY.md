@@ -9,3 +9,5 @@
   * [C++ notes for PS](problem-solving/c++-notes-for-ps.md)
   * [Problems' solutions](https://github.com/zeyadetman/Problem-Solving/tree/master/Problems%20Solution)
   * [Me on Problem Solving sites](problem-solving/me-on-problem-solving-sites.md)
+* [Google Sheet Templates](google-sheet-templates/README.md)
+  * [Simple Year Resolution](google-sheet-templates/simple-year-resolution.md)
