@@ -20,3 +20,5 @@
   * [Setup your machine for development](macos/setup-your-machine-for-development.md)
 * [Frontend](frontend/README.md)
   * [Colors](frontend/colors.md)
+  * [UI frameworks for side projects](frontend/ui-frameworks-for-side-projects.md)
+  * [Design Systems](frontend/design-systems.md)
