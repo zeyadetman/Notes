@@ -22,3 +22,5 @@
   * [Colors](frontend/colors.md)
   * [UI frameworks for side projects](frontend/ui-frameworks-for-side-projects.md)
   * [Design Systems](frontend/design-systems.md)
+* [CLI](cli/README.md)
+  * [Tools](cli/tools.md)
