@@ -4,6 +4,7 @@
 * [Git](git/README.md)
   * [Git Log](git/git-log.md)
   * [Git Bisect](git/git-bisect.md)
+  * [Pull Request Templates](git/pull-request-templates.md)
 * [Problem Solving](problem-solving/README.md)
   * [Sorting Algorithms Resources](problem-solving/sorting-algorithms-resources.md)
   * [C++ notes for PS](problem-solving/c++-notes-for-ps.md)
