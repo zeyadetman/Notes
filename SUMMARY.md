@@ -26,3 +26,5 @@
 * [CLI](cli/README.md)
   * [Tools](cli/tools.md)
 * [Firebase](firebase.md)
+* [Scripts](scripts/README.md)
+  * [Written by me](scripts/written-by-me.md)
