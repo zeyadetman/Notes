@@ -30,3 +30,4 @@
 * [Scripts](scripts/README.md)
   * [Written by me](scripts/written-by-me.md)
     * [Create a branch from jira ticket and push changes to it.](scripts/written-by-me/create-a-branch-from-jira-ticket-and-push-changes-to-it..md)
+* [Technical Blogs](technical-blogs.md)
