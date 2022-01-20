@@ -15,6 +15,7 @@
 ### Rich Components
 
 * [https://baseweb.design/](https://baseweb.design) (Uber design system)
+* [https://chakra-ui.com/](https://chakra-ui.com)
 
 ### Build your own
 
@@ -24,3 +25,9 @@
 ### Courses
 
 * [Design Systems with React & Storybook.](https://frontendmasters.com/courses/design-systems/)
+
+### Colors
+
+{% content-ref url="colors.md" %}
+[colors.md](colors.md)
+{% endcontent-ref %}
