@@ -1,6 +1,8 @@
 # UI frameworks for side projects
 
 * [https://primer.style/](https://primer.style)
+* [https://palette.artsy.net/](https://palette.artsy.net)
+* [https://seeds.sproutsocial.com/](https://seeds.sproutsocial.com)
 
 ### [Chakra UI](https://chakra-ui.com)
 
