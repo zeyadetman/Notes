@@ -32,3 +32,7 @@
     * [Create a branch from jira ticket and push changes to it.](scripts/written-by-me/create-a-branch-from-jira-ticket-and-push-changes-to-it..md)
 * [Technical Blogs](technical-blogs.md)
 * [Backend](backend.md)
+* [Productivity](productivity.md)
+* [Design Patterns](design-patterns/README.md)
+  * [Easy to remember](design-patterns/easy-to-remember.md)
+  * [Page 1](design-patterns/page-1.md)
