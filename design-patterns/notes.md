@@ -1,6 +1,4 @@
-# Easy to remember
-
-List of design patterns that may be easy for you.
+# Notes
 
 ### Behavioral <a href="#strategy-design-pattern-behavioral" id="strategy-design-pattern-behavioral"></a>
 
