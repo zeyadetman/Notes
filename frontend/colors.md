@@ -11,4 +11,4 @@
 * [https://colorable.jxnblk.com/b73e25/001f31](https://colorable.jxnblk.com/b73e25/001f31)\
   ![](<../.gitbook/assets/image (1).png>)
 * [https://colorable.jxnblk.com/f5a58b/065771](https://colorable.jxnblk.com/f5a58b/065771)\
-  ![](<../.gitbook/assets/image (2).png>)
+  ![](<../.gitbook/assets/image (2) (1).png>)
