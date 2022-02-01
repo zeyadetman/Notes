@@ -28,6 +28,7 @@
     * [Tips and Tricks](frontend/react/tips-and-tricks.md)
 * [CLI](cli/README.md)
   * [Tools](cli/tools.md)
+  * [Learn command line](cli/learn-command-line.md)
 * [Firebase](firebase.md)
 * [Scripts](scripts/README.md)
   * [Written by me](scripts/written-by-me.md)
