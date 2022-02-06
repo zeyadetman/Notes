@@ -13,6 +13,41 @@
 
 ### Path
 
+#### Introducing to internet
+
+* \[en]\[video] [https://www.youtube.com/watch?v=7\_LPdttKXPc](https://www.youtube.com/watch?v=7\_LPdttKXPc\&ab\_channel=Aaron)
+* \[en]\[video] [https://www.youtube.com/watch?v=Sfzo4xm5eX8](https://www.youtube.com/watch?v=Sfzo4xm5eX8\&ab\_channel=BLASTERTECHNOLOGY)
+* \[en]\[article] [https://www.hp.com/us-en/shop/tech-takes/how-does-the-internet-work](https://www.hp.com/us-en/shop/tech-takes/how-does-the-internet-work)
+* \[ar]\[video] [https://www.youtube.com/watch?v=w1GpaH8XIUE](https://www.youtube.com/watch?v=w1GpaH8XIUE)
+
+#### HTML
+
+* \[en]\[video] [https://www.youtube.com/watch?v=pQN-pnXPaVg](https://www.youtube.com/watch?v=pQN-pnXPaVg)
+* \[ar]\[video] [https://www.youtube.com/watch?v=q3yFo-t1ykw](https://www.youtube.com/watch?v=q3yFo-t1ykw\&t=1109s)
+
+#### CSS
+
+* \[en]\[video] [https://www.youtube.com/watch?v=1Rs2ND1ryYc](https://www.youtube.com/watch?v=1Rs2ND1ryYc)
+* \[ar]\[video] [https://www.youtube.com/watch?v=Z-5QVutAEW4](https://www.youtube.com/watch?v=Z-5QVutAEW4\&t=4735s)
+
+#### HTML and CSS Practice
+
+_Practice as much as you can, You could start with the next two resources:_
+
+* \[en]\[video] [https://www.youtube.com/watch?v=O7WbVj5apxU](https://www.youtube.com/watch?v=O7WbVj5apxU)
+* \[ar]\[video] [https://www.youtube.com/watch?v=cARGOrtiWt4](https://www.youtube.com/watch?v=cARGOrtiWt4)
+
+#### Javascript
+
+* \[en]\[video] [https://www.youtube.com/watch?v=PkZNo7MFNFg](https://www.youtube.com/watch?v=PkZNo7MFNFg\&t=9574s)
+* \[ar]\[video] [https://www.youtube.com/watch?v=Ai\_0ONyPay4](https://www.youtube.com/watch?v=Ai\_0ONyPay4\&t=5606s)
+
+#### Javascript Practice
+
+_Practice as much as you can, You could start with the next two resources:_
+
+* \[en]\[video] [https://www.youtube.com/watch?v=3PHXvlpOkf4](https://www.youtube.com/watch?v=3PHXvlpOkf4)
+
 
 
 I write this path in order of learning, you can skip what you already know.
