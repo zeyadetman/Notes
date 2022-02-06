@@ -13,6 +13,8 @@
 
 ### Path
 
+_Skip what you already know._
+
 _**If you prefer learning from videos.**_
 
 #### Introducing to internet
@@ -50,4 +52,27 @@ _Practice as much as you can, You could start with the next two resources:_
 
 * \[en]\[video] [https://www.youtube.com/watch?v=3PHXvlpOkf4](https://www.youtube.com/watch?v=3PHXvlpOkf4)
 
-Skip what you already know.
+#### React
+
+* \[en]\[video] [https://www.youtube.com/watch?v=LlvBzyy-558](https://www.youtube.com/watch?v=LlvBzyy-558)
+* \[en]\[video] [https://www.youtube.com/watch?v=MfIoAG3e7p4](https://www.youtube.com/watch?v=MfIoAG3e7p4)
+
+#### React Practice
+
+* \[playlist] [https://www.youtube.com/watch?v=GDa8kZLNhJ4\&list=PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR](https://www.youtube.com/watch?v=GDa8kZLNhJ4\&list=PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR)
+
+
+
+#### What's next?
+
+Now, you able to get your first job as frontend developer, you have a good portfolio (GitHub, LinkedIn, Stack overflow), you've built apps.
+
+Some topics you can learn after that:
+
+* Micro frontends.
+* Design systems.
+* Testing.
+* Server side rendering.
+* state machine.
+* design patterns.
+* learn other frontend frameworks.
