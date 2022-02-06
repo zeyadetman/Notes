@@ -13,6 +13,8 @@
 
 ### Path
 
+_**If you prefer learning from videos.**_
+
 #### Introducing to internet
 
 * \[en]\[video] [https://www.youtube.com/watch?v=7\_LPdttKXPc](https://www.youtube.com/watch?v=7\_LPdttKXPc\&ab\_channel=Aaron)
@@ -48,6 +50,4 @@ _Practice as much as you can, You could start with the next two resources:_
 
 * \[en]\[video] [https://www.youtube.com/watch?v=3PHXvlpOkf4](https://www.youtube.com/watch?v=3PHXvlpOkf4)
 
-
-
-I write this path in order of learning, you can skip what you already know.
+Skip what you already know.
