@@ -27,6 +27,7 @@
   * [React](frontend/react/README.md)
     * [Tips and Tricks](frontend/react/tips-and-tricks.md)
   * [Articles](frontend/articles.md)
+  * [Assets & Illustrations](frontend/assets-and-illustrations.md)
 * [CLI](cli/README.md)
   * [Tools](cli/tools.md)
   * [Learn command line](cli/learn-command-line.md)
