@@ -1,5 +1,7 @@
 # Technical Blogs
 
+* [https://v8.dev/](https://v8.dev)
+
 ### Typescript and Rust
 
 * [https://fettblog.eu](https://fettblog.eu)
@@ -11,6 +13,8 @@
 ### Frontend
 
 * [https://jxnblk.com/](https://jxnblk.com)
+* [https://www.456bereastreet.com/](https://www.456bereastreet.com)
+* [https://umaar.com/dev-tips/](https://umaar.com/dev-tips/)
 
 ### System Design and Architecture
 
@@ -19,3 +23,4 @@
 ### Software Engineering
 
 * [https://katiehempenius.com/](https://katiehempenius.com)
+* [https://nicolodavis.com/](https://nicolodavis.com)
