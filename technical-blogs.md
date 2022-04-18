@@ -8,6 +8,10 @@
 
 * [https://aaronfrancis.com/articles](https://aaronfrancis.com/articles)
 
+### Frontend
+
+* [https://jxnblk.com/](https://jxnblk.com)
+
 ### System Design and Architecture
 
 * [https://www.quastor.org/](https://www.quastor.org)
