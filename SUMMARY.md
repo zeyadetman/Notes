@@ -1,6 +1,7 @@
 # Table of contents
 
 * [README](README.md)
+* [My Arabic Twitter Threads](my-arabic-twitter-threads.md)
 * [Git](git/README.md)
   * [Git Log](git/git-log.md)
   * [Git Bisect](git/git-bisect.md)
