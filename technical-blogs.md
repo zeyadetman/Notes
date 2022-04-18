@@ -11,3 +11,7 @@
 ### System Design and Architecture
 
 * [https://www.quastor.org/](https://www.quastor.org)
+
+### Software Engineering
+
+* [https://katiehempenius.com/](https://katiehempenius.com)
