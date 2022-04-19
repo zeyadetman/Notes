@@ -15,6 +15,7 @@
 * [https://jxnblk.com/](https://jxnblk.com)
 * [https://www.456bereastreet.com/](https://www.456bereastreet.com)
 * [https://umaar.com/dev-tips/](https://umaar.com/dev-tips/)
+* [https://tamalweb.com/](https://tamalweb.com)
 
 ### System Design and Architecture
 
