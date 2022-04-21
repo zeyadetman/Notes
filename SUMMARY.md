@@ -1,7 +1,10 @@
 # Table of contents
 
 * [README](README.md)
-* [My Arabic Twitter Threads](my-arabic-twitter-threads.md)
+* [My Arabic Twitter Threads](my-arabic-twitter-threads/README.md)
+  * [Frontend Threads](my-arabic-twitter-threads/frontend-threads.md)
+  * [Fullstack Threads](my-arabic-twitter-threads/fullstack-threads.md)
+  * [Software Engineering](my-arabic-twitter-threads/software-engineering.md)
 * [Git](git/README.md)
   * [Git Log](git/git-log.md)
   * [Git Bisect](git/git-bisect.md)
