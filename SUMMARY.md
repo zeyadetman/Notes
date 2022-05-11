@@ -46,3 +46,6 @@
 * [Design Patterns](design-patterns/README.md)
   * [Notes](design-patterns/notes.md)
   * [Design patterns](design-patterns/design-patterns.md)
+* [Programming Languages](programming-languages/README.md)
+  * [Javascript](programming-languages/javascript/README.md)
+    * [Hard Parts](programming-languages/javascript/hard-parts.md)
