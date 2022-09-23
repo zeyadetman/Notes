@@ -1,6 +1,7 @@
 import React from "react";
 import { Rate } from "@site/src/components/Rate";
 import { watchAnyObject } from "@site/utils/watchObject";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 interface Props {
   sessionStorageKey: string;
@@ -9,18 +10,21 @@ interface Props {
 }
 
 function Table(props: Props) {
+  const isBrowser = useIsBrowser();
   const { sessionStorageKey, data, headers } = props;
   const [filterGenre, setFilterGenre] = React.useState("");
 
-  watchAnyObject(
-    window && window.localStorage,
-    ["setItem", "getItem", "removeItem"],
-    (...args: any) => {
-      if (args[1] === sessionStorageKey) {
-        setFilterGenre(args[2]);
+  if (isBrowser) {
+    watchAnyObject(
+      window.localStorage,
+      ["setItem", "getItem", "removeItem"],
+      (...args: any) => {
+        if (args[1] === sessionStorageKey) {
+          setFilterGenre(args[2]);
+        }
       }
-    }
-  );
+    );
+  }
 
   return (
     <table>

@@ -1,5 +1,6 @@
 import React from "react";
 import { watchAnyObject } from "@site/utils/watchObject";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 interface Props {
   sessionStorageKey: string;
@@ -7,18 +8,21 @@ interface Props {
 }
 
 function ItemsNumber(props: Props) {
+  const isBrowser = useIsBrowser();
   const { sessionStorageKey, data } = props;
   const [filterGenre, setFilterGenre] = React.useState("");
 
-  watchAnyObject(
-    window && window.localStorage,
-    ["setItem", "getItem", "removeItem"],
-    (...args: any) => {
-      if (args[1] === sessionStorageKey) {
-        setFilterGenre(args[2]);
+  if (isBrowser) {
+    watchAnyObject(
+      window.localStorage,
+      ["setItem", "getItem", "removeItem"],
+      (...args: any) => {
+        if (args[1] === sessionStorageKey) {
+          setFilterGenre(args[2]);
+        }
       }
-    }
-  );
+    );
+  }
 
   return (
     <>

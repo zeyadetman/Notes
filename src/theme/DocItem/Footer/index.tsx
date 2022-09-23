@@ -4,9 +4,11 @@ import Giscus from "@giscus/react";
 import { useColorMode } from "@docusaurus/theme-common";
 import { TwitterFollowButton, TwitterShareButton } from "react-twitter-embed";
 import useRouteContext from "@docusaurus/useRouteContext";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 export default function FooterWrapper(props) {
   const { colorMode } = useColorMode();
+  const isBrowser = useIsBrowser();
   return (
     <>
       <div style={{ paddingTop: "32px" }}>
@@ -33,17 +35,19 @@ export default function FooterWrapper(props) {
             justifyContent: "space-between",
           }}
         >
-          <TwitterShareButton
-            onLoad={function noRefCheck() {}}
-            options={{
-              buttonHashtag: undefined,
-              screenName: undefined,
-              size: "large",
-              text: "Have a look at this note",
-              via: "zeyadetman",
-            }}
-            url={window && window.location.href}
-          />
+          {isBrowser && (
+            <TwitterShareButton
+              onLoad={function noRefCheck() {}}
+              options={{
+                buttonHashtag: undefined,
+                screenName: undefined,
+                size: "large",
+                text: "Have a look at this note",
+                via: "zeyadetman",
+              }}
+              url={window.location.href}
+            />
+          )}
           <TwitterFollowButton
             options={{
               size: "large",

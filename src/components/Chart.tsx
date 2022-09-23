@@ -3,6 +3,7 @@ import { ResponsivePie } from "@nivo/pie";
 import { useEffect } from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 import { watchAnyObject } from "@site/utils/watchObject";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 interface Props {
   data: any;
@@ -11,6 +12,7 @@ interface Props {
 
 function Chart(props: Props) {
   const { data, sessionStorageKey } = props;
+  const isBrowser = useIsBrowser();
   const { colorMode } = useColorMode();
   const [genres, setGenres] = useState([]);
   const [activeItem, setActiveItem] = useState({});
@@ -37,13 +39,15 @@ function Chart(props: Props) {
     setGenres(genresData);
 
     if (activeItem && (activeItem as any)?.id) {
-      localStorage.setItem(sessionStorageKey, (activeItem as any)?.id);
-      watchAnyObject(
-        window && window.localStorage,
-        ["setItem", "getItem", "removeItem"],
-        // @ts-ignore
-        (method, key, ...args) => ({ [key]: args })
-      );
+      if (isBrowser) {
+        localStorage.setItem(sessionStorageKey, (activeItem as any)?.id);
+        watchAnyObject(
+          window && window.localStorage,
+          ["setItem", "getItem", "removeItem"],
+          // @ts-ignore
+          (method, key, ...args) => ({ [key]: args })
+        );
+      }
 
       setFillItems(
         genresData.map((genre) => ({
@@ -52,7 +56,7 @@ function Chart(props: Props) {
         }))
       );
     } else {
-      localStorage.removeItem(sessionStorageKey);
+      if (isBrowser) localStorage.removeItem(sessionStorageKey);
       setFillItems([]);
     }
   }, [activeItem]);
