@@ -13,7 +13,7 @@ function Table(props: Props) {
   const [filterGenre, setFilterGenre] = React.useState("");
 
   watchAnyObject(
-    window.localStorage,
+    window && window.localStorage,
     ["setItem", "getItem", "removeItem"],
     (...args: any) => {
       if (args[1] === sessionStorageKey) {

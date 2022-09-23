@@ -42,7 +42,7 @@ export default function FooterWrapper(props) {
               text: "Have a look at this note",
               via: "zeyadetman",
             }}
-            url={window.location.href}
+            url={window && window.location.href}
           />
           <TwitterFollowButton
             options={{

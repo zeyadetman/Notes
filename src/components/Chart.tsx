@@ -39,7 +39,7 @@ function Chart(props: Props) {
     if (activeItem && (activeItem as any)?.id) {
       localStorage.setItem(sessionStorageKey, (activeItem as any)?.id);
       watchAnyObject(
-        window.localStorage,
+        window && window.localStorage,
         ["setItem", "getItem", "removeItem"],
         // @ts-ignore
         (method, key, ...args) => ({ [key]: args })
