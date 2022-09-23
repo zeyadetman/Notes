@@ -4,4 +4,4 @@ I just created this google sheet example to be a simpler way to create your own 
 
 [Clone your own.](https://docs.google.com/spreadsheets/d/1BMcu4KpRElvfs8o4bIgjzWnuZv81N1tcK5mOPeNFlsk/edit?usp=sharing)
 
-{% embed url="https://docs.google.com/spreadsheets/d/1BMcu4KpRElvfs8o4bIgjzWnuZv81N1tcK5mOPeNFlsk/edit?usp=sharing" %}
+https://docs.google.com/spreadsheets/d/1BMcu4KpRElvfs8o4bIgjzWnuZv81N1tcK5mOPeNFlsk/edit?usp=sharing

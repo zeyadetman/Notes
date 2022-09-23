@@ -38,6 +38,6 @@
 
 ### Colors
 
-{% content-ref url="colors.md" %}
+{% content-ref url="colors.md
 [colors.md](colors.md)
 {% endcontent-ref %}

@@ -4,7 +4,7 @@
 
 **Description:**&#x20;
 
-{% embed url="https://twitter.com/zeyadetman/status/1483423110774861825" %}
+https://twitter.com/zeyadetman/status/1483423110774861825
 
 **Code:**
 

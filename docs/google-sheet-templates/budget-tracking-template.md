@@ -4,4 +4,4 @@ I found this template online and it's super useful for budget tracking, just clo
 
 [Clone your own.](https://docs.google.com/spreadsheets/d/1l9l5JH4b9g7zqKTlylqWIhHnfWlBJzP2vqj9ET9K\_Ok/edit?usp=sharing)
 
-{% embed url="https://docs.google.com/spreadsheets/d/1l9l5JH4b9g7zqKTlylqWIhHnfWlBJzP2vqj9ET9K_Ok/edit?usp=sharing" %}
+https://docs.google.com/spreadsheets/d/1l9l5JH4b9g7zqKTlylqWIhHnfWlBJzP2vqj9ET9K_Ok/edit?usp=sharing

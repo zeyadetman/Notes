@@ -6,4 +6,4 @@ Just clone it and change the dates based on your start date. As well as change t
 
 [Clone your own.](https://docs.google.com/spreadsheets/d/1ylZPn6ER2yTigGoRpYAC3dvIPdblWqEu\_N8FrJ6cqaA/edit?usp=sharing)
 
-{% embed url="https://docs.google.com/spreadsheets/d/1ylZPn6ER2yTigGoRpYAC3dvIPdblWqEu_N8FrJ6cqaA/edit?usp=sharing" %}
+https://docs.google.com/spreadsheets/d/1ylZPn6ER2yTigGoRpYAC3dvIPdblWqEu_N8FrJ6cqaA/edit?usp=sharing
