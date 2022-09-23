@@ -1,0 +1,35 @@
+---
+title: Movies
+---
+
+import { movies } from "@site/src/data/imdb.json";
+import { Rate } from "@site/src/components/Rate.tsx";
+import Chart from "@site/src/components/Chart.tsx";
+import MoviesTable from "@site/src/components/Table.tsx";
+import ItemsCount from "@site/src/components/ItemsCount.tsx";
+import { BiCameraMovie } from "react-icons/bi";
+
+# Movies <BiCameraMovie />
+
+In this document, I'll share with you my movies watch list, I'd rather watch movies than [TV shows](tv-series).
+
+<div style={{ height: 600 }}>
+  <Chart data={movies} sessionStorageKey="selectedMovieGenre" />
+</div>
+
+The list provided is automatically fetched from my account on [IMDB](https://www.imdb.com/user/ur46282417/watchlist?sort=list_order%2Casc&title_type=movie&view=detail).
+
+## TV Count <ItemsCount data={movies} sessionStorageKey="selectedMovieGenre" />
+
+I use [IMDB](https://www.imdb.com/user/ur46282417/watchlist?sort=list_order%2Casc&title_type=movie&view=detail) to track my movies watch list.
+
+## Movies List
+
+<MoviesTable
+  headers={["Movie", "Rating"]}
+  sessionStorageKey="selectedMovieGenre"
+  data={movies}
+/>
+
+**Note:** _This list isn't sorted by any criteria except the order in which I added
+them to my watchlist._

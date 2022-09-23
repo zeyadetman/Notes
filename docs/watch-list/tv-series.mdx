@@ -1,0 +1,41 @@
+---
+title: TV Series
+---
+
+import { tvSeries } from "@site/src/data/imdb.json";
+import { Rate } from "@site/src/components/Rate.tsx";
+import Chart from "@site/src/components/Chart.tsx";
+import SeriesTable from "@site/src/components/Table.tsx";
+import ItemsCount from "@site/src/components/ItemsCount.tsx";
+import { RiMovieLine } from "react-icons/ri";
+
+# TV Series <RiMovieLine />
+
+In this document, I'll share with you my tv series watch list, I'd rather [watching movies](movies) than TV shows, it's like spending two hours - more or less - and
+you're done, but with TV shows, you have to spend a lot of time to watch a season, and you have to wait for the next season to be released, and if you missed a tv show 4 seasons for example,
+you have to watch all of them to understand what's going on, and that's why I don't like TV shows, but I'm trying to watch some of them, and I'll share with you my watch list.
+
+Also you can recommend me some TV shows to watch, I'll be happy to watch them.
+
+<div style={{ height: 600 }}>
+  <Chart data={tvSeries} sessionStorageKey="selectedTvGenre" />
+</div>
+
+The list provided is automatically fetched from my account on [IMDB](https://www.imdb.com/user/ur46282417/watchlist?sort=list_order%2Casc&title_type=tvSeries&view=detail).
+
+## TV Series Count <ItemsCount data={tvSeries} sessionStorageKey="selectedTvGenre" />
+
+I use [IMDB](https://www.imdb.com/user/ur46282417/watchlist?sort=list_order%2Casc&title_type=tvSeries&view=detail) to track my tv series watch list.
+
+## TV Series List
+
+<SeriesTable
+  headers={["TV Series/Episode", "Rating"]}
+  sessionStorageKey="selectedTvGenre"
+  data={tvSeries}
+/>
+
+**Note:** _This list isn't sorted by any criteria except the order in which I added
+them to my watchlist._
+
+_How I made this page. (Working on it...)_
