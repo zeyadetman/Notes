@@ -1,5 +1,14 @@
  
- dasd 
+ --- 
+  
+  
+ slug: the-pragmatic-developer 
+  
+  
+ --- 
+  
+  
+ Test  
   
   
  dasdasd 
