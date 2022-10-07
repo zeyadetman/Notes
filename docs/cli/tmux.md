@@ -16,5 +16,6 @@
 - [https://tmuxcheatsheet.com/](https://tmuxcheatsheet.com/)
 - [https://gist.github.com/MohamedAlaa/2961058](https://gist.github.com/MohamedAlaa/2961058)
 
-You’ll find my [`.tmux.conf`](https://github.com/zeyadetman/dotfiles/blob/main/.tmux.conf)[ file here](https://github.com/zeyadetman/dotfiles/blob/main/.tmux.conf).
+## My Config
 
+- You’ll find my [`.tmux.conf`](https://github.com/zeyadetman/dotfiles/blob/main/.tmux.conf)[ file here](https://github.com/zeyadetman/dotfiles/blob/main/.tmux.conf).
