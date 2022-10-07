@@ -2,7 +2,7 @@
  # CLI 
   
   
- In 
+ In this page will document my knowledge on command line interface. 
   
   
  ## My setup 
