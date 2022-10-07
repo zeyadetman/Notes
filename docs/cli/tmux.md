@@ -9,6 +9,9 @@
   
  - [Writing Your tmux Config: a Detailed Guide](https://thevaluable.dev/tmux-config-mouseless/) 
   
+ --- 
+  
+  
  ## Cheatsheet 
   
  - [https://tmuxcheatsheet.com/](https://tmuxcheatsheet.com/) 
