@@ -1,7 +1,0 @@
- 
- # Learn CLI 
-  
-  
- ## Resources 
-  
- 
