@@ -19,3 +19,4 @@
 ## My Config
 
 - You’ll find my [`.tmux.conf`](https://github.com/zeyadetman/dotfiles/blob/main/.tmux.conf)[ file here](https://github.com/zeyadetman/dotfiles/blob/main/.tmux.conf).
+- Find my [tmux stars ⭐️ on github](https://github.com/stars/zeyadetman/lists/tmux).
