@@ -2,7 +2,7 @@
 # PostgreSQL
 
 
-[https://www.postgresql.org/](https://www.postgresql.org/)
+[https://www.postgresql.org/](https://www.postgresql.org/) .
 
 
 ## Learning
