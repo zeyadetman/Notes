@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/setup/setup.md",
+                "file": "content/setup.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/setup/setup.md",
+                "file": "content/setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/setup/setup.md",
+                "file": "content/setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/setup/setup.md"
+                "file": "content/setup.md"
               }
             }
           }
@@ -136,11 +136,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4676820100e31594",
+  "active": "c09a1641981dee21",
   "lastOpenFiles": [
-    "content/devops/devops.md",
-    "content/setup/setup.md",
     "content/_index.md",
+    "content/setup.md",
+    "content/devops/devops.md",
     "README.md"
   ]
 }
