@@ -18,4 +18,5 @@ After that I tried different apps to take notes and tracking things, Until I set
 ### Apps
 - [streaks](https://streaksapp.com/) is one of the main apps for my setup, I use it to track the habits, including reading, sleeping times, work and breaks, and other small tasks. This app is running on all of my devices and they all share same tasks, I'm keeping them private.
 - [Notion](https://www.notion.so/) I use it to track the private stuff, like long term plans, work notes, religious lessons, side projects plans, reading list. It's a powerful tool for these things, actually I'm new to notion but notion is a rich note-taking app and i found it suitable to me.
-- [Obsidian](https://obsidian.md/) is the engine of this site, 
+- [Obsidian](https://obsidian.md/) is the crm-like of this site, and public posts except for [my blog](https://zeyadetman.com) at least until now, I don't have so much working with obsidian but I can list the 3 tools that I've used to build this site in the next sub items.
+	- [quartz](https://github.com/jackyzha0/quartz) Is the engine of the site, I use it to publish my notes from obsidian vault to the internet.
