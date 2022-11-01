@@ -11,7 +11,9 @@ After that I tried different apps to take notes and tracking things, Until I set
 ## Setup
 
 ### Tools
+- macbook pro 2019 - 2.4 GHz Quad-Core Intel Core i5 💻 
+- iPhone 11📱 
+- Apple Watch ⌚️ 
 
-- macOS 2019
-- iPhone 11
-
+### Apps
+- [streaks](https://streaksapp.com/) is one of the main apps for my setup, I use it to track the habits, 
