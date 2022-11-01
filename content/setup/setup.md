@@ -16,4 +16,6 @@ After that I tried different apps to take notes and tracking things, Until I set
 - Apple Watch ⌚️ 
 
 ### Apps
-- [streaks](https://streaksapp.com/) is one of the main apps for my setup, I use it to track the habits, 
+- [streaks](https://streaksapp.com/) is one of the main apps for my setup, I use it to track the habits, including reading, sleeping times, work and breaks, and other small tasks. This app is running on all of my devices and they all share same tasks, I'm keeping them private.
+- [Notion](https://www.notion.so/) I use it to track the private stuff, like long term plans, work notes, religious lessons, side projects plans. It's super cool tool for these things, actually I'm new to notion but notion is a rich note-taking app.
+- 
