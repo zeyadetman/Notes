@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "087436f47c867433",
+        "id": "913f9ec9d807a921",
         "type": "tabs",
         "children": [
           {
-            "id": "4676820100e31594",
+            "id": "9b7be2b5360c9872",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/_index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "content/_index.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -136,7 +128,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4676820100e31594",
+  "active": "9b7be2b5360c9872",
   "lastOpenFiles": [
     "content/programming-languages/programming-languages.md",
     "content/_index.md",
