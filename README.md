@@ -7,3 +7,5 @@ I'm Zeyad a software engineer from [Egypt 🇪🇬](https://en.wikipedia.org/wik
 
 ## About this site
 I created this site to track the things that might be useful to be shared with you, It's not like [my blog](https://zeyadetman.com), the blog is more specific for articles I write, but here you'll find my favs and notes 📝.
+
+Read more about setup here: https://notes.zeyadetman.com/setup

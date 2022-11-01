@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/setup.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/setup.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/setup.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/setup.md"
+                "file": "README.md"
               }
             }
           }
@@ -136,10 +136,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c09a1641981dee21",
+  "active": "4676820100e31594",
   "lastOpenFiles": [
-    "content/_index.md",
     "content/setup.md",
+    "content/_index.md",
     "content/devops/devops.md",
     "README.md"
   ]
