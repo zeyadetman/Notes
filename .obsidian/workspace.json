@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/private/private-note.md",
+                "file": "content/_index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/private/private-note.md",
+                "file": "content/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/private/private-note.md",
+                "file": "content/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/private/private-note.md"
+                "file": "content/_index.md"
               }
             }
           }
@@ -138,11 +138,12 @@
   },
   "active": "4676820100e31594",
   "lastOpenFiles": [
+    "content/setup.md",
+    "content/private/private-note.md",
     "content/programming-languages/programming-languages.md",
     "content/_index.md",
     "content/frontend/interview.md",
     "README.md",
-    "content/setup.md",
     "content/devops/devops.md"
   ]
 }
