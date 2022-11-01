@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "content/frontend/interview.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "content/frontend/interview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "content/frontend/interview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "content/frontend/interview.md"
               }
             }
           }
@@ -138,9 +138,9 @@
   },
   "active": "4676820100e31594",
   "lastOpenFiles": [
+    "README.md",
     "content/setup.md",
     "content/_index.md",
-    "content/devops/devops.md",
-    "README.md"
+    "content/devops/devops.md"
   ]
 }
