@@ -1,19 +1,9 @@
-# Quartz
+# Welcome to my notes
 
-Host your second brain and [digital garden](https://jzhao.xyz/posts/networked-thought) for free. Quartz features
+Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the awesome project [Quartz 3.3](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/).
 
-1. Extremely fast natural-language search
-2. Customizable and hackable design based on Hugo
-3. Automatically generated backlinks, link previews, and local graph
-4. Built-in CJK + Latex Support and Admonition-style callouts
-5. Support for both Markdown Links and Wikilinks
+## About me
+I'm Zeyad a software engineer from [Egypt 🇪🇬](https://en.wikipedia.org/wiki/Kafr_El_Dawwar). Currently I spend most of my time learning and coding.
 
-Check out some of the [amazing gardens that community members](https://quartz.jzhao.xyz/notes/showcase/) have published with Quartz!
-
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
-
-🔗 Get Started: https://quartz.jzhao.xyz/
-
-![Quartz Example Screenshot](./screenshot.png)*Quartz Example Screenshot*
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+## About this site
+I created this site to track the things that might be useful to be shared with you, It's not like [my blog](https://zeyadetman.com), the blog is more specific for articles I write, but here you'll find my favs and notes 📝.
