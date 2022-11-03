@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/reactjs/reactjs.md",
+                "file": "content/reactjs/libraries.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/reactjs/reactjs.md",
+            "file": "content/reactjs/libraries.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/reactjs/reactjs.md",
+            "file": "content/reactjs/libraries.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +114,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/reactjs/reactjs.md"
+            "file": "content/reactjs/libraries.md"
           }
         }
       }
@@ -123,8 +123,9 @@
   },
   "active": "d8039dd06050f786",
   "lastOpenFiles": [
-    "content/reactjs/libraries.md",
     "content/reactjs/reactjs.md",
+    "content/reactjs/tricks.md",
+    "content/reactjs/libraries.md",
     "content/_index.md",
     "README.md"
   ]
