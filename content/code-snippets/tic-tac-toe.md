@@ -1,5 +1,6 @@
 ---
 title: "Tic Tac Toe using golang"
+tags: - golang
 ---
 
 #golang

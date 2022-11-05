@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/programming-languages/go.md",
+                "file": "content/code-snippets/tic-tac-toe.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/programming-languages/go.md",
+                "file": "content/code-snippets/tic-tac-toe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/programming-languages/go.md",
+                "file": "content/code-snippets/tic-tac-toe.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/programming-languages/go.md"
+                "file": "content/code-snippets/tic-tac-toe.md"
               }
             }
           }
@@ -138,14 +138,14 @@
   },
   "active": "c72e2ef7441f9b97",
   "lastOpenFiles": [
-    "content/code-snippets/tic-tac-toe.md",
+    "content/programming-languages/go.md",
     "content/code-snippets/code-snippets.md",
+    "content/code-snippets/tic-tac-toe.md",
     "content/Untitled.md",
     "content/learning-notes.md",
     "content/_index.md",
     "content/career/paths.md",
     "content/career/management.md",
-    "content/programming-languages/go.md",
     "content/clean-code/links.md",
     "content/clean-code/clean-code.md"
   ]

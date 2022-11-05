@@ -1,5 +1,7 @@
 ---
 title: "GO Lang"
+tags:
+- golang
 ---
 
 #golang 
