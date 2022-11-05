@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "a07026eba940ef19",
+    "type": "split",
+    "children": [
+      {
+        "id": "913f9ec9d807a921",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b7be2b5360c9872",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/programming-languages/typescript.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d674c1110dd7f48b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/frontend/roadmap.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7637dd6308b604c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/design-patterns/design-patterns.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ca6b8ad04c3b9b27",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/career/paths.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c03f754cfaa95242",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/programming-languages/go.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0d50a449e6154484",
+    "type": "split",
+    "children": [
+      {
+        "id": "0380f2048cf4792a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c09a1641981dee21",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5165f8b8c96cf230",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cdb5d7ffb6ba68b4",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "57c382e36bbd75f2",
+    "type": "split",
+    "children": [
+      {
+        "id": "369d79806fd868cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c5a4f67c21ff7ec",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/programming-languages/go.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6d0d411bfa61d9b8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/programming-languages/go.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d7c7b2eaea0c6491",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c86d8f2b6c73b6f6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/programming-languages/go.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c03f754cfaa95242",
+  "lastOpenFiles": [
+    "content/career/management.md",
+    "content/clean-code/links.md",
+    "content/clean-code/clean-code.md",
+    "content/learning-notes.md",
+    "content/career/paths.md",
+    "content/Untitled.md",
+    "content/design-patterns/design-patterns.md",
+    "content/design-patterns/behavioral.md",
+    "content/git/git.md",
+    "content/oop/oop.md"
+  ]
+}
