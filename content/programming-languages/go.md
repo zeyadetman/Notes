@@ -124,3 +124,52 @@ s := slice1[0:2] // by reference from 0 to 2 (not including 2), but it'll not ex
 slice1[0] = "d"
 fmt.Println(s, slice1) // [d a] [d a c]
 ```
+
+- Maps
+```go
+maptest := map[string]string{
+	"key1": "value1",
+	"key2": "value2",
+}
+
+fmt.Println(maptest)
+
+map2 := make(map[string]string)
+map2["key1"] = "value1"
+map2["key2"] = "value2"
+
+delete(map2, "key1")
+
+// we use ok to check if the key exists and differentiate between default value and the actual value
+v, ok := map2["key1"] // ok is false if key is not present, true otherwise
+
+fmt.Println(v, ok) // prints " " false
+
+map3 := map[string][]string{
+	"key1": []string{"value1", "value2"}, // redundant type
+	"key2": {"value1", "value2"},         // redundant type (solved)
+}
+
+fmt.Println(map3)
+```
+
+- Range
+```go
+// Range
+
+arr1 := []string{"zeyad", "vvv", "drrr", "llooo"}
+map1 := map[string]string{
+	"ass":  "asda",
+	"key1": "value1",
+}
+
+for k, v := range arr1 {
+	fmt.Println(k, v)
+}
+
+for k, v := range map1 {
+	fmt.Println(k, v)
+}
+```
+
+- Functions
