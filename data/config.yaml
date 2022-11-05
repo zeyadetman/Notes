@@ -9,7 +9,7 @@ enableCallouts: true
 enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
-enableRecentNotes: true
+enableRecentNotes: false
 enableGitHubEdit: true
 GitHubLink: https://github.com/zeyadetman/Notes/tree/hugo/content
 enableSemanticSearch: false
