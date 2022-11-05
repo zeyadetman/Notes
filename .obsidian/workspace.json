@@ -66,9 +66,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a823ed7b98383d9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/programming-languages/go.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -185,8 +197,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c03f754cfaa95242",
+  "active": "a823ed7b98383d9c",
   "lastOpenFiles": [
+    "content/code-snippets/tic-tac-toe.go.md",
+    "content/programming-languages/go.md",
     "content/career/management.md",
     "content/clean-code/links.md",
     "content/clean-code/clean-code.md",
@@ -194,8 +208,6 @@
     "content/career/paths.md",
     "content/Untitled.md",
     "content/design-patterns/design-patterns.md",
-    "content/design-patterns/behavioral.md",
-    "content/git/git.md",
-    "content/oop/oop.md"
+    "content/design-patterns/behavioral.md"
   ]
 }
