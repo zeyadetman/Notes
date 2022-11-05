@@ -6,6 +6,9 @@ tags:
 
 #golang 
 
+## Articles
+- [How to become a Golang developer: 10 steps career path](https://www.softkraft.co/how-to-become-golang-developer)
+
 ## Syntax
 
 - Variables
