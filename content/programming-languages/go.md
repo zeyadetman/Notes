@@ -97,3 +97,25 @@ for {
 ```
 
 - Hands on [[tic-tac-toe]]
+- Slices.
+```go
+var slice1 = []string{}
+var slice2 = []string{"aaa"}
+slice3 := make([]string, 0) // 0 length
+slice1 = append(slice2, "a")
+
+slice3 = append(slice3, "a")
+slice3 = append(slice3, "b")
+
+slice1[0] = "b"
+fmt.Println(slice2, slice1, slice3) // [aaa] [b a] [a b]
+
+copy(slice2, slice1)                // copy(dest, src) copying is depending on the length of the dest
+fmt.Println(slice2, slice1, slice3) // [b] [b a] [a b]
+
+slice1 = append(slice1, "c")
+
+s := slice1[0:2] // by reference from 0 to 2 (not including 2), but it'll not expand
+slice1[0] = "d"
+fmt.Println(s, slice1) // [d a] [d a c]
+```
