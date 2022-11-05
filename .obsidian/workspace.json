@@ -11,8 +11,12 @@
             "id": "c72e2ef7441f9b97",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "content/code-snippets/tic-tac-toe.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/code-snippets/tic-tac-toe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "content/code-snippets/tic-tac-toe.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "content/code-snippets/tic-tac-toe.md"
+              }
             }
           }
         ]
@@ -128,17 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c09a1641981dee21",
+  "active": "c72e2ef7441f9b97",
   "lastOpenFiles": [
+    "content/code-snippets/code-snippets.md",
+    "content/Untitled.md",
     "content/learning-notes.md",
     "content/_index.md",
     "content/career/paths.md",
     "content/career/management.md",
     "content/programming-languages/go.md",
-    "content/code-snippets/tic-tac-toe.go.md",
+    "content/code-snippets/tic-tac-toe.md",
     "content/clean-code/links.md",
-    "content/clean-code/clean-code.md",
-    "content/Untitled.md",
-    "content/design-patterns/design-patterns.md"
+    "content/clean-code/clean-code.md"
   ]
 }

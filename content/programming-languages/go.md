@@ -96,4 +96,4 @@ for {
 }
 ```
 
-- Hands on [[tic-tac-toe.go]]
+- Hands on [[tic-tac-toe]]
