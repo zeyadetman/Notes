@@ -173,3 +173,57 @@ for k, v := range map1 {
 ```
 
 - Functions
+```go
+package main
+
+import "fmt"
+
+func pl(s string) {
+	fmt.Println(s)
+}
+
+func plAll(params ...interface{}) { // interface is a generic datatype, similar to ...rest in javascript
+	fmt.Println(len(params))
+}
+
+func f1(x, y int) int { // similar to f1(x int, y int)
+	return x + y
+}
+
+func f2(x string) (string, int) { // return multiple values
+	return x, len(x) // hello 5
+}
+
+func f3(x string) (r string, count int) { // return vars declared here no need to return them
+	r = x
+	count = len(x)
+	return
+}
+
+func main() {
+	fmt.Println(f3("hello"))
+	var x func(x, y int) int // function as datatype
+	x = f1
+	fmt.Println(x(3, 4)) // 7
+}
+```
+
+- Pointers
+```go
+package main
+
+import "fmt"
+
+func set(s *string) {
+	*s = "zzz"
+}
+
+func main() {
+	var x string = "zeyad"
+	set(&x)
+
+	fmt.Println(x, &x)
+}
+```
+
+- Structs
