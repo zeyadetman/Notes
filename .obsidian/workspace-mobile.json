@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/frontend/frontend.md",
+                "file": "content/frontend/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/frontend/frontend.md",
+            "file": "content/frontend/index.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/frontend/frontend.md",
+            "file": "content/frontend/index.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,17 +114,20 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/frontend/frontend.md"
+            "file": "content/frontend/index.md"
           }
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "1e621f6405ab798d",
+  "active": "d8039dd06050f786",
   "lastOpenFiles": [
     "content/_index.md",
-    "content/frontend/frontend.md",
+    "content/programming-languages/programming-languages.md",
+    "content/learning-notes.md",
+    "content/frontend/index.md",
+    "programming-languages/programming-languages.md",
     "content/setup.md",
     "content/reactjs/libraries.md",
     "content/reactjs/reactjs.md",
