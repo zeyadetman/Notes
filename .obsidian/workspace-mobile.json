@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/frontend/frontend.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/_index.md",
+            "file": "content/frontend/frontend.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/_index.md",
+            "file": "content/frontend/frontend.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,21 +114,21 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/_index.md"
+            "file": "content/frontend/frontend.md"
           }
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "d8039dd06050f786",
+  "active": "1e621f6405ab798d",
   "lastOpenFiles": [
+    "content/_index.md",
     "content/frontend/frontend.md",
     "content/setup.md",
     "content/reactjs/libraries.md",
     "content/reactjs/reactjs.md",
     "content/reactjs/tricks.md",
-    "content/_index.md",
     "README.md"
   ]
 }
