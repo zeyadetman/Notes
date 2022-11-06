@@ -7,6 +7,6 @@
   https://gohugo.io/content-management/related/
   -->
   {{$notes := .Site.RegularPages}}
-  {{partial "page-list.html" (first 3 $notes)}}
+  {{$notesSorted := $notes.ByLastmod.Reverse}}
+  {{partial "page-list.html" (first 3 $notesSorted)}}
 </div>
-
