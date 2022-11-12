@@ -280,7 +280,9 @@ func main() {
 
 ```
 
+- Interfaces
 
 
 ## Notes
 - [You cannot use methods on structs if you declared your struct inside function.](https://stackoverflow.com/questions/42010112/implications-of-defining-a-struct-inside-a-function-vs-outside)
+- [Go Variable Scope](https://www.programiz.com/golang/variable-scope)
