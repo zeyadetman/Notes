@@ -215,12 +215,12 @@ package main
 import "fmt"
 
 func set(s *string) {
-	*s = "zzz"
+	*s = "zzz" // changing the x var as well
 }
 
 func main() {
 	var x string = "zeyad"
-	set(&x)
+	set(&x) // sending the reference
 
 	fmt.Println(x, &x)
 }
