@@ -286,3 +286,6 @@ func main() {
 ## Notes
 - [You cannot use methods on structs if you declared your struct inside function.](https://stackoverflow.com/questions/42010112/implications-of-defining-a-struct-inside-a-function-vs-outside)
 - [Go Variable Scope](https://www.programiz.com/golang/variable-scope)
+
+## Resources
+- [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests/)
