@@ -227,3 +227,60 @@ func main() {
 ```
 
 - Structs
+```go
+package main
+
+import "fmt"
+
+type player struct {
+	firstName string
+	lastName  string
+	id        int
+}
+
+type game struct {
+	players map[string]*player // map of reference of structs
+}
+
+type gameBase struct {
+	game // game struct as an "embedded field"
+	next *gameBase
+}
+
+// create a function on a struct
+func (g *game) iteratePlayers() []string {
+	fmt.Println("GGG: ", g.players)
+	result := []string{}
+	for _, val := range g.players {
+		result = append(result, val.firstName)
+	}
+
+	return result
+}
+
+func main() {
+
+	g := &game{
+		players: make(map[string]*player),
+	}
+
+	p1 := player{}
+	p2 := player{firstName: "John", lastName: "Doe", id: 2}
+	g.players["p1"] = &p1
+	g.players["p2"] = &p2
+	p1.firstName = "zeyad"
+	fmt.Println(g, p1) // &{map[p1:0xc00010e1b0]} {zeyad  0}
+	playerNames := g.iteratePlayers()
+	fmt.Println(playerNames) // [zeyad John]
+
+	// chaining
+	gb := &gameBase{}
+	gb.iteratePlayers() // This Works
+}
+
+```
+
+
+
+## Notes
+- [You cannot use methods on structs if you declared your struct inside function.](https://stackoverflow.com/questions/42010112/implications-of-defining-a-struct-inside-a-function-vs-outside)
