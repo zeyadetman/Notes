@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/programming-languages/go.md",
+                "file": "content/code-snippets/code-snippets.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0e75687c247f8aa0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/code-snippets/code-snippets.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/programming-languages/go.md",
+                "file": "content/code-snippets/code-snippets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/programming-languages/go.md",
+                "file": "content/code-snippets/code-snippets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/programming-languages/go.md"
+                "file": "content/code-snippets/code-snippets.md"
               }
             }
           }
@@ -136,17 +149,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "145963f890f2c332",
+  "active": "0e75687c247f8aa0",
   "lastOpenFiles": [
+    "content/code-snippets/center-in-css.md",
+    "content/code-snippets/code-snippets.md",
+    "content/code-snippets/tic-tac-toe.md",
+    "content/programming-languages/go.md",
     "content/programming-languages/typescript.md",
     "content/frontend/assets-illustrations.md",
     "content/frontend/colors.md",
     "content/frontend/roadmap.md",
     "content/frontend/interview.md",
-    "content/frontend/design-systems.md",
-    "content/frontend/frontend.md",
-    "content/programming-languages/go.md",
-    "content/code-snippets/tic-tac-toe.md",
-    "content/programming-languages/programming-languages.md"
+    "content/frontend/design-systems.md"
   ]
 }
