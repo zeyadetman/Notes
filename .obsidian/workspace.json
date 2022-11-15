@@ -154,12 +154,12 @@
     "content/code-snippets/center-in-css.md",
     "content/code-snippets/code-snippets.md",
     "content/code-snippets/tic-tac-toe.md",
+    "content/programming-languages/programming-languages.md",
     "content/programming-languages/golang.md",
     "content/programming-languages/typescript.md",
     "content/frontend/assets-illustrations.md",
     "content/frontend/colors.md",
     "content/frontend/roadmap.md",
-    "content/frontend/interview.md",
-    "content/frontend/design-systems.md"
+    "content/frontend/interview.md"
   ]
 }

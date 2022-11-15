@@ -1,8 +1,10 @@
 ---
 title: "Center elements in Css"
+tags:
+- css
 ---
 
-#css
+## Centering div
 
 - Using Grid
 ```css
