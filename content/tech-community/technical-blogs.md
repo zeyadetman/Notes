@@ -20,6 +20,7 @@ title: "Technical Blogs"
 * [https://www.456bereastreet.com/](https://www.456bereastreet.com)
 * [https://umaar.com/dev-tips/](https://umaar.com/dev-tips/)
 * [https://tamalweb.com/](https://tamalweb.com)
+* [https://www.upbeatcode.com/](https://www.upbeatcode.com/)
 
 ### System Design and Architecture
 
@@ -32,3 +33,4 @@ title: "Technical Blogs"
 * [https://ably.com/blog/tag/ably-engineering](https://ably.com/blog/tag/ably-engineering)
 * https://timothya.com/
 * https://www.emadelsaid.com/
+* [https://www.basedash.com/blog](https://www.basedash.com/blog)

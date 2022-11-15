@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/reactjs/libraries.md",
+                "file": "content/tech-community/technical-blogs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/reactjs/libraries.md",
+                "file": "content/tech-community/technical-blogs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/reactjs/libraries.md",
+                "file": "content/tech-community/technical-blogs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/reactjs/libraries.md"
+                "file": "content/tech-community/technical-blogs.md"
               }
             }
           }
@@ -138,6 +138,7 @@
   },
   "active": "145963f890f2c332",
   "lastOpenFiles": [
+    "content/reactjs/libraries.md",
     "content/reactjs/reactjs.md",
     "content/private/private-note.md",
     "content/code-snippets/tic-tac-toe.md",
@@ -146,7 +147,6 @@
     "content/programming-languages/programming-languages.md",
     "content/programming-languages/golang.md",
     "content/programming-languages/typescript.md",
-    "content/frontend/assets-illustrations.md",
-    "content/frontend/colors.md"
+    "content/frontend/assets-illustrations.md"
   ]
 }
