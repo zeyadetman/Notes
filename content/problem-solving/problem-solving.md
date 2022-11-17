@@ -15,5 +15,9 @@ title: "Problem Solving"
 - [Mustafa Saad sheet.](https://goo.gl/unDETI) ⭐️
 - [How to use LeetCode to help yourself efficiently and effectively (for beginners)](https://leetcode.com/discuss/career/450215/How-to-use-LeetCode-to-help-yourself-efficiently-and-effectively-(for-beginners))
 
+
+## IDEs
+- **C++:** [Code::Blocks](https://www.codeblocks.org/)
+
 **See more:**
 [Follow me](problem-solving/me-on-problem-solving.md)
