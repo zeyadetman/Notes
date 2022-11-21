@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/programming-languages/typescript.md",
+                "file": "content/frontend/frontend.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/programming-languages/typescript.md",
+                "file": "content/frontend/frontend.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/programming-languages/typescript.md",
+                "file": "content/frontend/frontend.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/programming-languages/typescript.md"
+                "file": "content/frontend/frontend.md"
               }
             }
           }
@@ -139,6 +138,7 @@
   },
   "active": "145963f890f2c332",
   "lastOpenFiles": [
+    "content/programming-languages/typescript.md",
     "content/git/git.md",
     "content/git/git-log.md",
     "content/git/git-bisect.md",
@@ -147,7 +147,6 @@
     "content/reactjs/reactjs.md",
     "content/private/private-note.md",
     "content/code-snippets/tic-tac-toe.md",
-    "content/code-snippets/center-in-css.md",
-    "content/code-snippets/code-snippets.md"
+    "content/code-snippets/center-in-css.md"
   ]
 }
