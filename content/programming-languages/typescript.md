@@ -12,5 +12,8 @@ This articles I found them useful while you're writing typescript with [[reactjs
 - [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 
 ## Articles
-- [How To Use Generics in TypeScript](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-typescript) #generics #typescript
-- 
+- [How To Use Generics in TypeScript](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-typescript) #generics #typescript 
+
+
+## Tools
+- [Typescript coverage.](https://github.com/alexcanessa/typescript-coverage-report)
