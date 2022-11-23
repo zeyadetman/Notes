@@ -3,5 +3,6 @@
   "useMarkdownLinks": true,
   "newLinkFormat": "absolute",
   "newFileLocation": "folder",
-  "newFileFolderPath": "content"
+  "newFileFolderPath": "content",
+  "attachmentFolderPath": "content"
 }

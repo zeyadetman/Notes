@@ -5,7 +5,7 @@ tags:
 - css
 ---
 
-1. [[golang]]
+1. [golang](programming-languages/golang.md)
 - [[tic-tac-toe]]
 
 

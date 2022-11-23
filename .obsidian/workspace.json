@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d2d02b11c900f55c",
+        "id": "e1eca1c7fd695d9e",
         "type": "tabs",
         "children": [
           {
-            "id": "74d195b98ec208a2",
+            "id": "ecbbefb9fa784f27",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/programming-languages/golang.md",
+                "file": "content/articles/mui-design-system.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/programming-languages/golang.md",
+                "file": "content/articles/mui-design-system.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/programming-languages/golang.md",
+                "file": "content/articles/mui-design-system.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/programming-languages/golang.md"
+                "file": "content/articles/mui-design-system.md"
               }
             }
           }
@@ -136,17 +137,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "74d195b98ec208a2",
+  "active": "ecbbefb9fa784f27",
   "lastOpenFiles": [
+    "content/code-snippets/tic-tac-toe.md",
+    "content/code-snippets/code-snippets.md",
+    "content/programming-languages/golang.md",
     "content/problem-solving/problem-solving.md",
     "content/frontend/design-systems.md",
     "content/backend/backend.md",
     "content/articles/mui-design-system.md",
     "README.md",
     "[[mui-design-system]].md",
-    "static/icon.png",
-    "content/Pasted image 20221123060835.png",
-    "Pasted image 20221123061251.png",
-    "content/frontend/frontend.md"
+    "static/icon.png"
   ]
 }
