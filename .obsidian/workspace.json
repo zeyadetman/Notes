@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/frontend/design-systems.md",
+                "file": "content/programming-languages/golang.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/frontend/design-systems.md",
+                "file": "content/programming-languages/golang.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/frontend/design-systems.md",
+                "file": "content/programming-languages/golang.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/frontend/design-systems.md"
+                "file": "content/programming-languages/golang.md"
               }
             }
           }
@@ -138,15 +138,15 @@
   },
   "active": "74d195b98ec208a2",
   "lastOpenFiles": [
-    "content/articles/mui-design-system.md",
+    "content/problem-solving/problem-solving.md",
     "content/frontend/design-systems.md",
+    "content/backend/backend.md",
+    "content/articles/mui-design-system.md",
     "README.md",
     "[[mui-design-system]].md",
     "static/icon.png",
     "content/Pasted image 20221123060835.png",
     "Pasted image 20221123061251.png",
-    "content/frontend/frontend.md",
-    "content/programming-languages/typescript.md",
-    "content/git/git.md"
+    "content/frontend/frontend.md"
   ]
 }
