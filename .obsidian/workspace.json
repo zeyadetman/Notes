@@ -13,10 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/frontend/frontend.md",
+                "file": "content/articles/mui-design-system.md",
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "e7f2b01a34dadab3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/frontend/frontend.md",
+                "file": "content/articles/mui-design-system.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/frontend/frontend.md",
+                "file": "content/articles/mui-design-system.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/frontend/frontend.md"
+                "file": "content/articles/mui-design-system.md"
               }
             }
           }
@@ -138,15 +146,15 @@
   },
   "active": "145963f890f2c332",
   "lastOpenFiles": [
+    "content/frontend/design-systems.md",
+    "Pasted image 20221123061251.png",
+    "content/articles/mui-design-system.md",
+    "content/frontend/frontend.md",
     "content/programming-languages/typescript.md",
     "content/git/git.md",
     "content/git/git-log.md",
     "content/git/git-bisect.md",
     "content/tech-community/technical-blogs.md",
-    "content/reactjs/libraries.md",
-    "content/reactjs/reactjs.md",
-    "content/private/private-note.md",
-    "content/code-snippets/tic-tac-toe.md",
-    "content/code-snippets/center-in-css.md"
+    "content/reactjs/libraries.md"
   ]
 }
