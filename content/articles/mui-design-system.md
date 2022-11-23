@@ -172,7 +172,7 @@ import { theme } from "theme";
 
 Tada! 🎉 
 
-Another Things about [Design Systems](content/frontend/design-systems.md)
+Another Things about [design-systems](content/frontend/design-systems.md)
 
 - [[frontend]]
 
