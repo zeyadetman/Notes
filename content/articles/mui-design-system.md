@@ -172,8 +172,6 @@ import { theme } from "theme";
 
 Tada! 🎉 
 
-Another Things about [Design Systems](frontend/design-systems.md)
-
-- [[frontend]]
+Another Things about [Design Systems](frontend/design-systems.md) or [Frontend](frontend/frontend.md)
 
 Project Template [here](https://github.com/zeyadetman/ts-mui-nextjs-storybook-boilerplate)
