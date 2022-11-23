@@ -11,11 +11,9 @@
             "id": "145963f890f2c332",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "content/articles/mui-design-system.md",
-                "mode": "source",
-                "source": false
+                "file": "content/Pasted image 20221123060835.png"
               }
             }
           },
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/articles/mui-design-system.md",
+                "file": "content/Pasted image 20221123060835.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/articles/mui-design-system.md",
+                "file": "content/Pasted image 20221123060835.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/articles/mui-design-system.md"
+                "file": "content/Pasted image 20221123060835.png"
               }
             }
           }
@@ -144,11 +142,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "145963f890f2c332",
+  "active": "c09a1641981dee21",
   "lastOpenFiles": [
+    "content/articles/mui-design-system.md",
     "content/frontend/design-systems.md",
     "Pasted image 20221123061251.png",
-    "content/articles/mui-design-system.md",
     "content/frontend/frontend.md",
     "content/programming-languages/typescript.md",
     "content/git/git.md",
