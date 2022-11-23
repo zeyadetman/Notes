@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/frontend/design-systems.md",
+                "file": "content/articles/mui-design-system.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/frontend/design-systems.md",
+                "file": "content/articles/mui-design-system.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/frontend/design-systems.md",
+                "file": "content/articles/mui-design-system.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/frontend/design-systems.md"
+                "file": "content/articles/mui-design-system.md"
               }
             }
           }
@@ -138,8 +138,8 @@
   },
   "active": "e7f2b01a34dadab3",
   "lastOpenFiles": [
-    "content/articles/mui-design-system.md",
     "content/frontend/design-systems.md",
+    "content/articles/mui-design-system.md",
     "content/Pasted image 20221123060835.png",
     "Pasted image 20221123061251.png",
     "content/frontend/frontend.md",
