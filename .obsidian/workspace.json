@@ -8,21 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "145963f890f2c332",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "content/Pasted image 20221123060835.png"
-              }
-            }
-          },
-          {
             "id": "e7f2b01a34dadab3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "content/frontend/design-systems.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -91,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Pasted image 20221123060835.png",
+                "file": "content/frontend/design-systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Pasted image 20221123060835.png",
+                "file": "content/frontend/design-systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Pasted image 20221123060835.png"
+                "file": "content/frontend/design-systems.md"
               }
             }
           }
@@ -142,17 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c09a1641981dee21",
+  "active": "e7f2b01a34dadab3",
   "lastOpenFiles": [
     "content/articles/mui-design-system.md",
     "content/frontend/design-systems.md",
+    "content/Pasted image 20221123060835.png",
     "Pasted image 20221123061251.png",
     "content/frontend/frontend.md",
     "content/programming-languages/typescript.md",
     "content/git/git.md",
     "content/git/git-log.md",
     "content/git/git-bisect.md",
-    "content/tech-community/technical-blogs.md",
-    "content/reactjs/libraries.md"
+    "content/tech-community/technical-blogs.md"
   ]
 }
