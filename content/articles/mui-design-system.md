@@ -2,6 +2,8 @@
 title: "Customize MUI theme with TypeScript"
 ---
 
+> [Published on my Blog](https://zeyadetman.com/posts/mui-design-system)
+
 Ok, this is a quick tutorial on how to customize the default theme in [mui v5](https://mui.com/material-ui/getting-started/overview/). we'll just customize the button component.
 
 Project Template [here](https://github.com/zeyadetman/ts-mui-nextjs-storybook-boilerplate)

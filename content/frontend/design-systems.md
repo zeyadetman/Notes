@@ -19,7 +19,7 @@ title: "Design Systems"
 
 * [Component Based Design System With Styled-System.](https://varun.ca/styled-system/)
 * [UI component explorers — your new favorite tool](https://www.chromatic.com/blog/ui-component-explorers---your-new-favorite-tool/)
-* Customize MUI theme with TypeScript [[mui-design-system]]
+* [[mui-design-system|Customize MUI theme with TypeScript]]
 
 ### Design Systems
 
