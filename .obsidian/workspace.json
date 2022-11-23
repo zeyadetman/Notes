@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "02c3ff1349addad7",
+        "id": "fc7773d95c20948d",
         "type": "tabs",
         "children": [
           {
-            "id": "e7f2b01a34dadab3",
+            "id": "ba24562107cb1c4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/articles/mui-design-system.md",
+                "file": "content/frontend/design-systems.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/articles/mui-design-system.md",
+                "file": "content/frontend/design-systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/articles/mui-design-system.md",
+                "file": "content/frontend/design-systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/articles/mui-design-system.md"
+                "file": "content/frontend/design-systems.md"
               }
             }
           }
@@ -136,17 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e7f2b01a34dadab3",
+  "active": "ba24562107cb1c4c",
   "lastOpenFiles": [
-    "content/frontend/design-systems.md",
     "content/articles/mui-design-system.md",
+    "content/frontend/design-systems.md",
+    "[[mui-design-system]].md",
+    "static/icon.png",
     "content/Pasted image 20221123060835.png",
     "Pasted image 20221123061251.png",
     "content/frontend/frontend.md",
     "content/programming-languages/typescript.md",
     "content/git/git.md",
-    "content/git/git-log.md",
-    "content/git/git-bisect.md",
-    "content/tech-community/technical-blogs.md"
+    "content/git/git-log.md"
   ]
 }
