@@ -19,11 +19,8 @@ title: "Frontend Articles"
 [[frontend/design-systems#Articles|Desgin System Articles]]
 
 **Read more...**
+- [reactjs](reactjs/reactjs.md)
 - [assets-illustrations](frontend/assets-illustrations.md)
 - [colors](frontend/colors.md)
 - [design-systems](frontend/design-systems.md)
 - [roadmap](frontend/roadmap.md)
-
-## Project Starter
-
-- [NextJS + StorybookJS + Material-UI + Jest + SWR](https://itnext.io/nextjs-storybookjs-material-ui-jest-swr-fe2ff5cb9af8)

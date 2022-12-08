@@ -11,8 +11,13 @@
             "id": "c5ffb95c40447fed",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "content/frontend/frontend.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/frontend/frontend.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "content/frontend/frontend.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "content/frontend/frontend.md"
+              }
             }
           }
         ]
@@ -130,15 +139,15 @@
   },
   "active": "c5ffb95c40447fed",
   "lastOpenFiles": [
+    "content/reactjs/reactjs.md",
+    "content/frontend/frontend.md",
     "screenshot.png",
     "content/templates/post.md",
     "content/frontend/design-systems.md",
-    "content/frontend/frontend.md",
     "content/frontend/interview.md",
     "content/articles/mui-design-system.md",
     "content/code-snippets/tic-tac-toe.md",
     "content/code-snippets/code-snippets.md",
-    "content/programming-languages/golang.md",
-    "content/problem-solving/problem-solving.md"
+    "content/programming-languages/golang.md"
   ]
 }
