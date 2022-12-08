@@ -4,6 +4,9 @@ title: "Git"
 
 Here's one of the best things to learn git by doing: https://wyag.thb.lt
 
+## Visualizations
+- [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
+
 ## Tutorials
 - [A Better Model for Stacked (GitHub) Pull Requests](https://timothya.com/blog/git-stack/#rebase-no-conflict)
 

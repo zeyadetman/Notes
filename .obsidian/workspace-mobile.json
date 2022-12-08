@@ -13,8 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/problem-solving/problem-solving.md",
+                "file": "content/git/git.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -85,7 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/problem-solving/problem-solving.md",
+            "file": "content/git/git.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/problem-solving/problem-solving.md",
+            "file": "content/git/git.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +115,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/problem-solving/problem-solving.md"
+            "file": "content/git/git.md"
           }
         }
       }
@@ -123,15 +124,15 @@
   },
   "active": "d8039dd06050f786",
   "lastOpenFiles": [
+    "content/articles/mui-design-system.md",
+    "content/articles/Untitled.md",
+    "content/problem-solving/problem-solving.md",
     "content/problem-solving/me-on-problem-solving.md",
     "content/programming-languages/go.md",
     "content/_index.md",
     "content/frontend/frontend.md",
     "content/programming-languages/programming-languages.md",
     "content/learning-notes.md",
-    "programming-languages/programming-languages.md",
-    "content/setup.md",
-    "content/reactjs/libraries.md",
-    "content/reactjs/reactjs.md"
+    "programming-languages/programming-languages.md"
   ]
 }
