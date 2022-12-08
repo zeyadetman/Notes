@@ -4,5 +4,7 @@
   "newLinkFormat": "absolute",
   "newFileLocation": "folder",
   "newFileFolderPath": "content",
-  "attachmentFolderPath": "content"
+  "attachmentFolderPath": "content",
+  "showFrontmatter": true,
+  "spellcheck": true
 }

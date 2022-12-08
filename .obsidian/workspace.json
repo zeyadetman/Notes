@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "e1eca1c7fd695d9e",
+        "id": "6d9691fdad28162a",
         "type": "tabs",
         "children": [
           {
-            "id": "ecbbefb9fa784f27",
+            "id": "c5ffb95c40447fed",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/articles/mui-design-system.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/articles/mui-design-system.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/articles/mui-design-system.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "content/articles/mui-design-system.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -137,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "ecbbefb9fa784f27",
+  "active": "c5ffb95c40447fed",
   "lastOpenFiles": [
+    "screenshot.png",
+    "content/templates/post.md",
     "content/frontend/design-systems.md",
+    "content/frontend/frontend.md",
+    "content/frontend/interview.md",
     "content/articles/mui-design-system.md",
     "content/code-snippets/tic-tac-toe.md",
     "content/code-snippets/code-snippets.md",
     "content/programming-languages/golang.md",
-    "content/problem-solving/problem-solving.md",
-    "content/backend/backend.md",
-    "README.md",
-    "[[mui-design-system]].md",
-    "static/icon.png"
+    "content/problem-solving/problem-solving.md"
   ]
 }
