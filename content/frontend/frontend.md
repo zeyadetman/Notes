@@ -10,6 +10,8 @@ title: "Frontend Articles"
 
 * [Embracing modern image formats.](https://www.joshwcomeau.com/performance/embracing-modern-image-formats)
 * [Best Practices on How to Compress Images For Reactjs.](https://tamalweb.com/compress-images-reactjs#use-webpavif-images-for-even-better-compression)
+* [Blogged Answers: A (Mostly) Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/)
+* [When Does React Render Your Component?](https://www.zhenghao.io/posts/react-rerender)
 
 ### Regular Expressions
 

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "68103c7c2f54d53c",
+        "id": "ff951e236d292212",
         "type": "tabs",
         "children": [
           {
-            "id": "d8039dd06050f786",
+            "id": "8f97c03b355fdf96",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/git/git.md",
+                "file": "content/frontend/frontend.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/git/git.md",
+            "file": "content/frontend/frontend.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/git/git.md",
+            "file": "content/frontend/frontend.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,24 +115,24 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/git/git.md"
+            "file": "content/frontend/frontend.md"
           }
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "d8039dd06050f786",
+  "active": "8f97c03b355fdf96",
   "lastOpenFiles": [
+    "content/frontend/frontend.md",
+    "content/git/git.md",
     "content/articles/mui-design-system.md",
     "content/articles/Untitled.md",
     "content/problem-solving/problem-solving.md",
     "content/problem-solving/me-on-problem-solving.md",
     "content/programming-languages/go.md",
     "content/_index.md",
-    "content/frontend/frontend.md",
     "content/programming-languages/programming-languages.md",
-    "content/learning-notes.md",
-    "programming-languages/programming-languages.md"
+    "content/learning-notes.md"
   ]
 }
