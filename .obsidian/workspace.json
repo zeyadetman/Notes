@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/reactjs/libraries.md",
+                "file": "content/reactjs/reactjs.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "typescript",
+                "query": "reactjs",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/reactjs/libraries.md",
+                "file": "content/reactjs/reactjs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/reactjs/libraries.md",
+                "file": "content/reactjs/reactjs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/reactjs/libraries.md"
+                "file": "content/reactjs/reactjs.md"
               }
             }
           }
@@ -139,6 +140,8 @@
   },
   "active": "c5ffb95c40447fed",
   "lastOpenFiles": [
+    "content/programming-languages/typescript.md",
+    "content/reactjs/libraries.md",
     "content/reactjs/reactjs.md",
     "content/frontend/frontend.md",
     "screenshot.png",
@@ -146,8 +149,6 @@
     "content/frontend/design-systems.md",
     "content/frontend/interview.md",
     "content/articles/mui-design-system.md",
-    "content/code-snippets/tic-tac-toe.md",
-    "content/code-snippets/code-snippets.md",
-    "content/programming-languages/golang.md"
+    "content/code-snippets/tic-tac-toe.md"
   ]
 }

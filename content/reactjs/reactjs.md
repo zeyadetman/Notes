@@ -26,3 +26,6 @@ title: "ReactJS Articles"
 
 ## Videos
 - https://youtu.be/bGzanfKVFeU
+
+
+[typescript](content/programming-languages/typescript.md)
