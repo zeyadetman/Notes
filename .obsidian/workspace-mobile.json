@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/reactjs/reactjs.md",
+                "file": "content/programming-languages/typescript.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/reactjs/reactjs.md",
+            "file": "content/programming-languages/typescript.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/reactjs/reactjs.md",
+            "file": "content/programming-languages/typescript.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,7 +115,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/reactjs/reactjs.md"
+            "file": "content/programming-languages/typescript.md"
           }
         }
       }
@@ -135,6 +135,10 @@
   },
   "active": "8f97c03b355fdf96",
   "lastOpenFiles": [
+    "content/reactjs/reactjs.md",
+    "/content/reactjs/reactjs.md",
+    "/content/reactjs/libraries.md",
+    "/content/programming-languages/typescript.md",
     "content/frontend/frontend.md",
     "content/git/git.md",
     "content/articles/mui-design-system.md",
