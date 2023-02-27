@@ -6,6 +6,7 @@ title: "ReactJS Articles"
 * [3 React Component Design Patterns You Should Know About.](https://blog.openreplay.com/3-react-component-design-patterns-you-should-know-about)
 * [⚛️ 🚀 React Component Patterns](https://dev.to/alexi\_be3/react-component-patterns-49ho#provider-pattern).
 * [SOLID Principles in React](https://www.everydayreact.com/articles/solid-principles-in-react) 
+* [Ultimate React Component Patterns with Typescript 2.8](https://levelup.gitconnected.com/ultimate-react-component-patterns-with-typescript-2-8-82990c516935)
 
 ## Mocking
 - For mocking the APIs in the reactjs code, I use [mswjs](https://github.com/mswjs/msw/) it's easy and powerful, give it a try.
