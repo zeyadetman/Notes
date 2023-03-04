@@ -4,7 +4,8 @@ If you've questions send them to me on [My LinkedIn Account](https://www.linkedi
 
 >Q: I have been hoping to pursue a career in software engineering / web development I have studied Python, HTML, CSS, JS and am starting to work my way through React I know this is very much the basics and am trying to work out the paths that other people with experience have taken, Would you have any advice?
 
-1. Practice smart.
+
+Practice smart.
 	a. Open figma community.
 	b. Search for a template of an idea you love to implement.
 	c. Start implementing it using react.

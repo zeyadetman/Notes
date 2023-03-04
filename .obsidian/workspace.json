@@ -164,8 +164,9 @@
   },
   "active": "b2224029ffb54334",
   "lastOpenFiles": [
-    "content/templates/post.md",
+    "content/_index.md",
     "content/Q&A.md",
+    "content/templates/post.md",
     "content/reactjs/reactjs.md",
     "content/programming-languages/typescript.md",
     "content/reactjs/libraries.md",
