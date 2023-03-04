@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Q&A.md",
+                "file": "content/_index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Q&A.md",
+                "file": "content/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Q&A.md",
+                "file": "content/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Q&A.md"
+                "file": "content/_index.md"
               }
             }
           }
@@ -164,9 +164,10 @@
   },
   "active": "b2224029ffb54334",
   "lastOpenFiles": [
-    "content/_index.md",
-    "content/Q&A.md",
+    "content/QA.md",
+    "content/tech-community/technical-blogs.md",
     "content/templates/post.md",
+    "content/_index.md",
     "content/reactjs/reactjs.md",
     "content/programming-languages/typescript.md",
     "content/reactjs/libraries.md",

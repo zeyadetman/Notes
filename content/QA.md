@@ -1,3 +1,7 @@
+---
+title: "Q&A"
+---
+
 This page will be for questions that I got from social media and i found them useful for community.
 
 If you've questions send them to me on [My LinkedIn Account](https://www.linkedin.com/in/zeyadetman).
@@ -6,9 +10,10 @@ If you've questions send them to me on [My LinkedIn Account](https://www.linkedi
 
 
 Practice smart.
-	a. Open figma community.
-	b. Search for a template of an idea you love to implement.
-	c. Start implementing it using react.
+
+a. Open figma community.
+b. Search for a template of an idea you love to implement.
+c. Start implementing it using react.
 
 While practicing try to see how the others implement this part, how they organize the folder structure, how they manage the state, which is better react query or redux thunk or sagas, how to create custom hook to do specific function, challenge yourself to do hard/new to you parts.
 
