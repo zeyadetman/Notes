@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/reactjs/reactjs.md",
+                "file": "content/design-patterns/design-patterns.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/reactjs/reactjs.md",
+            "file": "content/design-patterns/design-patterns.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/reactjs/reactjs.md",
+            "file": "content/design-patterns/design-patterns.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,7 +115,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/reactjs/reactjs.md"
+            "file": "content/design-patterns/design-patterns.md"
           }
         }
       }
@@ -135,9 +135,12 @@
   },
   "active": "8f97c03b355fdf96",
   "lastOpenFiles": [
+    "content/reactjs/reactjs.md",
+    "content/QA.md",
+    "/content/_index.md",
+    "/content/QA.md",
     "content/frontend/frontend.md",
     "content/programming-languages/typescript.md",
-    "content/reactjs/reactjs.md",
     "/content/reactjs/reactjs.md",
     "/content/reactjs/libraries.md",
     "/content/programming-languages/typescript.md",

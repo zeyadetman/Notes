@@ -9,6 +9,9 @@ Design patterns is a kinda tough to be remembered, so i created this pages to li
 -   [Learning Design Patterns: A Summary.](https://lo-victoria.com/learning-design-patterns-a-summary)
 -   [Decorator design pattern](https://refactoring.guru/design-patterns/decorator)
 
+## Learn more
+- https://github.com/AbdurRKhalid/Design-Patterns
+- 
 
 **See more:**
 [behavioral](design-patterns/behavioral.md)
