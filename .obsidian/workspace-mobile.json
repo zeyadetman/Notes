@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/programming-languages/typescript.md",
+                "file": "content/reactjs/reactjs.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/programming-languages/typescript.md",
+            "file": "content/reactjs/reactjs.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/programming-languages/typescript.md",
+            "file": "content/reactjs/reactjs.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,7 +115,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/programming-languages/typescript.md"
+            "file": "content/reactjs/reactjs.md"
           }
         }
       }
@@ -135,13 +135,13 @@
   },
   "active": "8f97c03b355fdf96",
   "lastOpenFiles": [
+    "content/frontend/frontend.md",
+    "content/programming-languages/typescript.md",
     "content/design-patterns/design-patterns.md",
     "content/reactjs/reactjs.md",
     "content/QA.md",
     "/content/_index.md",
     "/content/QA.md",
-    "content/frontend/frontend.md",
-    "content/programming-languages/typescript.md",
     "/content/reactjs/reactjs.md",
     "/content/reactjs/libraries.md",
     "/content/programming-languages/typescript.md",
