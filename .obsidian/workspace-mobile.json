@@ -135,12 +135,13 @@
   },
   "active": "8f97c03b355fdf96",
   "lastOpenFiles": [
-    "content/programming-languages/typescript.md",
+    "content/QA.md",
+    "content/_index.md",
     "content/programming-languages/notes-on-typescript.md",
+    "content/programming-languages/typescript.md",
     "content/reactjs/reactjs.md",
     "content/frontend/frontend.md",
     "content/design-patterns/design-patterns.md",
-    "content/QA.md",
     "/content/_index.md",
     "/content/QA.md",
     "/content/reactjs/reactjs.md",
@@ -152,7 +153,6 @@
     "content/problem-solving/problem-solving.md",
     "content/problem-solving/me-on-problem-solving.md",
     "content/programming-languages/go.md",
-    "content/_index.md",
     "content/programming-languages/programming-languages.md",
     "content/learning-notes.md"
   ]
