@@ -16,6 +16,7 @@ This articles I found them useful while you're writing typescript with [[reactjs
 
 ## Tutorials
 - [Learn react and typescript ⭐️](https://youtube.com/playlist?list=PLNqp92_EXZBJ4CBroxVBJEpAXoz1g-naZ)
+- [Advanced Typescript by Matt Pocock ⭐️](https://youtube.com/playlist?list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b)
 
 ## Articles
 - [How To Use Generics in TypeScript](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-typescript) #generics #typescript 
