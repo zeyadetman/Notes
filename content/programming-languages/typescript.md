@@ -23,3 +23,6 @@ This articles I found them useful while you're writing typescript with [[reactjs
 
 ## Tools
 - [Typescript coverage.](https://github.com/alexcanessa/typescript-coverage-report)
+
+
+[notes-on-typescript](content/programming-languages/notes-on-typescript.md)
