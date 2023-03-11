@@ -13,28 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/templates/post.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b2224029ffb54334",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/_index.md",
+                "file": "content/database/database.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/database/database.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/database/database.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/_index.md"
+                "file": "content/database/database.md"
               }
             }
           }
@@ -162,12 +148,13 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b2224029ffb54334",
+  "active": "7152e945e00d1331",
   "lastOpenFiles": [
-    "content/QA.md",
-    "content/tech-community/technical-blogs.md",
     "content/templates/post.md",
     "content/_index.md",
+    "content/programming-languages/notes-on-typescript.md",
+    "content/QA.md",
+    "content/tech-community/technical-blogs.md",
     "content/reactjs/reactjs.md",
     "content/programming-languages/typescript.md",
     "content/reactjs/libraries.md",
