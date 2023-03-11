@@ -11,7 +11,11 @@ title: "Databases"
 
 ### Normalization
 - [Learn Database Normalization - 1NF, 2NF, 3NF, 4NF, 5NF ⭐️](https://www.youtube.com/watch?v=GFQaEYEc8_8)
-- 
+
+### N+1 Problem
+- [What is the N+1 Problem in GraphQL?](https://medium.com/the-marcy-lab-school/what-is-the-n-1-problem-in-graphql-dd4921cb3c1a)
+- [Understanding, identifying and fixing the N+1 query problem](https://schneide.blog/2021/12/06/understanding-identifying-and-fixing-the-n1-query-problem/)
+
 
 ## Articles
 
