@@ -1,5 +1,11 @@
 ---
 title: "ReactJS Articles"
+tags:
+- typescript
+- E2E testing
+- Cypress
+- Material UI
+- Amplify
 ---
 ### Articles [[reactjs]]
 
@@ -10,6 +16,7 @@ title: "ReactJS Articles"
 * [SOLID Principles in React](https://www.everydayreact.com/articles/solid-principles-in-react) 
 * [Ultimate React Component Patterns with Typescript 2.8](https://levelup.gitconnected.com/ultimate-react-component-patterns-with-typescript-2-8-82990c516935)
 * [Add E2E testing to CI/CD - amplify & cypress](https://amplify-sns.workshop.aws/en/80_e2e_test/00_-cypress.html)
+* [Managing Access Control in a React App](https://levelup.gitconnected.com/access-control-in-a-react-ui-71f1df60f354)
 
 ## Mocking
 - For mocking the APIs in the reactjs code, I use [mswjs](https://github.com/mswjs/msw/) it's easy and powerful, give it a try.
