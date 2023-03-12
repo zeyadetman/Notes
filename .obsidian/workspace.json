@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/backend/backend.md",
+                "file": "content/backend/graphql.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/backend/backend.md",
+                "file": "content/backend/graphql.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/backend/backend.md",
+                "file": "content/backend/graphql.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/backend/backend.md"
+                "file": "content/backend/graphql.md"
               }
             }
           }
@@ -164,8 +164,9 @@
   },
   "active": "a53c941211caab5d",
   "lastOpenFiles": [
-    "content/backend/graphql.md",
     "content/database/database.md",
+    "content/backend/backend.md",
+    "content/backend/graphql.md",
     "content/templates/post.md",
     "content/_index.md",
     "content/programming-languages/notes-on-typescript.md",
