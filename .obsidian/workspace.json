@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "aab07423a02ab1ca",
+        "id": "0510ebc9131ac518",
         "type": "tabs",
         "children": [
           {
-            "id": "7152e945e00d1331",
+            "id": "aa2b504abc511911",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/database/database.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a53c941211caab5d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/backend/graphql.md",
+                "file": "content/backend/backend.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/backend/graphql.md",
+                "file": "content/backend/backend.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/backend/graphql.md",
+                "file": "content/backend/backend.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/backend/graphql.md"
+                "file": "content/backend/backend.md"
               }
             }
           }
@@ -162,11 +148,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "a53c941211caab5d",
+  "active": "aa2b504abc511911",
   "lastOpenFiles": [
     "content/database/database.md",
-    "content/backend/backend.md",
     "content/backend/graphql.md",
+    "content/backend/backend.md",
     "content/templates/post.md",
     "content/_index.md",
     "content/programming-languages/notes-on-typescript.md",
