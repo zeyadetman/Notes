@@ -19,8 +19,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "25d3f1b6df3b4c5d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/books/books.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "edc2dc6c002b065b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/books/api-design-patterns.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -86,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/backend/backend.md",
+                "file": "content/books/api-design-patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/backend/backend.md",
+                "file": "content/books/api-design-patterns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/backend/backend.md"
+                "file": "content/books/api-design-patterns.md"
               }
             }
           }
@@ -148,11 +175,16 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "aa2b504abc511911",
+  "active": "edc2dc6c002b065b",
   "lastOpenFiles": [
+    "content/books/books.md",
+    "content/books/api-design-patterns.md",
+    "content/backend/backend.md",
+    "content/books",
+    "content/system-design/system-design.md",
+    "content/system-design",
     "content/database/database.md",
     "content/backend/graphql.md",
-    "content/backend/backend.md",
     "content/templates/post.md",
     "content/_index.md",
     "content/programming-languages/notes-on-typescript.md",
