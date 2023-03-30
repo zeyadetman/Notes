@@ -39,7 +39,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/books/api-design-patterns.md",
+                "file": "content/tech-community/technical-blogs.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b6c52e3bc7789fec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/system-design/system-design.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -113,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/books/api-design-patterns.md",
+                "file": "content/system-design/system-design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/books/api-design-patterns.md",
+                "file": "content/system-design/system-design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/books/api-design-patterns.md"
+                "file": "content/system-design/system-design.md"
               }
             }
           }
@@ -175,13 +188,15 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "edc2dc6c002b065b",
+  "active": "b6c52e3bc7789fec",
   "lastOpenFiles": [
+    "content/tech-community/interview.md",
+    "content/tech-community/technical-blogs.md",
+    "content/system-design/system-design.md",
     "content/books/books.md",
     "content/books/api-design-patterns.md",
     "content/backend/backend.md",
     "content/books",
-    "content/system-design/system-design.md",
     "content/system-design",
     "content/database/database.md",
     "content/backend/graphql.md",
@@ -189,7 +204,6 @@
     "content/_index.md",
     "content/programming-languages/notes-on-typescript.md",
     "content/QA.md",
-    "content/tech-community/technical-blogs.md",
     "content/reactjs/reactjs.md",
     "content/programming-languages/typescript.md",
     "content/reactjs/libraries.md",
