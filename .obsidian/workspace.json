@@ -58,9 +58,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7ad59a396fb1aa56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/frontend/pwa.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -126,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/system-design/system-design.md",
+                "file": "content/frontend/pwa.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/system-design/system-design.md",
+                "file": "content/frontend/pwa.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/system-design/system-design.md"
+                "file": "content/frontend/pwa.md"
               }
             }
           }
@@ -188,11 +201,12 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b6c52e3bc7789fec",
+  "active": "7ad59a396fb1aa56",
   "lastOpenFiles": [
+    "content/system-design/system-design.md",
+    "content/frontend/pwa.md",
     "content/tech-community/interview.md",
     "content/tech-community/technical-blogs.md",
-    "content/system-design/system-design.md",
     "content/books/books.md",
     "content/books/api-design-patterns.md",
     "content/backend/backend.md",
