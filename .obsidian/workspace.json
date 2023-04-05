@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/productivity.md",
+                "file": "content/frontend/colors.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/productivity.md",
+                "file": "content/frontend/colors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/productivity.md",
+                "file": "content/frontend/colors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/productivity.md"
+                "file": "content/frontend/colors.md"
               }
             }
           }
@@ -203,6 +203,7 @@
   },
   "active": "7ad59a396fb1aa56",
   "lastOpenFiles": [
+    "content/productivity.md",
     "content/frontend/pwa.md",
     "content/system-design/system-design.md",
     "content/tech-community/interview.md",
