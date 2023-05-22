@@ -20,6 +20,12 @@ title: "Frontend Articles"
 ### Design System
 [[frontend/design-systems#Articles|Desgin System Articles]]
 
+### Icons
+[https://lucide.dev](https://lucide.dev)
+
+### Animation
+- [Framer Motion.](https://www.framer.com/motion/)
+
 **Read more...**
 - [reactjs](reactjs/reactjs.md)
 - [assets-illustrations](frontend/assets-illustrations.md)

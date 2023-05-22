@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/tech-community/technical-blogs.md",
+                "file": "content/tech/technical-blogs.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -65,7 +65,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/frontend/colors.md",
+                "file": "content/tech/technical-blogs.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1c4ae15e4bc6d84c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/tech/tech-stacks.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0ddf608e0b9d6bc1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/tech/tech-stacks.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -139,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/frontend/colors.md",
+                "file": "content/tech/tech-stacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/frontend/colors.md",
+                "file": "content/tech/tech-stacks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +205,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/frontend/colors.md"
+                "file": "content/tech/tech-stacks.md"
               }
             }
           }
@@ -201,13 +227,19 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "7ad59a396fb1aa56",
+  "active": "0ddf608e0b9d6bc1",
   "lastOpenFiles": [
+    "content/reactjs/nextjs.md",
+    "content/tech/tech-stacks.md",
+    "content/tech/technical-blogs.md",
+    "content/reactjs/reactjs.md",
+    "content/tech/interview.md",
+    "content/frontend/frontend.md",
+    "content/frontend/assets-illustrations.md",
+    "content/frontend/colors.md",
     "content/productivity.md",
     "content/frontend/pwa.md",
     "content/system-design/system-design.md",
-    "content/tech-community/interview.md",
-    "content/tech-community/technical-blogs.md",
     "content/books/books.md",
     "content/books/api-design-patterns.md",
     "content/backend/backend.md",
@@ -219,10 +251,8 @@
     "content/_index.md",
     "content/programming-languages/notes-on-typescript.md",
     "content/QA.md",
-    "content/reactjs/reactjs.md",
     "content/programming-languages/typescript.md",
     "content/reactjs/libraries.md",
-    "content/frontend/frontend.md",
     "screenshot.png",
     "content/frontend/design-systems.md",
     "content/frontend/interview.md",

@@ -40,3 +40,4 @@ tags:
 
 
 [typescript](content/programming-languages/typescript.md)
+[tech-stacks](content/tech/tech-stacks.md)
