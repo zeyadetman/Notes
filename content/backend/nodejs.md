@@ -4,7 +4,11 @@ title: "NodeJS"
 
 ## Articles
 
--   [Best Practices for Scaling Your Node.js REST APIs.](https://www.freecodecamp.org/news/nodejs-api-best-practices-for-scaling/)
+- [Best Practices for Scaling Your Node.js REST APIs.](https://www.freecodecamp.org/news/nodejs-api-best-practices-for-scaling/)
+- [How To Work with Files Using Streams in Node.js](https://www.digitalocean.com/community/tutorials/how-to-work-with-files-using-streams-in-node-js)
+- [How To Scale Node.js Applications with Clustering](https://www.digitalocean.com/community/tutorials/how-to-scale-node-js-applications-with-clustering)
+- [How To Handle Asynchronous Tasks with Node.js and BullMQ](https://www.digitalocean.com/community/tutorials/how-to-handle-asynchronous-tasks-with-node-js-and-bullmq)
+- 
 
 ## Setup a new app
 
