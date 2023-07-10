@@ -20,6 +20,9 @@ title: "Frontend Articles"
 ### Design System
 [[frontend/design-systems#Articles|Desgin System Articles]]
 
+### Styles
+- [The Surprising Truth About Pixels and Accessibility](https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/)
+
 ### Icons
 [https://lucide.dev](https://lucide.dev)
 
