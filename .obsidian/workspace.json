@@ -91,33 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/tech/tech-stacks.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ec0675c50abf48db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/reactjs/reactjs.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "129d9c328f18e27b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/frontend/frontend.md",
+                "file": "content/git/tips.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -125,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -199,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/frontend/frontend.md",
+                "file": "content/git/tips.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/frontend/frontend.md",
+                "file": "content/git/tips.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +213,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/frontend/frontend.md"
+                "file": "content/git/tips.md"
               }
             }
           }
@@ -261,15 +235,17 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "129d9c328f18e27b",
+  "active": "0ddf608e0b9d6bc1",
   "lastOpenFiles": [
+    "content/git/git.md",
+    "content/git/tips.md",
+    "content/tech/tech-stacks.md",
+    "content/reactjs/reactjs.md",
+    "content/frontend/frontend.md",
     "content/backend/nodejs.md",
     "content/reactjs/nextjs.md",
-    "content/tech/tech-stacks.md",
     "content/tech/technical-blogs.md",
-    "content/reactjs/reactjs.md",
     "content/tech/interview.md",
-    "content/frontend/frontend.md",
     "content/frontend/assets-illustrations.md",
     "content/frontend/colors.md",
     "content/productivity.md",
@@ -289,8 +265,6 @@
     "content/programming-languages/typescript.md",
     "content/reactjs/libraries.md",
     "screenshot.png",
-    "content/frontend/design-systems.md",
-    "content/frontend/interview.md",
-    "content/articles/mui-design-system.md"
+    "content/frontend/design-systems.md"
   ]
 }
