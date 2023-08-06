@@ -4,11 +4,11 @@ title: "Git Tips & Tricks"
 
 ## Ignore files changes in git locally
 
-**You can ignore files from the worktree**
-- `git update-index --skip-worktree [files]`
-**Remove files from ignoring**
- - `git update-index --no-skip-worktree [files]`
-**To list the files you've added before**
+- **You can ignore files from the worktree** 
+`git update-index --skip-worktree [files]`
+- **Remove files from ignoring**
+`git update-index --no-skip-worktree [files]`
+- **To list the files you've added before**
 `git ls-files -v . | grep "^S"`
 
 To understand this line: 
