@@ -67,7 +67,7 @@ You can use them via a keycloak/certs folder.
 localhost.crt -> keycloak-server.pem
 localhost.key -> keycloak-server-key.pem
 
-Instead you can use this command
+You can also use this command
 
 ````bash
 bin/kc.[sh|bat] start --https-certificate-file=/path/to/certfile.pem --https-certificate-key-file=/path/to/keyfile.pem

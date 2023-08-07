@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/git/tips.md",
+                "file": "content/keycloak/handle-https.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/git/tips.md",
+            "file": "content/keycloak/handle-https.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/git/tips.md",
+            "file": "content/keycloak/handle-https.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,7 +123,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/git/tips.md"
+            "file": "content/keycloak/handle-https.md"
           }
         }
       }
@@ -143,8 +143,26 @@
   },
   "active": "8f97c03b355fdf96",
   "lastOpenFiles": [
-    "content/frontend/frontend.md",
     "content/git/tips.md",
+    "content/Pasted image 20230807040245.png",
+    "linkIndex.json",
+    "content/Pasted image 20230807043106.png",
+    "content/Pasted image 20230807040044.png",
+    "content/Pasted image 20230807040342.png",
+    "content/Pasted image 20230807040814.png",
+    "content/Pasted image 20230807041239.png",
+    "content/keycloak/handle-https.md",
+    "content/keycloak",
+    "/linkIndex.json",
+    "/layouts/partials/search.html",
+    "/layouts/partials/katex.html",
+    "/content/keycloak/handle-https.md",
+    "/content/Pasted image 20230807043106.png",
+    "/content/Pasted image 20230807041239.png",
+    "/content/Pasted image 20230807040814.png",
+    "/content/Pasted image 20230807040342.png",
+    "/content/keycloak",
+    "content/frontend/frontend.md",
     "/content/git/tips.md",
     "content/frontend/design-systems.md",
     "content/_index.md",
@@ -168,11 +186,7 @@
     "/content/frontend/frontend.md",
     "/content/frontend/colors.md",
     "/content/books/books.md",
-    "/content/books/api-design-patterns.md",
-    "/content/backend/nodejs.md",
     "/content/tech",
-    "/content/books",
-    "content/system-design/system-design.md",
-    "content/system-design"
+    "/content/books"
   ]
 }
