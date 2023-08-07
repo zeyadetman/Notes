@@ -16,11 +16,11 @@ The problem is we need to serve from two ports, the first one is the keycloak ad
 
 So when we try to use https on localhost, we'll face _your connection is not private_ error, because we're serving localhost via https
 
-![Your connection is not private](content/Pasted%20image%2020230807040814.png)
+![Your connection is not private](Pasted%20image%2020230807040814.png)
 
 To Solve this error All you have to do is write chrome://flags in the chrome url, and then search for *Allow invalid certificates for resources loaded from localhost.* to enable it.
 
-![](content/Pasted%20image%2020230807041239.png)
+![](Pasted%20image%2020230807041239.png)
 
 Great! So now we can do the request to localhost with an invalid certificate.
 
@@ -28,11 +28,11 @@ Great! So now we can do the request to localhost with an invalid certificate.
 
 Now we're facing this error
 
-![The current case](content/Pasted%20image%2020230807040044.png)
+![The current case](Pasted%20image%2020230807040044.png)
 
 When you click over it, you'll see that the certificate is not valid, in the next steps we'll trust this certificate
 
-![](content/Pasted%20image%2020230807040342.png)
+![](Pasted%20image%2020230807040342.png)
 
 To solve this issue, we need to trust the certificate on our machine, to do this
 1. Click on *Certificate is not valid* button.
@@ -60,7 +60,7 @@ To create a new certificate on macOS, copy this command and put it on your termi
 
 This will create two files for you, the first one is `localhost.crt` the certificate itself, and the second one is the localhost key, we'll use both in the keycloak folder configuration so you can copy them.
 
-![](content/Pasted%20image%2020230807043106.png)
+![](Pasted%20image%2020230807043106.png)
 
 You can use them via a keycloak/certs folder.
 
