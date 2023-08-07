@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/git/tips.md",
+                "file": "content/keycloak/handle-https.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -173,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/git/tips.md",
+                "file": "content/keycloak/handle-https.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/git/tips.md",
+                "file": "content/keycloak/handle-https.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,7 +213,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/git/tips.md"
+                "file": "content/keycloak/handle-https.md"
               }
             }
           }
@@ -237,8 +237,16 @@
   },
   "active": "0ddf608e0b9d6bc1",
   "lastOpenFiles": [
-    "content/git/git.md",
+    "content/Pasted image 20230807043106.png",
+    "content/Pasted image 20230807041239.png",
+    "content/Pasted image 20230807040814.png",
+    "content/Pasted image 20230807040342.png",
+    "content/Pasted image 20230807040245.png",
+    "content/Pasted image 20230807040044.png",
     "content/git/tips.md",
+    "content/keycloak/handle-https.md",
+    "content/keycloak",
+    "content/git/git.md",
     "content/tech/tech-stacks.md",
     "content/reactjs/reactjs.md",
     "content/frontend/frontend.md",
@@ -263,8 +271,6 @@
     "content/programming-languages/notes-on-typescript.md",
     "content/QA.md",
     "content/programming-languages/typescript.md",
-    "content/reactjs/libraries.md",
-    "screenshot.png",
-    "content/frontend/design-systems.md"
+    "screenshot.png"
   ]
 }
