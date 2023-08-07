@@ -38,7 +38,7 @@ To solve this issue, we need to trust the certificate on our machine, to do this
 1. Click on *Certificate is not valid* button.
 2. You'll see a Certificate Viewer popup, Click on the details tab.
 3. Click on **Export** and select **PKCS #7, single certificate**.
-4. Open **Keychain Access** app on your macOS.
+4. Open **Keychain Access** app on your macOS and select **Login**.
 5. File > Import Items > select the file/certificate you've exported from chrome.
 6. Click on the certificate > Trust > Always Trust.
 
