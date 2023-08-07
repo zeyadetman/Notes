@@ -82,4 +82,5 @@ bin/kc.[sh|bat] start --https-certificate-file=/path/to/certfile.pem --https-cer
 
 
 *Have you learned something new? Want to learn more?*
-[tips](content/git/tips.md)
+
+[tips](git/tips.md)

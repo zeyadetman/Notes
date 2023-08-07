@@ -128,7 +128,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "reactjs",
+                "query": "colors",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -153,7 +153,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -235,7 +236,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "0ddf608e0b9d6bc1",
+  "active": "5165f8b8c96cf230",
   "lastOpenFiles": [
     "content/Pasted image 20230807043106.png",
     "content/Pasted image 20230807041239.png",
