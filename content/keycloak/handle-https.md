@@ -1,5 +1,5 @@
 ---
-title: "Configure the keycloak instance to run on localhost using https on macOS"
+title: "Configure Keycloak instance to run on localhost using https on macOS"
 ---
 
 ## Prerequisites
