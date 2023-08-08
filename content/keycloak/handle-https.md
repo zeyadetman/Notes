@@ -64,8 +64,8 @@ This will create two files for you, the first one is `localhost.crt` the certifi
 
 You can use them via a keycloak/certs folder.
 
-localhost.crt -> keycloak-server.pem
-localhost.key -> keycloak-server-key.pem
+- localhost.crt -> keycloak-server.pem
+- localhost.key -> keycloak-server-key.pem
 
 You can also use this command
 
