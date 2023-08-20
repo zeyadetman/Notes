@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/keycloak/handle-https.md",
+                "file": "content/tech/tech-stacks.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/keycloak/handle-https.md",
+            "file": "content/tech/tech-stacks.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/keycloak/handle-https.md",
+            "file": "content/tech/tech-stacks.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,7 +123,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/keycloak/handle-https.md"
+            "file": "content/tech/tech-stacks.md"
           }
         }
       }
@@ -143,6 +143,7 @@
   },
   "active": "8f97c03b355fdf96",
   "lastOpenFiles": [
+    "content/keycloak/handle-https.md",
     "content/git/tips.md",
     "content/Pasted image 20230807040245.png",
     "linkIndex.json",
@@ -151,7 +152,6 @@
     "content/Pasted image 20230807040342.png",
     "content/Pasted image 20230807040814.png",
     "content/Pasted image 20230807041239.png",
-    "content/keycloak/handle-https.md",
     "content/keycloak",
     "/linkIndex.json",
     "/layouts/partials/search.html",
