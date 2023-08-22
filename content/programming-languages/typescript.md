@@ -13,6 +13,7 @@ This articles I found them useful while you're writing typescript with [[reactjs
 ## Advanced Topics
 - [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 - [Performance](https://github.com/microsoft/TypeScript/wiki/Performance)
+- [ArrayT> vs T[]: Which is better?](https://www.totaltypescript.com/array-types-in-typescript)
 
 ## Tutorials
 - [Learn react and typescript ⭐️](https://youtube.com/playlist?list=PLNqp92_EXZBJ4CBroxVBJEpAXoz1g-naZ)
