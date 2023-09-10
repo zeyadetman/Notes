@@ -2,7 +2,7 @@
 title: "Typescript"
 ---
 
-## Articles with Reactjs.
+## Articles with Reactjs
 This articles I found them useful while you're writing typescript with [[reactjs/reactjs]]
 
 - [Build strongly typed polymorphic components with React and TypeScript](https://blog.logrocket.com/build-strongly-typed-polymorphic-components-react-typescript/)
