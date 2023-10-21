@@ -4,94 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "0510ebc9131ac518",
+        "id": "9990c9be96b461e1",
         "type": "tabs",
         "children": [
           {
-            "id": "aa2b504abc511911",
+            "id": "c6ece5959a8076c3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/backend/backend.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
-            "id": "25d3f1b6df3b4c5d",
+            "id": "4f0f80cd3d32fd51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/books/books.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "edc2dc6c002b065b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/tech/technical-blogs.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b6c52e3bc7789fec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/system-design/system-design.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7ad59a396fb1aa56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/tech/technical-blogs.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1c4ae15e4bc6d84c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/tech/tech-stacks.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0ddf608e0b9d6bc1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/keycloak/handle-https.md",
+                "file": "content/frontend/css.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +29,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -128,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "colors",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -153,8 +83,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -174,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/keycloak/handle-https.md",
+                "file": "content/frontend/css.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/keycloak/handle-https.md",
+                "file": "content/frontend/css.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/keycloak/handle-https.md"
+                "file": "content/frontend/css.md"
               }
             }
           }
@@ -236,8 +165,16 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "5165f8b8c96cf230",
+  "active": "4f0f80cd3d32fd51",
   "lastOpenFiles": [
+    "content/frontend/css.md",
+    "linkIndex.json",
+    "content/backend/backend.md",
+    "content/books/books.md",
+    "content/tech/technical-blogs.md",
+    "content/system-design/system-design.md",
+    "content/tech/tech-stacks.md",
+    "content/keycloak/handle-https.md",
     "content/Pasted image 20230807043106.png",
     "content/Pasted image 20230807041239.png",
     "content/Pasted image 20230807040814.png",
@@ -245,24 +182,18 @@
     "content/Pasted image 20230807040245.png",
     "content/Pasted image 20230807040044.png",
     "content/git/tips.md",
-    "content/keycloak/handle-https.md",
     "content/keycloak",
     "content/git/git.md",
-    "content/tech/tech-stacks.md",
     "content/reactjs/reactjs.md",
     "content/frontend/frontend.md",
     "content/backend/nodejs.md",
     "content/reactjs/nextjs.md",
-    "content/tech/technical-blogs.md",
     "content/tech/interview.md",
     "content/frontend/assets-illustrations.md",
     "content/frontend/colors.md",
     "content/productivity.md",
     "content/frontend/pwa.md",
-    "content/system-design/system-design.md",
-    "content/books/books.md",
     "content/books/api-design-patterns.md",
-    "content/backend/backend.md",
     "content/books",
     "content/system-design",
     "content/database/database.md",
