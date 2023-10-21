@@ -1,5 +1,6 @@
 ---
-title: "Frontend Articles"
+title: Frontend Articles
+slug: frontend
 ---
 
 ### Layout
