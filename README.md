@@ -1,6 +1,6 @@
 # Welcome to my notes
 
-Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the awesome project [Quartz 3.3](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/).
+Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the awesome project [Quartz 4](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/).
 
 ## About me
 I'm Zeyad a software engineer from [Egypt 🇪🇬](). Currently I spend most of my time learning and coding.
