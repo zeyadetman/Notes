@@ -17,3 +17,8 @@ I'm Zeyad a software engineer from [Egypt 🇪🇬](https://en.wikipedia.org/wik
 
 ## About this site
 I created this site to track the things that might be useful to be shared with you, It's not like [my blog](https://zeyadetman.com), the blog is more specific for articles I write, but here you'll find my favs and notes 📝. for more information about how I created this site open the [[setup]] page.
+
+
+> [!Warning] Browsing the digital garden
+> To easily browse it, you can search for the keywords you’re interested in, or use the left sidebar for the full notes list. *Only on Desktop, If you’re on Mobile device, Click on #Obsidian  *. Also keep an eye on the backlinks and mentions pages.
+
