@@ -1,20 +1,11 @@
-# Quartz v4
+# Welcome to my notes
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the awesome project [Quartz 3.3](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/).
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+## About me
+I'm Zeyad a software engineer from [Egypt 🇪🇬](). Currently I spend most of my time learning and coding.
 
-**If you are looking for Quartz v3, you can find it on the [`hugo` branch](https://github.com/jackyzha0/quartz/tree/hugo).**
+## About this site
+I created this site to track the things that might be useful to be shared with you, It's not like [my blog](https://zeyadetman.com), the blog is more specific for articles I write, but here you'll find my favs and notes 📝.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Read more about setup here: https://notes.zeyadetman.com/setup
