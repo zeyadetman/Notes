@@ -18,3 +18,11 @@ I'm Zeyad a software engineer from [Egypt 🇪🇬](https://en.wikipedia.org/wik
 ## About this site
 I created this site to track the things that might be useful to be shared with you, It's not like [my blog](https://zeyadetman.com), the blog is more specific for articles I write, but here you'll find my favs and notes 📝. for more information about how I created this site open the [[setup]] page.
 
+
+## How to browse this site?
+
+> [!NOTE] Browsing The site
+> Using the search bar, and the map in the bottom are the most straightforward ways to use this digital garden 🪴.
+
+
+
