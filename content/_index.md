@@ -20,5 +20,5 @@ I created this site to track the things that might be useful to be shared with y
 
 
 > [!Warning] Browsing the digital garden
-> To easily browse it, you can search for the keywords you’re interested in, or use the left sidebar for the full notes list. *Only on Desktop, If you’re on Mobile device, Click on #Obsidian*  .Also keep an eye on the backlinks and mentions pages.
+> To easily browse it, you can search for the keywords you’re interested in, or use the left sidebar for the full notes list. *Only on Desktop, If you’re on a Mobile device, Click on #Obsidian*  .Also keep an eye on the backlinks and mentions pages.
 
