@@ -4,7 +4,7 @@ title: "Zeyad's Notes"
 
 # Welcome to my notes
 
-Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the awesome project [Quartz 3.3](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/).
+Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the awesome project [Quartz 4](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/).
 
 ## About me
 I'm Zeyad a software engineer from [Egypt 🇪🇬](https://en.wikipedia.org/wiki/Kafr_El_Dawwar), working as a Fullstack engineer ([[frontend]] heavily). My type is [INTJ](https://www.crystalknows.com/personality-type/intj) Currently I spend most of my time learning [[programming-languages|Coding]]
