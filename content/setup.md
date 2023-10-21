@@ -24,8 +24,11 @@ After that I tried different apps to take notes and tracking things, Until I set
 - [Obsidian](https://obsidian.md/) is the [crm](https://en.wikipedia.org/wiki/Content_management_system)-like of this site, and public posts except for [my blog](https://zeyadetman.com) at least until now, I don't have so much working with obsidian but I can list the 3 tools that I've used to build this site in the next sub items.
 	- [quartz 4](https://github.com/jackyzha0/quartz) Is the engine of the site, I use it to publish my notes from obsidian vault to the internet.
 	- [obsidian-git](https://github.com/denolehov/obsidian-git) I use it to sync between obsidian vault and github, to automate the deployment process, it's also helpful to sync the vault data between devices.
-	- [remotely-save](https://github.com/remotely-save/remotely-save) I use it to backup the vaults on dropbox, to avoid losing data that may happen by the previous tool.
 
+> [!NOTE] Sync your vault on all of your devices
+> If you're using iPhone, then you don't need to use extra apps with [obsidian-git](https://github.com/denolehov/obsidian-git), It can do all what you want to do to sync your data among devices.
+
+- [remotely-save](https://github.com/remotely-save/remotely-save) I use it to backup the vaults on dropbox, to avoid losing data that may happen by the previous tool.
 
 ### Resources
 - [obsidian publishing workflow](https://notes.aadimator.com/SBYNtPHqsTW9Ck1Kuoxsu/)
