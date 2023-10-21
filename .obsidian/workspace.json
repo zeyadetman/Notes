@@ -4,32 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "9990c9be96b461e1",
+        "id": "16b887f0f1446720",
         "type": "tabs",
         "children": [
           {
-            "id": "c6ece5959a8076c3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "4f0f80cd3d32fd51",
+            "id": "fa32760330bc2f2a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/frontend/css.md",
+                "file": "content/_index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/frontend/css.md",
+                "file": "content/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/frontend/css.md",
+                "file": "content/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/frontend/css.md"
+                "file": "content/_index.md"
               }
             }
           }
@@ -165,7 +156,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "4f0f80cd3d32fd51",
+  "active": "fa32760330bc2f2a",
   "lastOpenFiles": [
     "content/frontend/css.md",
     "linkIndex.json",
