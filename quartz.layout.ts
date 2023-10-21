@@ -45,9 +45,17 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.Explorer({
-      title: "All Notes",
-    }),
+    Component.DesktopOnly(
+      Component.Explorer({
+        title: "All Notes",
+      }),
+    ),
   ],
-  right: [],
+  right: [
+    Component.MobileOnly(
+      Component.Explorer({
+        title: "All Notes",
+      }),
+    ),
+  ],
 }
