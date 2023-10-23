@@ -9,3 +9,4 @@ title: CSS
 - [Haikei: Generate unique SVG design assets](https://haikei.app/)
 - [Josh Comeau: Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
 - [CSS Gradient](https://cssgradient.io/)
+- [Coolors](https://coolors.co/)
