@@ -10,3 +10,8 @@ title: CSS
 - [Josh Comeau: Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
 - [CSS Gradient](https://cssgradient.io/)
 - [Coolors](https://coolors.co/)
+
+
+## Best Practices
+
+- [Aligning Logo Images in CSS](https://ishadeed.com/article/aligning-logos-css/)
