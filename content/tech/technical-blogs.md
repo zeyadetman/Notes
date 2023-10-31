@@ -22,6 +22,10 @@ title: "Technical Blogs"
 * [https://tamalweb.com/](https://tamalweb.com)
 * [https://www.upbeatcode.com/](https://www.upbeatcode.com/)
 
+## FullStack
+
+- [⭐️ ⭐️ OLEKSII TREKHLEB ](https://trekhleb.dev/) #javascript #fullstack #uber #creator
+
 ### System Design and Architecture
 
 * [https://www.quastor.org/](https://www.quastor.org)
