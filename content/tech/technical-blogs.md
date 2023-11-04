@@ -39,3 +39,4 @@ title: "Technical Blogs"
 * https://www.emadelsaid.com/
 * [https://www.basedash.com/blog](https://www.basedash.com/blog)
 * [Atulr](https://blog.atulr.com/)
+* [Adrian Mejia](https://adrianmejia.com/)
