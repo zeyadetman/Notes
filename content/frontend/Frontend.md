@@ -3,6 +3,10 @@ title: Frontend Articles
 slug: frontend
 ---
 
+## Server Side
+
+- [What Is Server-side Rendering And How Does It Improve Site Speed?](https://www.debugbear.com/blog/server-side-rendering)
+
 ### Layout
 
 * [https://css-tricks.com/the-inside-problem/](https://css-tricks.com/the-inside-problem/)

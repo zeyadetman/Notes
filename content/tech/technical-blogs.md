@@ -21,6 +21,7 @@ title: "Technical Blogs"
 * [https://umaar.com/dev-tips/](https://umaar.com/dev-tips/)
 * [https://tamalweb.com/](https://tamalweb.com)
 * [https://www.upbeatcode.com/](https://www.upbeatcode.com/)
+* [https://www.zachleat.com/](https://www.zachleat.com/)
 
 ## FullStack
 
