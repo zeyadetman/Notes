@@ -5,10 +5,12 @@ title: "Technical Blogs"
 # Technical Blogs
 
 * [https://v8.dev/](https://v8.dev)
+* https://www.debugbear.com/blog
 
 ### Typescript and Rust
 
 * [https://fettblog.eu](https://fettblog.eu)
+* https://www.allthingstypescript.dev/
 
 ### Backend
 
@@ -41,3 +43,4 @@ title: "Technical Blogs"
 * [https://www.basedash.com/blog](https://www.basedash.com/blog)
 * [Atulr](https://blog.atulr.com/)
 * [Adrian Mejia](https://adrianmejia.com/)
+* [**John Papa**: (Podcasts Archive) contains a lot of resources in different topics](https://www.johnpapa.net/)
