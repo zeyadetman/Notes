@@ -23,6 +23,11 @@ This articles I found them useful while you're writing typescript with [[reactjs
 - [How To Use Generics in TypeScript](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-typescript) #generics #typescript 
 
 
+## Practices and Hands on
+
+- https://github.com/type-challenges/type-challenges ⭐️  #typescript #hands-on #practices #challenges 
+- https://typehero.dev/ #hands-on #advent #challenges #tracks #learning #practices 
+
 ## Tools
 - [Typescript coverage.](https://github.com/alexcanessa/typescript-coverage-report)
 
