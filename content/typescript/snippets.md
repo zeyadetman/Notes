@@ -6,7 +6,7 @@ title: Typescript code snippets
 
 ```typescript
 type AppendGood<A> = {
-	[K in keyof A as `good_${string & K}``]: A[K]
+	[K in keyof A as `good_${string & K}`]: A[K]
  };
 
 type WellBehavedList = {
