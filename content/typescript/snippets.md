@@ -2,7 +2,7 @@
 title: Typescript code snippets
 ---
 
-## Appending strings
+## Append strings
 
 ```typescript
 type AppendGood<A> = {
