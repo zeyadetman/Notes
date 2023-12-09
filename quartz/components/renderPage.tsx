@@ -6,6 +6,7 @@ import { JSResourceToScriptElement, StaticResources } from "../util/resources"
 import { FullSlug, RelativeURL, joinSegments } from "../util/path"
 import { visit } from "unist-util-visit"
 import { Root, Element } from "hast"
+import Backlinks from "./Backlinks"
 
 interface RenderComponents {
   head: QuartzComponent
@@ -138,6 +139,7 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
+              {Backlinks()(componentData)}
             </div>
             {RightComponent}
           </Body>

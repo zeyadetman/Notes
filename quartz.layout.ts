@@ -34,7 +34,7 @@ export const defaultContentPageLayout: PageLayout = {
       }),
     ),
   ],
-  right: [Component.Graph(), Component.Backlinks()],
+  right: [Component.Graph(), Component.DesktopOnly(Component.RecentNotes({ limit: 3 }))],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
@@ -52,6 +52,7 @@ export const defaultListPageLayout: PageLayout = {
     ),
   ],
   right: [
+    Component.DesktopOnly(Component.RecentNotes({ limit: 5 })),
     Component.MobileOnly(
       Component.Explorer({
         title: "All Notes",
