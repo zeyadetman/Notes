@@ -1,5 +1,5 @@
 ---
-title: "Notes on Typescript"
+title: Notes on Typescript
 ---
 
 - **Pick** `Pick<type, keys>`

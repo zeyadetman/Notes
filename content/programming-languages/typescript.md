@@ -1,9 +1,8 @@
 ---
 title: "Typescript"
 ---
-
 ## Articles with Reactjs
-This articles I found them useful while you're writing typescript with [[reactjs/reactjs]]
+This articles I found them useful for you if you're writing typescript with [[reactjs/reactjs]]
 
 - [Build strongly typed polymorphic components with React and TypeScript](https://blog.logrocket.com/build-strongly-typed-polymorphic-components-react-typescript/)
 - [Useful Patterns by Use Case](https://github.com/typescript-cheatsheets/react/blob/main/docs/advanced/patterns_by_usecase.md)
@@ -14,6 +13,7 @@ This articles I found them useful while you're writing typescript with [[reactjs
 - [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 - [Performance](https://github.com/microsoft/TypeScript/wiki/Performance)
 - [ArrayT> vs T[]: Which is better?](https://www.totaltypescript.com/array-types-in-typescript)
+- [Making Generic Functions Pass Type Checking](https://type-level-typescript.com/articles/making-generic-functions-pass-type-checking)
 
 ## Tutorials
 - [Learn react and typescript ⭐️](https://youtube.com/playlist?list=PLNqp92_EXZBJ4CBroxVBJEpAXoz1g-naZ)
@@ -32,5 +32,9 @@ This articles I found them useful while you're writing typescript with [[reactjs
 ## Tools
 - [Typescript coverage.](https://github.com/alexcanessa/typescript-coverage-report)
 
-
-[notes-on-typescript](content/programming-languages/notes-on-typescript.md)
+> [!note] More notes and snippets located here
+> More notes and snippets on Typescript located in the below pages
+> [[notes]] 
+> [[snippets]]
+> 
+> Also you can search for more.
