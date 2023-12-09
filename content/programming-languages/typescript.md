@@ -32,7 +32,7 @@ This articles I found them useful for you if you're writing typescript with [[re
 ## Tools
 - [Typescript coverage.](https://github.com/alexcanessa/typescript-coverage-report)
 
-> [!note] More notes and snippets located here
+> [!tip] More notes and snippets located here
 > More notes and snippets on Typescript located in the below pages
 > [[notes]] 
 > [[snippets]]
