@@ -58,4 +58,7 @@ Some resources
 
 - https://mpov.timmorgan.org/use-rsync-instead-of-cp/
 
+> [!note] Use chatGPT to explain that more
+> If you're still have questions, you can also share your thoughts with me, or use chatGPT to explain the commands more to you, also you can use google.
+
 [[git]]
