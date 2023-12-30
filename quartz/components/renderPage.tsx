@@ -132,19 +132,33 @@ export function renderPage(
                     <HeaderComponent {...componentData} />
                   ))}
                 </Header>
+
                 <div class="popover-hint">
                   {beforeBody.map((BodyComponent) => (
                     <BodyComponent {...componentData} />
                   ))}
                 </div>
               </div>
+              <a
+                class="twitter-share-button"
+                href={`https://twitter.com/intent/tweet?text=${componentData.fileData.frontmatter?.title}&url=https://${componentData.cfg.baseUrl}/${componentData.fileData.slug}&via=zeyadetman`}
+              >
+                Share it on Twitter
+              </a>
               <Content {...componentData} />
+              <a
+                class="twitter-share-button"
+                href={`https://twitter.com/intent/tweet?text=${componentData.fileData.frontmatter?.title}&url=https://${componentData.cfg.baseUrl}/${componentData.fileData.slug}&via=zeyadetman`}
+              >
+                Share it on Twitter
+              </a>
               {Backlinks()(componentData)}
             </div>
             {RightComponent}
           </Body>
           <Footer {...componentData} />
         </div>
+        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
       </body>
       {pageResources.js
         .filter((resource) => resource.loadTime === "afterDOMReady")
