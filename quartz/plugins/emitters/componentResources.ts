@@ -86,8 +86,8 @@ function addGlobalPageResources(
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag(\`js\`, new Date());
-      gtag(\`config\`, \`${tagId}\`, { send_page_view: false });
-  
+      gtag(\`config\`, \`${tagId}\`, { send_page_view: true });
+
       document.addEventListener(\`nav\`, () => {
         gtag(\`event\`, \`page_view\`, {
           page_title: document.title,
@@ -102,7 +102,7 @@ function addGlobalPageResources(
       umamiScript.src = "https://analytics.umami.is/script.js"
       umamiScript.setAttribute("data-website-id", "${cfg.analytics.websiteId}")
       umamiScript.async = true
-  
+
       document.head.appendChild(umamiScript)
     `)
   }
