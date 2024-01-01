@@ -155,6 +155,7 @@ export function renderPage(
               {Backlinks()(componentData)}
             </div>
             {RightComponent}
+            <script src="https://webkeyz.github.io/stand-with-palestine/dist/stand-with-palestine-widget.js"></script>
           </Body>
           <Footer {...componentData} />
         </div>
