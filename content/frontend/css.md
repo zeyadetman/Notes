@@ -15,3 +15,4 @@ title: CSS
 ## Best Practices
 
 - [Aligning Logo Images in CSS](https://ishadeed.com/article/aligning-logos-css/)
+- [Style a button](https://fvsch.com/articles/button-css/test.html)
