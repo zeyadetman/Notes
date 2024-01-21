@@ -1,7 +1,6 @@
 ---
 title: "Zeyad's Notes"
 ---
-***Stand with Palestine 🇵🇸*** 
 # Welcome to my notes
 
 Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the powerful project [Quartz 4](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/) code hosted on [GitHub](https://github.com/zeyadetman/Notes) and deployed and published with [Cloudflare Pages](https://pages.cloudflare.com/).
