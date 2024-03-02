@@ -23,6 +23,8 @@ This articles I found them useful for you if you're writing typescript with [[re
 ## Articles
 - [How To Use Generics in TypeScript](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-typescript) #generics #typescript 
 
+## Books
+- 62 Specific Ways to Improve your typescript.
 
 ## Practices and Hands on
 
