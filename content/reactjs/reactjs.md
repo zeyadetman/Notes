@@ -34,8 +34,8 @@ tags:
 ## Libraries
 [[libraries]]
 
-## Tricks
-[tricks](reactjs/tricks.md)
+## Deal with Forms
+[forms](forms.md)
 
 ## Videos
 - https://youtu.be/bGzanfKVFeU
