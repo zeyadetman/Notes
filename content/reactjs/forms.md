@@ -13,3 +13,9 @@ title: Forms in ReactJS
 - [React Hook Form](https://react-hook-form.com/)
 - [Formik](https://formik.org/)
 - [TansStack Form](https://tanstack.com/form/latest/docs/overview)
+
+
+## React 19
+
+https://react.dev/blog/2024/04/25/react-19#form-actions
+
