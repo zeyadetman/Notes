@@ -2,6 +2,9 @@
 title: Tailwindcss Tips
 ---
 ## Setup themes
+the easiest way to setup multiple themes or just dark mode in tailwindcss.
+#tailwindcss
+
 
 ```css
 // global.css
