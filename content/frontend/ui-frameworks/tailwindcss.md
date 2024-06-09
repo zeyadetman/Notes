@@ -3,7 +3,7 @@ title: Tailwindcss Tips
 ---
 ## Setup themes
 
-```
+```css
 // global.css
 
 .theme1 {
@@ -27,7 +27,7 @@ title: Tailwindcss Tips
 }
 ```
 
-```
+```js
 // tailwind.config.js
 
 module.exports = {
@@ -44,7 +44,7 @@ module.exports = {
 
 And finally you can do something like this to the wrapper element of your app
 
-```
+```html
 <body className="theme1">
 ...
 ```
