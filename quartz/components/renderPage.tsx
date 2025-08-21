@@ -155,7 +155,6 @@ export function renderPage(
               {Backlinks()(componentData)}
             </div>
             {RightComponent}
-            <script src="https://stand-with-palestine.pages.dev/widget.js"></script>
           </Body>
           <Footer {...componentData} />
         </div>
