@@ -14,14 +14,14 @@ After that I tried different apps to take notes and tracking things, Until I set
 ## Setup
 
 ### Tools
-- macbook pro 2019 - 2.4 GHz Quad-Core Intel Core i5 💻 
-- iPhone 13 Pro Max📱 
-- Apple Watch SE ⌚️ 
+- macbook pro 2019 - 2.4 GHz Quad-Core Intel Core i5 💻
+- iPhone 13 Pro Max📱
+- Apple Watch SE ⌚️
 
 ### Apps
 - [streaks](https://streaksapp.com/) is one of the main apps for my setup, I use it to track the habits, including reading, sleeping times, work and breaks, and other small tasks. This app is running on all of my devices and they all share same tasks, I'm keeping them private.
 - [Notion](https://www.notion.so/) I use it to track the private stuff, like long term plans, work notes, religious lessons, side projects plans, reading list. It's a powerful tool for these things, actually I'm new to notion but notion is a rich note-taking app and i found it suitable to me.
-- [Obsidian](https://obsidian.md/) is the [crm](https://en.wikipedia.org/wiki/Content_management_system)-like of this site, and public posts except for [my blog](https://zeyadetman.com) at least until now, I don't have so much working with obsidian but I can list the 3 tools that I've used to build this site in the next sub items.
+- [Obsidian](https://obsidian.md/) is the [crm](https://en.wikipedia.org/wiki/Content_management_system)-like of this site, and public posts except for [my blog](https://zeyadnotes.dev) at least until now, I don't have so much working with obsidian but I can list the 3 tools that I've used to build this site in the next sub items.
 	- [quartz 4](https://github.com/jackyzha0/quartz) Is the engine of the site, I use it to publish my notes from obsidian vault to the internet.
 	- [obsidian-git](https://github.com/denolehov/obsidian-git) I use it to sync between obsidian vault and github, to automate the deployment process, it's also helpful to sync the vault data between devices.
 

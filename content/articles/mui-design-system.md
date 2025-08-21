@@ -2,7 +2,7 @@
 title: "Customize MUI theme with TypeScript"
 ---
 
-> [Published on my Blog](https://zeyadetman.com/posts/mui-design-system)
+> [Published on my Blog](https://zeyadnotes.dev/posts/mui-design-system)
 
 Ok, this is a quick tutorial on how to customize the default theme in [mui v5](https://mui.com/material-ui/getting-started/overview/). we'll just customize the button component.
 
@@ -56,7 +56,7 @@ No magic, ha?
 `ThemeOptions` will perfectly handles the types for the passed properties. We excluded the `components` from `themeOptions` vars and passed it inside the `createTheme` function, you can modify it to update it directly inside the variable.
 
 ![[Pasted image 20221123060835.png]] Based on mui, Here's the `ThemeOptions` interface, this will make our writing code is super easy and straightforward. How?
-We need to customize the `theme` colors for example, it called `palette` and its type is `PaletteOptions` 
+We need to customize the `theme` colors for example, it called `palette` and its type is `PaletteOptions`
 
 So here's our `theme/foundations/palette.ts`
 
@@ -77,7 +77,7 @@ export const palette: PaletteOptions = {
 
 And because we've used the correct Interface so the editor will help us continue writing the remain properties
 
-![[Pasted image 20221123061345.png]] 
+![[Pasted image 20221123061345.png]]
 
 **The Question** will be, What if I need to add a new color schema.
 **The Answer** is Simple as this
@@ -127,7 +127,7 @@ We got it from the `.d.ts` file located in the mui package files inside the `nod
 
 [Note: Feel free to use interfaces or types for this.](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces)
 
-After that let's create our custom theme for `MuiButton` 
+After that let's create our custom theme for `MuiButton`
 
 ```ts
 declare module "@mui/material/Button" {
@@ -170,7 +170,7 @@ import { theme } from "theme";
 </ThemeProvider>
 ```
 
-Tada! 🎉 
+Tada! 🎉
 
 Another Things about [Design Systems](frontend/design-systems.md) or [Frontend](frontend/frontend.md)
 
