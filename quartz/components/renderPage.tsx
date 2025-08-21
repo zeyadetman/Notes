@@ -141,14 +141,14 @@ export function renderPage(
               </div>
               <a
                 class="twitter-share-button"
-                href={`https://twitter.com/intent/tweet?text=${componentData.fileData.frontmatter?.title}&url=https://${componentData.cfg.baseUrl}/${componentData.fileData.slug}&via=zeyadetman`}
+                href={`https://twitter.com/intent/tweet?text=${componentData.fileData.frontmatter?.title}&url=https://${componentData.cfg.baseUrl}/${componentData.fileData.slug}&via=zeyadelmarsafy`}
               >
                 Share it on Twitter
               </a>
               <Content {...componentData} />
               <a
                 class="twitter-share-button"
-                href={`https://twitter.com/intent/tweet?text=${componentData.fileData.frontmatter?.title}&url=https://${componentData.cfg.baseUrl}/${componentData.fileData.slug}&via=zeyadetman`}
+                href={`https://twitter.com/intent/tweet?text=${componentData.fileData.frontmatter?.title}&url=https://${componentData.cfg.baseUrl}/${componentData.fileData.slug}&via=zeyadelmarsafy`}
               >
                 Share it on Twitter
               </a>

@@ -6,7 +6,7 @@ title: "Create a branch from jira ticket and push changes to it"
 
 ### Create a branch from jira ticket and push changes to it.
 
-https://twitter.com/zeyadetman/status/1483423110774861825
+https://twitter.com/zeyadelmarsafy/status/1483423110774861825
 
 **Code:**
 
@@ -15,7 +15,7 @@ https://twitter.com/zeyadetman/status/1483423110774861825
 
 pushit () {
     echo "Getting data...";
-    jira issue list -a"Zeyad Etman" -s"IN PROGRESS";
+    jira issue list -a"Zeyad" -s"IN PROGRESS";
     echo "\nPlease enter ticket id: "
     read id;
     echo "\n"

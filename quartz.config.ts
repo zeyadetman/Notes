@@ -10,7 +10,7 @@ const config: QuartzConfig = {
       provider: "google",
       tagId: "G-QEXV76M819",
     },
-    baseUrl: "notes.zeyadetman.com",
+    baseUrl: "notes.zeyadnotes.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
