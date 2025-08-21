@@ -8,7 +8,7 @@
   <meta property="og:title" content="Folder and Tag Listings" />
   <meta property="og:description"
     content="Quartz creates listing pages for any folders and tags you have. Folder Listings § Quartz will generate an index page for all the pages under that folder." />
-  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:image" content="https://notes.zeyadnotes.dev/static/og-image.png" />
   <meta property="og:width" content="1200" />
   <meta property="og:height" content="675" />
   <link rel="icon" href="../static/icon.png" />
@@ -272,7 +272,7 @@
         </div>
       </div>
     </div><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Folder and Tag Listings&amp;url=https://notes.zeyadetman.com/features/folder-and-tag-listings&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Folder and Tag Listings&amp;url=https://notes.zeyadnotes.dev/features/folder-and-tag-listings&amp;via=zeyadetman">Share
       it on Twitter</a>
     <article class="popover-hint">
       <p>Quartz creates listing pages for any folders and tags you have.</p>
@@ -282,24 +282,28 @@
         multiple levels deep.</p>
       <p>Additionally, Quartz will also generate pages for subfolders. Say you have a note in a nested folder
         <code>content/abc/def/note.md</code>. Then, Quartz would generate a page for all the notes under
-        <code>abc</code> <em>and</em> a page for all the notes under <code>abc/def</code>.</p>
+        <code>abc</code> <em>and</em> a page for all the notes under <code>abc/def</code>.
+      </p>
       <p>By default, Quartz will title the page <code>Folder: &lt;name of folder></code> and no description. You can
         override this by creating an <code>index.md</code> file in the folder with the <code>title</code> <a
           href="../authoring-content#syntax" class="internal" data-slug="authoring-content">frontmatter</a> field. Any
         content you write in this file will also be used in the description of the folder.</p>
       <p>For example, for the folder <code>content/posts</code>, you can add another file
-        <code>content/posts/index.md</code> to add a specific description for it.</p>
+        <code>content/posts/index.md</code> to add a specific description for it.
+      </p>
       <h2 id="tag-listings">Tag Listings<a aria-hidden="true" tabindex="-1" href="#tag-listings" class="internal"> §</a>
       </h2>
       <p>Quartz will also create an index page for each unique tag in your vault and render a list of all notes with
         that tag.</p>
       <p>Quartz also supports tag hierarchies as well (e.g. <code>plugin/emitter</code>) and will also render a separate
         tag page for each layer of the tag hierarchy. It will also create a default global tag index page at
-        <code>/tags</code> that displays a list of all the tags in your Quartz.</p>
+        <code>/tags</code> that displays a list of all the tags in your Quartz.
+      </p>
       <p>Like folder listings, you can also provide a description and title for a tag page by creating a file for each
         tag. For example, if you wanted to create a custom description for the<a href=".././tags/component"
           class="tag-link internal" data-slug="tags/component">#component</a> tag, you would create a file at
-        <code>content/tags/component.md</code> with a title and description.</p>
+        <code>content/tags/component.md</code> with a title and description.
+      </p>
       <h2 id="customization">Customization<a aria-hidden="true" tabindex="-1" href="#customization" class="internal">
           §</a></h2>
       <p>The layout for both the folder and content pages can be customized. By default, they use the
@@ -307,15 +311,18 @@
         changes to the layout and don’t mind editing some <a href="../advanced/creating-components" class="internal"
           data-slug="advanced/creating-components">Quartz components</a>, you can take a look at
         <code>quartz/components/pages/FolderContent.tsx</code> and <code>quartz/components/pages/TagContent.tsx</code>
-        respectively.</p>
+        respectively.
+      </p>
       <ul>
         <li>Removing folder listings: remove <code>Plugin.FolderPage()</code> from <code>emitters</code> in
-          <code>quartz.config.ts</code></li>
+          <code>quartz.config.ts</code>
+        </li>
         <li>Removing tag listings: remove <code>Plugin.TagPage()</code> from <code>emitters</code> in
-          <code>quartz.config.ts</code></li>
+          <code>quartz.config.ts</code>
+        </li>
       </ul>
     </article><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Folder and Tag Listings&amp;url=https://notes.zeyadetman.com/features/folder-and-tag-listings&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Folder and Tag Listings&amp;url=https://notes.zeyadnotes.dev/features/folder-and-tag-listings&amp;via=zeyadetman">Share
       it on Twitter</a>
     <div class="backlinks ">
       <h3>Backlinks</h3>
@@ -395,7 +402,7 @@
     <ul>
       <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
       <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
-      <li><a href="https://zeyadetman.com">Blog</a></li>
+      <li><a href="https://zeyadnotes.dev">Blog</a></li>
     </ul>
   </footer>
   </div>

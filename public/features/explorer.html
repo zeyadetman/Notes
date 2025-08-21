@@ -8,7 +8,7 @@
   <meta property="og:title" content="Explorer" />
   <meta property="og:description"
     content="Quartz features an explorer that allows you to navigate all files and folders on your site. It supports nested folders and is highly customizable. By default, it shows all folders and files on your page." />
-  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:image" content="https://notes.zeyadnotes.dev/static/og-image.png" />
   <meta property="og:width" content="1200" />
   <meta property="og:height" content="675" />
   <link rel="icon" href="../static/icon.png" />
@@ -284,7 +284,7 @@
         </div>
       </div>
     </div><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Explorer&amp;url=https://notes.zeyadetman.com/features/explorer&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Explorer&amp;url=https://notes.zeyadnotes.dev/features/explorer&amp;via=zeyadetman">Share
       it on Twitter</a>
     <article class="popover-hint">
       <p>Quartz features an explorer that allows you to navigate all files and folders on your site. It supports nested
@@ -294,7 +294,8 @@
       <p>Display names for folders get determined by the <code>title</code> frontmatter field in
         <code>folder/index.md</code> (more detail in <a href="../authoring-content" class="internal"
           data-slug="authoring-content">Authoring Content</a>). If this file does not exist or does not contain
-        frontmatter, the local folder name will be used instead.</p>
+        frontmatter, the local folder name will be used instead.
+      </p>
       <blockquote class="callout" data-callout="info">
         <div class="callout-title">
           <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
@@ -366,7 +367,8 @@
           href="#advanced-customization" class="internal"> §</a></h2>
       <p>This component allows you to fully customize all of its behavior. You can pass a custom <code>sort</code>,
         <code>filter</code> and <code>map</code> function.
-        All functions you can pass work with the <code>FileNode</code> class, which has the following properties:</p>
+        All functions you can pass work with the <code>FileNode</code> class, which has the following properties:
+      </p>
       <div data-rehype-pretty-code-fragment>
         <div data-rehype-pretty-code-title data-language="ts" data-theme="default">quartz/components/ExplorerNode.tsx
         </div>
@@ -416,7 +418,8 @@
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
           class="external">Array.prototype.filter()</a> and <a
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
-          class="external">Array.prototype.map()</a>.</p>
+          class="external">Array.prototype.map()</a>.
+      </p>
       <p>Type definitions look like this:</p>
       <div data-rehype-pretty-code-fragment>
         <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
@@ -487,7 +490,8 @@
       <h3 id="remove-list-of-elements-filter">Remove list of elements (<code>filter</code>)<a aria-hidden="true"
           tabindex="-1" href="#remove-list-of-elements-filter" class="internal"> §</a></h3>
       <p>Using this example, you can remove elements from your explorer by providing an array of folders/files using the
-        <code>omit</code> set.</p>
+        <code>omit</code> set.
+      </p>
       <div data-rehype-pretty-code-fragment>
         <div data-rehype-pretty-code-title data-language="ts" data-theme="default">quartz.layout.ts</div>
         <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
@@ -553,7 +557,8 @@
       <p>Notice how we customized the <code>order</code> array here. This is done because the default order applies the
         <code>sort</code> function last. While this normally works well, it would cause unintended behavior here, since
         we changed the first characters of all display names. In our example, <code>sort</code> would be applied based
-        off the emoji prefix instead of the first <em>real</em> character.</p>
+        off the emoji prefix instead of the first <em>real</em> character.
+      </p>
       <p>To fix this, we just changed around the order and apply the <code>sort</code> function before changing the
         display names in the <code>map</code> function.</p>
       <blockquote class="callout" data-callout="tip">
@@ -599,7 +604,7 @@
         </div>
       </blockquote>
     </article><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Explorer&amp;url=https://notes.zeyadetman.com/features/explorer&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Explorer&amp;url=https://notes.zeyadnotes.dev/features/explorer&amp;via=zeyadetman">Share
       it on Twitter</a>
     <div class="backlinks ">
       <h3>Backlinks</h3>
@@ -679,7 +684,7 @@
     <ul>
       <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
       <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
-      <li><a href="https://zeyadetman.com">Blog</a></li>
+      <li><a href="https://zeyadnotes.dev">Blog</a></li>
     </ul>
   </footer>
   </div>

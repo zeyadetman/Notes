@@ -8,7 +8,7 @@
   <meta property="og:title" content="Making your own plugins" />
   <meta property="og:description"
     content="Warning This part of the documentation will assume you have working knowledge in TypeScript and will include code snippets that describe the interface of what Quartz plugins should look like." />
-  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:image" content="https://notes.zeyadnotes.dev/static/og-image.png" />
   <meta property="og:width" content="1200" />
   <meta property="og:height" content="675" />
   <link rel="icon" href="../static/icon.png" />
@@ -268,7 +268,7 @@
         </div>
       </div>
     </div><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Making your own plugins&amp;url=https://notes.zeyadetman.com/advanced/making-plugins&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Making your own plugins&amp;url=https://notes.zeyadnotes.dev/advanced/making-plugins&amp;via=zeyadetman">Share
       it on Twitter</a>
     <article class="popover-hint">
       <blockquote class="callout" data-callout="warning">
@@ -293,7 +293,8 @@
       <p><img src="../images/quartz-transform-pipeline.png" width="auto" height="auto" /></p>
       <p>All plugins are defined as a function that takes in a single parameter for options
         <code>type OptionType = object | undefined</code> and return an object that corresponds to the type of plugin it
-        is.</p>
+        is.
+      </p>
       <div data-rehype-pretty-code-fragment>
         <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
           data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">OptionType</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">object</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">undefined</span></span>
@@ -314,7 +315,8 @@
                 data-slug="configuration">configuration</a></li>
             <li><code>allSlugs</code>: a list of all the valid content slugs (see <a href="../advanced/paths"
                 class="internal" data-slug="advanced/paths">paths</a> for more information on what a
-              <code>ServerSlug</code> is)</li>
+              <code>ServerSlug</code> is)
+            </li>
           </ul>
         </li>
         <li><code>StaticResources</code> is defined in <code>quartz/resources.tsx</code>. It consists of
@@ -323,7 +325,8 @@
             <li><code>js</code>: a list of scripts that should be loaded. A script is described with the
               <code>JSResource</code> type which is also defined in <code>quartz/resources.tsx</code>. It allows you to
               define a load time (either before or after the DOM has been loaded), whether it should be a module, and
-              either the source URL or the inline content of the script.</li>
+              either the source URL or the inline content of the script.
+            </li>
           </ul>
         </li>
       </ul>
@@ -345,10 +348,12 @@
         optional functions that allow you to hook into various parts of transforming a single Markdown file.</p>
       <ul>
         <li><code>textTransform</code> performs a text-to-text transformation <em>before</em> a file is parsed into the
-          <a href="https://github.com/syntax-tree/mdast" class="external">Markdown AST</a>.</li>
+          <a href="https://github.com/syntax-tree/mdast" class="external">Markdown AST</a>.
+        </li>
         <li><code>markdownPlugins</code> defines a list of <a
             href="https://github.com/remarkjs/remark/blob/main/doc/plugins.md" class="external">remark plugins</a>.
-          <code>remark</code> is a tool that transforms Markdown to Markdown in a structured way.</li>
+          <code>remark</code> is a tool that transforms Markdown to Markdown in a structured way.
+        </li>
         <li><code>htmlPlugins</code> defines a list of <a
             href="https://github.com/rehypejs/rehype/blob/main/doc/plugins.md" class="external">rehype plugins</a>.
           Similar to how <code>remark</code> works, <code>rehype</code> is a tool that transforms HTML to HTML in a
@@ -442,7 +447,8 @@
       </div>
       <p>Finally, you can also perform transformations over Markdown or HTML ASTs using the <code>visit</code> function
         from the <code>unist-util-visit</code> package or the <code>findAndReplace</code> function from the
-        <code>mdast-util-find-and-replace</code> package.</p>
+        <code>mdast-util-find-and-replace</code> package.
+      </p>
       <div data-rehype-pretty-code-fragment>
         <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
           data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">TextTransforms</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzTransformerPlugin</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> () </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
@@ -480,7 +486,8 @@
       </div>
       <p>All transformer plugins can be found under <code>quartz/plugins/transformers</code>. If you decide to write
         your own transformer plugin, don’t forget to re-export it under
-        <code>quartz/plugins/transformers/index.ts</code></p>
+        <code>quartz/plugins/transformers/index.ts</code>
+      </p>
       <p>A parting word: transformer plugins are quite complex so don’t worry if you don’t get them right away. Take a
         look at the built in transformers and see how they operate over content to get a better sense for how to
         accomplish what you are trying to do.</p>
@@ -500,7 +507,8 @@
       </div>
       <p>A filter plugin must define a <code>name</code> field and a <code>shouldPublish</code> function that takes in a
         piece of content that has been processed by all the transformers and returns a <code>true</code> or
-        <code>false</code> depending on whether it should be passed to the emitter plugins or not.</p>
+        <code>false</code> depending on whether it should be passed to the emitter plugins or not.
+      </p>
       <p>For example, here is the built-in plugin for removing drafts:</p>
       <div data-rehype-pretty-code-fragment>
         <div data-rehype-pretty-code-title data-language="ts" data-theme="default">quartz/plugins/filters/draft.ts</div>
@@ -539,7 +547,8 @@
       <p>An emitter plugin must define a <code>name</code> field an <code>emit</code> function and a
         <code>getQuartzComponents</code> function. <code>emit</code> is responsible for looking at all the parsed and
         filtered content and then appropriately creating files and returning a list of paths to files the plugin
-        created.</p>
+        created.
+      </p>
       <p>Creating new files can be done via regular Node <a href="https://nodejs.org/api/fs.html" class="external">fs
           module</a> (i.e. <code>fs.cp</code> or <code>fs.writeFile</code>) or via the <code>emitCallback</code> if you
         are creating files that contain text. The <code>emitCallback</code> function is the 4th argument of the emit
@@ -557,19 +566,22 @@
       </div>
       <p>This is a thin wrapper around writing to the appropriate output folder and ensuring that intermediate
         directories exist. If you choose to use the native Node <code>fs</code> APIs, ensure you emit to the
-        <code>argv.output</code> folder as well.</p>
+        <code>argv.output</code> folder as well.
+      </p>
       <p>If you are creating an emitter plugin that needs to render components, there are three more things to be aware
         of:</p>
       <ul>
         <li>Your component should use <code>getQuartzComponents</code> to declare a list of
           <code>QuartzComponents</code> that it uses to construct the page. See the page on <a
             href="../advanced/creating-components" class="internal" data-slug="advanced/creating-components">creating
-            components</a> for more information.</li>
+            components</a> for more information.
+        </li>
         <li>You can use the <code>renderPage</code> function defined in <code>quartz/components/renderPage.tsx</code> to
           render Quartz components into HTML.</li>
         <li>If you need to render an HTML AST to JSX, you can use the <code>toJsxRuntime</code> function from
           <code>hast-util-to-jsx-runtime</code> library. An example of this can be found in
-          <code>quartz/components/pages/Content.tsx</code>.</li>
+          <code>quartz/components/pages/Content.tsx</code>.
+        </li>
       </ul>
       <p>For example, the following is a simplified version of the content page plugin that renders every single page.
       </p>
@@ -622,7 +634,8 @@
       </div>
       <p>Note that it takes in a <code>FullPageLayout</code> as the options. It’s made by combining a
         <code>SharedLayout</code> and a <code>PageLayout</code> both of which are provided through the
-        <code>quartz.layout.ts</code> file.</p>
+        <code>quartz.layout.ts</code> file.
+      </p>
       <blockquote class="callout" data-callout="tip">
         <div class="callout-title">
           <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
@@ -641,7 +654,7 @@
         </p>
       </blockquote>
     </article><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Making your own plugins&amp;url=https://notes.zeyadetman.com/advanced/making-plugins&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Making your own plugins&amp;url=https://notes.zeyadnotes.dev/advanced/making-plugins&amp;via=zeyadetman">Share
       it on Twitter</a>
     <div class="backlinks ">
       <h3>Backlinks</h3>
@@ -726,7 +739,7 @@
     <ul>
       <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
       <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
-      <li><a href="https://zeyadetman.com">Blog</a></li>
+      <li><a href="https://zeyadnotes.dev">Blog</a></li>
     </ul>
   </footer>
   </div>

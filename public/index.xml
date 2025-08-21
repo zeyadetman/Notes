@@ -2,13 +2,13 @@
 <rss version="2.0">
     <channel>
       <title>👨🏻‍💻 Zeyad&#039;s Notes</title>
-      <link>https://notes.zeyadetman.com</link>
+      <link>https://notes.zeyadnotes.dev</link>
       <description>Last 50 notes on 👨🏻‍💻 Zeyad&#039;s Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>Architecture</title>
-    <link>https://notes.zeyadetman.com/advanced/architecture</link>
-    <guid>https://notes.zeyadetman.com/advanced/architecture</guid>
+    <link>https://notes.zeyadnotes.dev/advanced/architecture</link>
+    <guid>https://notes.zeyadnotes.dev/advanced/architecture</guid>
     <description>&lt;p&gt;Quartz is a static site generator. How does it work?&lt;/p&gt;
 &lt;p&gt;This question is best answered by tracing what happens when a user (you!) runs &lt;code&gt;npx quartz build&lt;/code&gt; in the command line:&lt;/p&gt;
 &lt;h2 id=&quot;on-the-server&quot;&gt;On the server&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#on-the-server&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
@@ -82,13 +82,13 @@
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Creating your own Quartz components</title>
-    <link>https://notes.zeyadetman.com/advanced/creating-components</link>
-    <guid>https://notes.zeyadetman.com/advanced/creating-components</guid>
+    <link>https://notes.zeyadnotes.dev/advanced/creating-components</link>
+    <guid>https://notes.zeyadnotes.dev/advanced/creating-components</guid>
     <description>&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;This guide assumes you have experience writing JavaScript and are familiar with TypeScript.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -180,7 +180,7 @@
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Quartz does not use CSS modules so any styles you declare here apply &lt;em&gt;globally&lt;/em&gt;. If you only want it to apply to your component, make sure you use specific class names and selectors.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -206,7 +206,7 @@
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;For those coming from React, Quartz components are different from React components in that it only uses JSX for templating and layout. Hooks like &lt;code&gt;useEffect&lt;/code&gt;, &lt;code&gt;useState&lt;/code&gt;, etc. are not rendered and other properties that accept functions like &lt;code&gt;onClick&lt;/code&gt; handlers will not work. Instead, do it using a regular JS script that modifies the DOM element directly.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -271,26 +271,26 @@
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Look in &lt;code&gt;quartz/components&lt;/code&gt; for more examples of components in Quartz as reference for your own components!&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Advanced</title>
-    <link>https://notes.zeyadetman.com/advanced/</link>
-    <guid>https://notes.zeyadetman.com/advanced/</guid>
+    <link>https://notes.zeyadnotes.dev/advanced/</link>
+    <guid>https://notes.zeyadnotes.dev/advanced/</guid>
     <description></description>
     <pubDate>Wed, 20 Sep 2023 23:08:54 GMT</pubDate>
   </item><item>
     <title>Making your own plugins</title>
-    <link>https://notes.zeyadetman.com/advanced/making-plugins</link>
-    <guid>https://notes.zeyadetman.com/advanced/making-plugins</guid>
+    <link>https://notes.zeyadnotes.dev/advanced/making-plugins</link>
+    <guid>https://notes.zeyadnotes.dev/advanced/making-plugins</guid>
     <description>&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;This part of the documentation will assume you have working knowledge in TypeScript and will include code snippets that describe the interface of what Quartz plugins should look like.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -545,15 +545,15 @@
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Look in &lt;code&gt;quartz/plugins&lt;/code&gt; for more examples of plugins in Quartz as reference for your own plugins!&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Paths in Quartz</title>
-    <link>https://notes.zeyadetman.com/advanced/paths</link>
-    <guid>https://notes.zeyadetman.com/advanced/paths</guid>
+    <link>https://notes.zeyadnotes.dev/advanced/paths</link>
+    <guid>https://notes.zeyadnotes.dev/advanced/paths</guid>
     <description>&lt;p&gt;Paths are pretty complex to reason about because, especially for a static site generator, they can come from so many places.&lt;/p&gt;
 &lt;p&gt;A full file path to a piece of content? Also a path. What about a slug for a piece of content? Yet another path.&lt;/p&gt;
 &lt;p&gt;It would be silly to type these all as &lt;code&gt;string&lt;/code&gt; and call it a day as it’s pretty common to accidentally mistake one type of path for another. Unfortunately, TypeScript does not have &lt;a href=&quot;https://en.wikipedia.org/wiki/Nominal_type_system&quot; class=&quot;external&quot;&gt;nominal types&lt;/a&gt; for type aliases meaning even if you made custom types of a server-side slug or a client-slug slug, you can still accidentally assign one to another and TypeScript wouldn’t catch it.&lt;/p&gt;
@@ -592,8 +592,8 @@
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Authoring Content</title>
-    <link>https://notes.zeyadetman.com/authoring-content</link>
-    <guid>https://notes.zeyadetman.com/authoring-content</guid>
+    <link>https://notes.zeyadnotes.dev/authoring-content</link>
+    <guid>https://notes.zeyadnotes.dev/authoring-content</guid>
     <description>&lt;p&gt;All of the content in your Quartz should go in the &lt;code&gt;/content&lt;/code&gt; folder. The content for the home page of your Quartz lives in &lt;code&gt;content/index.md&lt;/code&gt;. If you’ve &lt;a href=&quot;./#-get-started&quot; class=&quot;internal&quot; data-slug=&quot;&quot;&gt;setup Quartz&lt;/a&gt; already, this folder should already be initailized. Any Markdown in this folder will get processed by Quartz.&lt;/p&gt;
 &lt;p&gt;It is recommended that you use &lt;a href=&quot;https://obsidian.md/&quot; class=&quot;external&quot;&gt;Obsidian&lt;/a&gt; as a way to edit and maintain your Quartz. It comes with a nice editor and graphical interface to preview, edit, and link your local files and attachments.&lt;/p&gt;
 &lt;p&gt;Got everything setup? Let’s &lt;a href=&quot;./build&quot; class=&quot;internal&quot; data-slug=&quot;build&quot;&gt;build&lt;/a&gt; and preview your Quartz locally!&lt;/p&gt;
@@ -621,7 +621,7 @@
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Flags and options &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;For full help options, you can run &lt;code&gt;npx quartz sync --help&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Most of these have sensible defaults but you can override them if you have a custom setup:&lt;/p&gt;
@@ -636,8 +636,8 @@
     <pubDate>Thu, 24 Aug 2023 15:14:52 GMT</pubDate>
   </item><item>
     <title>Building your Quartz</title>
-    <link>https://notes.zeyadetman.com/build</link>
-    <guid>https://notes.zeyadetman.com/build</guid>
+    <link>https://notes.zeyadnotes.dev/build</link>
+    <guid>https://notes.zeyadnotes.dev/build</guid>
     <description>&lt;p&gt;Once you’ve &lt;a href=&quot;./#-get-started&quot; class=&quot;internal&quot; data-slug=&quot;&quot;&gt;initialized&lt;/a&gt; Quartz, let’s see what it looks like locally:&lt;/p&gt;
 &lt;div data-rehype-pretty-code-fragment=&quot;&quot;&gt;&lt;pre style=&quot;background-color: var(--shiki-color-background)&quot; tabindex=&quot;0&quot; data-language=&quot;bash&quot; data-theme=&quot;default&quot;&gt;&lt;code data-language=&quot;bash&quot; data-theme=&quot;default&quot;&gt;&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;npx&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;quartz&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;build&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;--serve&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This will start a local web server to run your Quartz on your computer. Open a web browser and visit &lt;code&gt;http://localhost:8080/&lt;/code&gt; to view it.&lt;/p&gt;
@@ -645,7 +645,7 @@
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Flags and options &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;For full help options, you can run &lt;code&gt;npx quartz build --help&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Most of these have sensible defaults but you can override them if you have a custom setup:&lt;/p&gt;
@@ -661,14 +661,14 @@
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Configuration</title>
-    <link>https://notes.zeyadetman.com/configuration</link>
-    <guid>https://notes.zeyadetman.com/configuration</guid>
+    <link>https://notes.zeyadnotes.dev/configuration</link>
+    <guid>https://notes.zeyadnotes.dev/configuration</guid>
     <description>&lt;p&gt;Quartz is meant to be extremely configurable, even if you don’t know any coding. Most of the configuration you should need can be done by just editing &lt;code&gt;quartz.config.ts&lt;/code&gt; or changing &lt;a href=&quot;./layout&quot; class=&quot;internal&quot; data-slug=&quot;layout&quot;&gt;the layout&lt;/a&gt; in &lt;code&gt;quartz.layout.ts&lt;/code&gt;.&lt;/p&gt;
 &lt;blockquote class=&quot;callout&quot; data-callout=&quot;tip&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;If you edit Quartz configuration using a text-editor that has TypeScript language support like VSCode, it will warn you when you you’ve made an error in your configuration, helping you avoid configuration mistakes!&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -740,7 +740,7 @@
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Each node is modified by every transformer &lt;em&gt;in order&lt;/em&gt;. Some transformers are position-sensitive so you may need to take special note of whether it needs come before or after any other particular plugins.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -753,16 +753,16 @@
     <pubDate>Wed, 20 Sep 2023 20:52:45 GMT</pubDate>
   </item><item>
     <title>Docker Support</title>
-    <link>https://notes.zeyadetman.com/features/Docker-Support</link>
-    <guid>https://notes.zeyadetman.com/features/Docker-Support</guid>
+    <link>https://notes.zeyadnotes.dev/features/Docker-Support</link>
+    <guid>https://notes.zeyadnotes.dev/features/Docker-Support</guid>
     <description>&lt;p&gt;Quartz comes shipped with a Docker image that will allow you to preview your Quartz locally without installing Node.&lt;/p&gt;
 &lt;p&gt;You can run the below one-liner to run Quartz in Docker.&lt;/p&gt;
 &lt;div data-rehype-pretty-code-fragment=&quot;&quot;&gt;&lt;pre style=&quot;background-color: var(--shiki-color-background)&quot; tabindex=&quot;0&quot; data-language=&quot;sh&quot; data-theme=&quot;default&quot;&gt;&lt;code data-language=&quot;sh&quot; data-theme=&quot;default&quot;&gt;&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;docker&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;run&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;--rm&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;-itp&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-constant)&quot;&gt;8080&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;:8080&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;$(&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;docker&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;build&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;-q&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     <pubDate>Sun, 08 Oct 2023 16:59:18 GMT</pubDate>
   </item><item>
     <title>Latex</title>
-    <link>https://notes.zeyadetman.com/features/Latex</link>
-    <guid>https://notes.zeyadetman.com/features/Latex</guid>
+    <link>https://notes.zeyadnotes.dev/features/Latex</link>
+    <guid>https://notes.zeyadnotes.dev/features/Latex</guid>
     <description>&lt;p&gt;Quartz uses &lt;a href=&quot;https://katex.org/&quot; class=&quot;external&quot;&gt;Katex&lt;/a&gt; by default to typeset both inline and block math expressions at build time.&lt;/p&gt;
 &lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#syntax&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;block-math&quot;&gt;Block Math&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#block-math&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
@@ -796,15 +796,15 @@ $$
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Mermaid diagrams</title>
-    <link>https://notes.zeyadetman.com/features/Mermaid-diagrams</link>
-    <guid>https://notes.zeyadetman.com/features/Mermaid-diagrams</guid>
+    <link>https://notes.zeyadnotes.dev/features/Mermaid-diagrams</link>
+    <guid>https://notes.zeyadnotes.dev/features/Mermaid-diagrams</guid>
     <description>&lt;p&gt;Quartz supports Mermaid which allows you to add diagrams and charts to your notes. Mermaid supports a range of diagrams, such as &lt;a href=&quot;https://mermaid.js.org/syntax/flowchart.html&quot; class=&quot;external&quot;&gt;flow charts&lt;/a&gt;, &lt;a href=&quot;https://mermaid.js.org/syntax/sequenceDiagram.html&quot; class=&quot;external&quot;&gt;sequence diagrams&lt;/a&gt;, and &lt;a href=&quot;https://mermaid.js.org/syntax/timeline.html&quot; class=&quot;external&quot;&gt;timelines&lt;/a&gt;. This is enabled as a part of &lt;a href=&quot;../features/Obsidian-compatibility&quot; class=&quot;internal&quot; data-slug=&quot;features/Obsidian-compatibility&quot;&gt;Obsidian compatibility&lt;/a&gt; and can be configured and enabled/disabled from that plugin.&lt;/p&gt;
 &lt;p&gt;By default, Quartz will render Mermaid diagrams to match the site theme.&lt;/p&gt;
 &lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Wondering why Mermaid diagrams may not be showing up even if you have them enabled? You may need to reorder your plugins so that &lt;code&gt;Plugin.ObsidianFlavoredMarkdown()&lt;/code&gt; is &lt;em&gt;after&lt;/em&gt; &lt;code&gt;Plugin.SyntaxHighlighting()&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -827,8 +827,8 @@ sequenceDiagram
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Obsidian compatibility</title>
-    <link>https://notes.zeyadetman.com/features/Obsidian-compatibility</link>
-    <guid>https://notes.zeyadetman.com/features/Obsidian-compatibility</guid>
+    <link>https://notes.zeyadnotes.dev/features/Obsidian-compatibility</link>
+    <guid>https://notes.zeyadnotes.dev/features/Obsidian-compatibility</guid>
     <description>&lt;p&gt;Quartz was originally designed as a tool to publish Obsidian vaults as websites. Even as the scope of Quartz has widened over time, it hasn’t lost the ability to seamlessly interoperate with Obsidian.&lt;/p&gt;
 &lt;p&gt;By default, Quartz ships with &lt;code&gt;Plugin.ObsidianFlavoredMarkdown&lt;/code&gt; which is a transformer plugin that adds support for &lt;a href=&quot;https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown&quot; class=&quot;external&quot;&gt;Obsidian Flavored Markdown&lt;/a&gt;. This includes support for features like &lt;a href=&quot;../features/wikilinks&quot; class=&quot;internal&quot; data-slug=&quot;features/wikilinks&quot;&gt;wikilinks&lt;/a&gt; and &lt;a href=&quot;../features/Mermaid-diagrams&quot; class=&quot;internal&quot; data-slug=&quot;features/Mermaid-diagrams&quot;&gt;Mermaid diagrams&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It also ships with support for &lt;a href=&quot;https://help.obsidian.md/Editing+and+formatting/Properties&quot; class=&quot;external&quot;&gt;frontmatter parsing&lt;/a&gt; with the same fields that Obsidian uses through the &lt;code&gt;Plugin.FrontMatter&lt;/code&gt; transformer plugin.&lt;/p&gt;
@@ -867,8 +867,8 @@ sequenceDiagram
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>OxHugo compatibility</title>
-    <link>https://notes.zeyadetman.com/features/OxHugo-compatibility</link>
-    <guid>https://notes.zeyadetman.com/features/OxHugo-compatibility</guid>
+    <link>https://notes.zeyadnotes.dev/features/OxHugo-compatibility</link>
+    <guid>https://notes.zeyadnotes.dev/features/OxHugo-compatibility</guid>
     <description>&lt;p&gt;&lt;a href=&quot;https://www.orgroam.com/&quot; class=&quot;external&quot;&gt;org-roam&lt;/a&gt; is a plain-text personal knowledge management system for &lt;a href=&quot;https://en.wikipedia.org/wiki/Emacs&quot; class=&quot;external&quot;&gt;emacs&lt;/a&gt;. &lt;a href=&quot;https://github.com/kaushalmodi/ox-hugo&quot; class=&quot;external&quot;&gt;ox-hugo&lt;/a&gt; is org exporter backend that exports &lt;code&gt;org-mode&lt;/code&gt; files to &lt;a href=&quot;https://gohugo.io/&quot; class=&quot;external&quot;&gt;Hugo&lt;/a&gt; compatible Markdown.&lt;/p&gt;
 &lt;p&gt;Because the Markdown generated by ox-hugo is not pure Markdown but Hugo specific, we need to transform it to fit into Quartz. This is done by &lt;code&gt;Plugin.OxHugoFlavouredMarkdown&lt;/code&gt;. Even though this &lt;a href=&quot;../advanced/making-plugins&quot; class=&quot;internal&quot; data-slug=&quot;advanced/making-plugins&quot;&gt;plugin&lt;/a&gt; was written with &lt;code&gt;ox-hugo&lt;/code&gt; in mind, it should work for any Hugo specific Markdown.&lt;/p&gt;
 &lt;div data-rehype-pretty-code-fragment=&quot;&quot;&gt;&lt;div data-rehype-pretty-code-title=&quot;&quot; data-language=&quot;typescript&quot; data-theme=&quot;default&quot;&gt;quartz.config.ts&lt;/div&gt;&lt;pre style=&quot;background-color: var(--shiki-color-background)&quot; tabindex=&quot;0&quot; data-language=&quot;typescript&quot; data-theme=&quot;default&quot;&gt;&lt;code data-language=&quot;typescript&quot; data-theme=&quot;default&quot;&gt;&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;plugins&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; {&lt;/span&gt;&lt;/span&gt;
@@ -906,15 +906,15 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;While you can use &lt;code&gt;Plugin.OxHugoFlavoredMarkdown&lt;/code&gt; and &lt;code&gt;Plugin.ObsidianFlavoredMarkdown&lt;/code&gt; together, it’s not recommended because it might mutate the file in unexpected ways. Use with caution.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Fri, 29 Sep 2023 18:35:26 GMT</pubDate>
   </item><item>
     <title>RSS Feed</title>
-    <link>https://notes.zeyadetman.com/features/RSS-Feed</link>
-    <guid>https://notes.zeyadetman.com/features/RSS-Feed</guid>
+    <link>https://notes.zeyadnotes.dev/features/RSS-Feed</link>
+    <guid>https://notes.zeyadnotes.dev/features/RSS-Feed</guid>
     <description>&lt;p&gt;Quartz creates an RSS feed for all the content on your site by generating an &lt;code&gt;index.xml&lt;/code&gt; file that RSS readers can subscribe to. Because of the RSS spec, this requires the &lt;code&gt;baseUrl&lt;/code&gt; property in your &lt;a href=&quot;../configuration&quot; class=&quot;internal&quot; data-slug=&quot;configuration&quot;&gt;configuration&lt;/a&gt; to be set properly for RSS readers to pick it up properly.&lt;/p&gt;
 &lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#configuration&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -925,8 +925,8 @@ sequenceDiagram
     <pubDate>Wed, 13 Sep 2023 04:44:03 GMT</pubDate>
   </item><item>
     <title>SPA Routing</title>
-    <link>https://notes.zeyadetman.com/features/SPA-Routing</link>
-    <guid>https://notes.zeyadetman.com/features/SPA-Routing</guid>
+    <link>https://notes.zeyadnotes.dev/features/SPA-Routing</link>
+    <guid>https://notes.zeyadnotes.dev/features/SPA-Routing</guid>
     <description>&lt;p&gt;Single-page-app style rendering. This prevents flashes of unstyled content and improves the smoothness of Quartz.&lt;/p&gt;
 &lt;p&gt;Under the hood, this is done by hijacking page navigations and instead fetching the HTML via a &lt;code&gt;GET&lt;/code&gt; request and then diffing and selectively replacing parts of the page using &lt;a href=&quot;https://github.com/natemoo-re/micromorph&quot; class=&quot;external&quot;&gt;micromorph&lt;/a&gt;. This allows us to change the content of the page without fully refreshing the page, reducing the amount of content that the browser needs to load.&lt;/p&gt;
 &lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#configuration&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
@@ -936,8 +936,8 @@ sequenceDiagram
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Backlinks</title>
-    <link>https://notes.zeyadetman.com/features/backlinks</link>
-    <guid>https://notes.zeyadetman.com/features/backlinks</guid>
+    <link>https://notes.zeyadnotes.dev/features/backlinks</link>
+    <guid>https://notes.zeyadnotes.dev/features/backlinks</guid>
     <description>&lt;p&gt;A backlink for a note is a link from another note to that note. Links in the backlink pane also feature rich &lt;a href=&quot;../features/popover-previews&quot; class=&quot;internal&quot; data-slug=&quot;features/popover-previews&quot;&gt;popover previews&lt;/a&gt; if you have that feature enabled.&lt;/p&gt;
 &lt;h2 id=&quot;customization&quot;&gt;Customization&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#customization&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -949,8 +949,8 @@ sequenceDiagram
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Breadcrumbs</title>
-    <link>https://notes.zeyadetman.com/features/breadcrumbs</link>
-    <guid>https://notes.zeyadetman.com/features/breadcrumbs</guid>
+    <link>https://notes.zeyadnotes.dev/features/breadcrumbs</link>
+    <guid>https://notes.zeyadnotes.dev/features/breadcrumbs</guid>
     <description>&lt;p&gt;Breadcrumbs provide a way to navigate a hierarchy of pages within your site using a list of its parent folders.&lt;/p&gt;
 &lt;p&gt;By default, the element at the very top of your page is the breadcrumb navigation bar (can also be seen at the top on this page!).&lt;/p&gt;
 &lt;h2 id=&quot;customization&quot;&gt;Customization&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#customization&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
@@ -974,8 +974,8 @@ sequenceDiagram
     <pubDate>Fri, 29 Sep 2023 15:19:10 GMT</pubDate>
   </item><item>
     <title>Callouts</title>
-    <link>https://notes.zeyadetman.com/features/callouts</link>
-    <guid>https://notes.zeyadetman.com/features/callouts</guid>
+    <link>https://notes.zeyadnotes.dev/features/callouts</link>
+    <guid>https://notes.zeyadnotes.dev/features/callouts</guid>
     <description>&lt;p&gt;Quartz supports the same Admonition-callout syntax as Obsidian.&lt;/p&gt;
 &lt;p&gt;This includes&lt;/p&gt;
 &lt;ul&gt;
@@ -983,7 +983,7 @@ sequenceDiagram
 &lt;li&gt;Collapsable callouts&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;&gt; [!info] Title
-&gt; 
+&gt;
 &gt; This is a callout!
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;See &lt;a href=&quot;https://help.obsidian.md/Editing+and+formatting/Callouts&quot; class=&quot;external&quot;&gt;documentation on supported types and syntax here&lt;/a&gt;.&lt;/p&gt;
@@ -991,7 +991,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Wondering why callouts may not be showing up even if you have them enabled? You may need to reorder your plugins so that &lt;code&gt;Plugin.ObsidianFlavoredMarkdown()&lt;/code&gt; is &lt;em&gt;after&lt;/em&gt; &lt;code&gt;Plugin.SyntaxHighlighting()&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1005,7 +1005,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12.01&quot; y2=&quot;8&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Info &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Default title&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1029,7 +1029,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;8&quot; y1=&quot;6&quot; x2=&quot;21&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;8&quot; y1=&quot;12&quot; x2=&quot;21&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;8&quot; y1=&quot;18&quot; x2=&quot;21&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;6&quot; x2=&quot;3.01&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;12&quot; x2=&quot;3.01&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;18&quot; x2=&quot;3.01&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;You can even use multiple layers of nesting. &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
@@ -1038,7 +1038,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;8&quot; y1=&quot;6&quot; x2=&quot;21&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;8&quot; y1=&quot;12&quot; x2=&quot;21&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;8&quot; y1=&quot;18&quot; x2=&quot;21&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;6&quot; x2=&quot;3.01&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;12&quot; x2=&quot;3.01&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;18&quot; x2=&quot;3.01&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Examples &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: example&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1046,7 +1046,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Notes &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: note&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1054,7 +1054,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;rect x=&quot;8&quot; y=&quot;2&quot; width=&quot;8&quot; height=&quot;4&quot; rx=&quot;1&quot; ry=&quot;1&quot;&gt;&lt;/rect&gt;&lt;path d=&quot;M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 11h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 16h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8 11h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8 16h.01&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Summaries &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: abstract, summary, tldr&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1062,7 +1062,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12.01&quot; y2=&quot;8&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Info &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: info, todo&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1070,7 +1070,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Hint &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: tip, hint, important&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1078,7 +1078,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Success &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: success, check, done&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1086,7 +1086,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;path d=&quot;M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Question &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: question, help, faq&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1094,7 +1094,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: warning, caution, attention&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1102,7 +1102,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;6&quot; x2=&quot;6&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;6&quot; y1=&quot;6&quot; x2=&quot;18&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Failure &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: failure, fail, missing&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1110,7 +1110,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polygon points=&quot;13 2 3 14 12 14 11 22 21 10 12 10 13 2&quot;&gt;&lt;/polygon&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Error &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: danger, error&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1118,7 +1118,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;rect width=&quot;8&quot; height=&quot;14&quot; x=&quot;8&quot; y=&quot;6&quot; rx=&quot;4&quot;&gt;&lt;/rect&gt;&lt;path d=&quot;m19 7-3 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m5 7 3 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m19 19-3-2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m5 19 3-2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M20 13h-4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M4 13h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m10 4 1 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m14 4-1 2&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Bug &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: bug&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1126,15 +1126,15 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Quote &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Aliases: quote, cite&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Darkmode</title>
-    <link>https://notes.zeyadetman.com/features/darkmode</link>
-    <guid>https://notes.zeyadetman.com/features/darkmode</guid>
+    <link>https://notes.zeyadnotes.dev/features/darkmode</link>
+    <guid>https://notes.zeyadnotes.dev/features/darkmode</guid>
     <description>&lt;p&gt;Quartz supports darkmode out of the box that respects the user’s theme preference. Any future manual toggles of the darkmode switch will be saved in the browser’s local storage so it can be persisted across future page loads.&lt;/p&gt;
 &lt;h2 id=&quot;customization&quot;&gt;Customization&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#customization&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -1146,8 +1146,8 @@ sequenceDiagram
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Explorer</title>
-    <link>https://notes.zeyadetman.com/features/explorer</link>
-    <guid>https://notes.zeyadetman.com/features/explorer</guid>
+    <link>https://notes.zeyadnotes.dev/features/explorer</link>
+    <guid>https://notes.zeyadnotes.dev/features/explorer</guid>
     <description>&lt;p&gt;Quartz features an explorer that allows you to navigate all files and folders on your site. It supports nested folders and is highly customizable.&lt;/p&gt;
 &lt;p&gt;By default, it shows all folders and files on your page. To display the explorer in a different spot, you can edit the &lt;a href=&quot;../layout&quot; class=&quot;internal&quot; data-slug=&quot;layout&quot;&gt;layout&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Display names for folders get determined by the &lt;code&gt;title&lt;/code&gt; frontmatter field in &lt;code&gt;folder/index.md&lt;/code&gt; (more detail in &lt;a href=&quot;../authoring-content&quot; class=&quot;internal&quot; data-slug=&quot;authoring-content&quot;&gt;Authoring Content&lt;/a&gt;). If this file does not exist or does not contain frontmatter, the local folder name will be used instead.&lt;/p&gt;
@@ -1155,7 +1155,7 @@ sequenceDiagram
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12.01&quot; y2=&quot;8&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Info &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;The explorer uses local storage by default to save the state of your explorer. This is done to ensure a smooth experience when navigating to different pages.&lt;/p&gt;
 &lt;p&gt;To clear/delete the explorer state from local storage, delete the &lt;code&gt;fileTree&lt;/code&gt; entry (guide on how to delete a key from local storage in chromium based browsers can be found &lt;a href=&quot;https://docs.devolutions.net/kb/general-knowledge-base/clear-browser-local-storage/clear-chrome-local-storage/&quot; class=&quot;external&quot;&gt;here&lt;/a&gt;). You can disable this by passing &lt;code&gt;useSavedState: false&lt;/code&gt; as an argument.&lt;/p&gt;
@@ -1237,7 +1237,7 @@ All functions you can pass work with the &lt;code&gt;FileNode&lt;/code&gt; class
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;You can check if a &lt;code&gt;FileNode&lt;/code&gt; is a folder or a file like this:&lt;/p&gt;
 &lt;div data-rehype-pretty-code-fragment=&quot;&quot;&gt;&lt;pre style=&quot;background-color: var(--shiki-color-background)&quot; tabindex=&quot;0&quot; data-language=&quot;ts&quot; data-theme=&quot;default&quot;&gt;&lt;code data-language=&quot;ts&quot; data-theme=&quot;default&quot;&gt;&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-constant)&quot;&gt;node&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;.file) {&lt;/span&gt;&lt;/span&gt;
@@ -1314,7 +1314,7 @@ All functions you can pass work with the &lt;code&gt;FileNode&lt;/code&gt; class
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;When writing more complicated functions, the &lt;code&gt;layout&lt;/code&gt; file can start to look very cramped.
 You can fix this by defining your functions in another file.&lt;/p&gt;
@@ -1339,8 +1339,8 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
     <pubDate>Wed, 18 Oct 2023 02:43:20 GMT</pubDate>
   </item><item>
     <title>Folder and Tag Listings</title>
-    <link>https://notes.zeyadetman.com/features/folder-and-tag-listings</link>
-    <guid>https://notes.zeyadetman.com/features/folder-and-tag-listings</guid>
+    <link>https://notes.zeyadnotes.dev/features/folder-and-tag-listings</link>
+    <guid>https://notes.zeyadnotes.dev/features/folder-and-tag-listings</guid>
     <description>&lt;p&gt;Quartz creates listing pages for any folders and tags you have.&lt;/p&gt;
 &lt;h2 id=&quot;folder-listings&quot;&gt;Folder Listings&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#folder-listings&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Quartz will generate an index page for all the pages under that folder. This includes any content that is multiple levels deep.&lt;/p&gt;
@@ -1360,8 +1360,8 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Full-text Search</title>
-    <link>https://notes.zeyadetman.com/features/full-text-search</link>
-    <guid>https://notes.zeyadetman.com/features/full-text-search</guid>
+    <link>https://notes.zeyadnotes.dev/features/full-text-search</link>
+    <guid>https://notes.zeyadnotes.dev/features/full-text-search</guid>
     <description>&lt;p&gt;Full-text search in Quartz is powered by &lt;a href=&quot;https://github.com/nextapps-de/flexsearch&quot; class=&quot;external&quot;&gt;Flexsearch&lt;/a&gt;. It’s fast enough to return search results in under 10ms for Quartzs as large as half a million words.&lt;/p&gt;
 &lt;p&gt;It can be opened by either clicking on the search bar or pressing &lt;code&gt;⌘&lt;/code&gt;/&lt;code&gt;ctrl&lt;/code&gt; + &lt;code&gt;K&lt;/code&gt;. The top 5 search results are shown on each query. Matching subterms are highlighted and the most relevant 30 words are excerpted. Clicking on a search result will navigate to that page.&lt;/p&gt;
 &lt;p&gt;To search content by tags, you can either press &lt;code&gt;⌘&lt;/code&gt;/&lt;code&gt;ctrl&lt;/code&gt; + &lt;code&gt;shift&lt;/code&gt; + &lt;code&gt;K&lt;/code&gt; or start your query with &lt;code&gt;#&lt;/code&gt; (e.g. &lt;code&gt;#components&lt;/code&gt;).&lt;/p&gt;
@@ -1370,7 +1370,7 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12.01&quot; y2=&quot;8&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Info &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Search requires the &lt;code&gt;ContentIndex&lt;/code&gt; emitter plugin to be present in the &lt;a href=&quot;../configuration&quot; class=&quot;internal&quot; data-slug=&quot;configuration&quot;&gt;configuration&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1391,8 +1391,8 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
     <pubDate>Mon, 04 Sep 2023 05:36:30 GMT</pubDate>
   </item><item>
     <title>Graph View</title>
-    <link>https://notes.zeyadetman.com/features/graph-view</link>
-    <guid>https://notes.zeyadetman.com/features/graph-view</guid>
+    <link>https://notes.zeyadnotes.dev/features/graph-view</link>
+    <guid>https://notes.zeyadnotes.dev/features/graph-view</guid>
     <description>&lt;p&gt;Quartz features a graph-view that can show both a local graph view and a global graph view.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The local graph view shows files that either link to the current file or are linked from the current file. In other words, it shows all notes that are &lt;em&gt;at most&lt;/em&gt; one hop away.&lt;/li&gt;
@@ -1404,7 +1404,7 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12.01&quot; y2=&quot;8&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Info &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Graph View requires the &lt;code&gt;ContentIndex&lt;/code&gt; emitter plugin to be present in the &lt;a href=&quot;../configuration&quot; class=&quot;internal&quot; data-slug=&quot;configuration&quot;&gt;configuration&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1446,14 +1446,14 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Feature List</title>
-    <link>https://notes.zeyadetman.com/features/</link>
-    <guid>https://notes.zeyadetman.com/features/</guid>
+    <link>https://notes.zeyadnotes.dev/features/</link>
+    <guid>https://notes.zeyadnotes.dev/features/</guid>
     <description></description>
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Popover Previews</title>
-    <link>https://notes.zeyadetman.com/features/popover-previews</link>
-    <guid>https://notes.zeyadetman.com/features/popover-previews</guid>
+    <link>https://notes.zeyadnotes.dev/features/popover-previews</link>
+    <guid>https://notes.zeyadnotes.dev/features/popover-previews</guid>
     <description>&lt;p&gt;Like Wikipedia, when you hover over a link in Quartz, there is a popup of a page preview that you can scroll to see the entire content. Links to headers will also scroll the popup to show that specific header in view.&lt;/p&gt;
 &lt;p&gt;By default, Quartz only fetches previews for pages inside your vault due to &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS&quot; class=&quot;external&quot;&gt;CORS&lt;/a&gt;. It does this by selecting all HTML elements with the &lt;code&gt;popover-hint&lt;/code&gt; class. For most pages, this includes the page title, page metadata like words and time to read, tags, and the actual page content.&lt;/p&gt;
 &lt;p&gt;When &lt;a href=&quot;../advanced/creating-components&quot; class=&quot;internal&quot; data-slug=&quot;advanced/creating-components&quot;&gt;creating your own components&lt;/a&gt;, you can include this &lt;code&gt;popover-hint&lt;/code&gt; class to also include it in the popover.&lt;/p&gt;
@@ -1466,8 +1466,8 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Private Pages</title>
-    <link>https://notes.zeyadetman.com/features/private-pages</link>
-    <guid>https://notes.zeyadetman.com/features/private-pages</guid>
+    <link>https://notes.zeyadnotes.dev/features/private-pages</link>
+    <guid>https://notes.zeyadnotes.dev/features/private-pages</guid>
     <description>&lt;p&gt;There may be some notes you want to avoid publishing as a website. Quartz supports this through two mechanisms which can be used in conjunction:&lt;/p&gt;
 &lt;h2 id=&quot;filter-plugins&quot;&gt;Filter Plugins&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#filter-plugins&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;../advanced/making-plugins#filters&quot; class=&quot;internal&quot; data-slug=&quot;advanced/making-plugins&quot;&gt;Filter plugins&lt;/a&gt; are plugins that filter out content based off of certain criteria. By default, Quartz uses the &lt;code&gt;Plugin.RemoveDrafts&lt;/code&gt; plugin which filters out any note that has &lt;code&gt;draft: true&lt;/code&gt; in the frontmatter.&lt;/p&gt;
@@ -1485,15 +1485,15 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Marking something as private via either a plugin or through the &lt;code&gt;ignorePatterns&lt;/code&gt; pattern will only prevent a page from being included in the final built site. If your GitHub repository is public, also be sure to include an ignore for those in the &lt;code&gt;.gitignore&lt;/code&gt; of your Quartz. See the &lt;code&gt;git&lt;/code&gt; &lt;a href=&quot;https://git-scm.com/docs/gitignore#_pattern_format&quot; class=&quot;external&quot;&gt;documentation&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Thu, 07 Sep 2023 15:13:41 GMT</pubDate>
   </item><item>
     <title>Recent Notes</title>
-    <link>https://notes.zeyadetman.com/features/recent-notes</link>
-    <guid>https://notes.zeyadetman.com/features/recent-notes</guid>
+    <link>https://notes.zeyadnotes.dev/features/recent-notes</link>
+    <guid>https://notes.zeyadnotes.dev/features/recent-notes</guid>
     <description>&lt;p&gt;Quartz can generate a list of recent notes for based on some filtering and sorting criteria. Though this component isn’t included in any &lt;a href=&quot;../layout&quot; class=&quot;internal&quot; data-slug=&quot;layout&quot;&gt;layout&lt;/a&gt; by default, you can add it by using &lt;code&gt;Component.RecentNotes&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;customization&quot;&gt;Customization&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#customization&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -1508,8 +1508,8 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Syntax Highlighting</title>
-    <link>https://notes.zeyadetman.com/features/syntax-highlighting</link>
-    <guid>https://notes.zeyadetman.com/features/syntax-highlighting</guid>
+    <link>https://notes.zeyadnotes.dev/features/syntax-highlighting</link>
+    <guid>https://notes.zeyadnotes.dev/features/syntax-highlighting</guid>
     <description>&lt;p&gt;Syntax highlighting in Quartz is completely done at build-time. This means that Quartz only ships pre-calculated CSS to highlight the right words so there is no heavy client-side bundle that does the syntax highlighting.&lt;/p&gt;
 &lt;p&gt;And, unlike some client-side highlighters, it has a full TextMate parser grammar instead of using Regexes, allowing for highly accurate code highlighting.&lt;/p&gt;
 &lt;p&gt;In short, it generates HTML that looks exactly like your code in an editor like VS Code. Under the hood, it’s powered by &lt;a href=&quot;https://rehype-pretty-code.netlify.app/&quot; class=&quot;external&quot;&gt;Rehype Pretty Code&lt;/a&gt; which uses &lt;a href=&quot;https://github.com/shikijs/shiki&quot; class=&quot;external&quot;&gt;Shiki&lt;/a&gt;.&lt;/p&gt;
@@ -1517,7 +1517,7 @@ You can fix this by defining your functions in another file.&lt;/p&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Syntax highlighting does have an impact on build speed if you have a lot of code snippets in your notes.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1606,8 +1606,8 @@ const [name, setName] = useState(&#039;Taylor&#039;);
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Table of Contents</title>
-    <link>https://notes.zeyadetman.com/features/table-of-contents</link>
-    <guid>https://notes.zeyadetman.com/features/table-of-contents</guid>
+    <link>https://notes.zeyadnotes.dev/features/table-of-contents</link>
+    <guid>https://notes.zeyadnotes.dev/features/table-of-contents</guid>
     <description>&lt;p&gt;Quartz can automatically generate a table of contents from a list of headings on each page. It will also show you your current scroll position on the site by marking headings you’ve scrolled through with a different colour.&lt;/p&gt;
 &lt;p&gt;By default, it will show all headers from H1 (&lt;code&gt;# Title&lt;/code&gt;) all the way to H3 (&lt;code&gt;### Title&lt;/code&gt;) and will only show the table of contents if there is more than 1 header on the page.
 You can also hide the table of contents on a page by adding &lt;code&gt;showToc: false&lt;/code&gt; to the frontmatter for that page.&lt;/p&gt;
@@ -1615,7 +1615,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12.01&quot; y2=&quot;8&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Info &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;This feature requires both &lt;code&gt;Plugin.TableOfContents&lt;/code&gt; in your &lt;code&gt;quartz.config.ts&lt;/code&gt; and &lt;code&gt;Component.TableOfContents&lt;/code&gt; in your &lt;code&gt;quartz.layout.ts&lt;/code&gt; to function correctly.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1636,8 +1636,8 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
     <pubDate>Wed, 20 Sep 2023 18:58:52 GMT</pubDate>
   </item><item>
     <title>Wikilinks</title>
-    <link>https://notes.zeyadetman.com/features/wikilinks</link>
-    <guid>https://notes.zeyadetman.com/features/wikilinks</guid>
+    <link>https://notes.zeyadnotes.dev/features/wikilinks</link>
+    <guid>https://notes.zeyadnotes.dev/features/wikilinks</guid>
     <description>&lt;p&gt;Wikilinks were pioneered by earlier internet wikis to make it easier to write links across pages without needing to write Markdown or HTML links each time.&lt;/p&gt;
 &lt;p&gt;Quartz supports Wikilinks by default and these links are resolved by Quartz using &lt;code&gt;Plugin.CrawlLinks&lt;/code&gt;. See the &lt;a href=&quot;https://help.obsidian.md/Linking+notes+and+files/Internal+links&quot; class=&quot;external&quot;&gt;Obsidian Help page on Internal Links&lt;/a&gt; for more information on Wikilink syntax.&lt;/p&gt;
 &lt;p&gt;This is enabled as a part of &lt;a href=&quot;../features/Obsidian-compatibility&quot; class=&quot;internal&quot; data-slug=&quot;features/Obsidian-compatibility&quot;&gt;Obsidian compatibility&lt;/a&gt; and can be configured and enabled/disabled from that plugin.&lt;/p&gt;
@@ -1651,15 +1651,15 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
     <pubDate>Wed, 13 Sep 2023 18:28:53 GMT</pubDate>
   </item><item>
     <title>Hosting</title>
-    <link>https://notes.zeyadetman.com/hosting</link>
-    <guid>https://notes.zeyadetman.com/hosting</guid>
+    <link>https://notes.zeyadnotes.dev/hosting</link>
+    <guid>https://notes.zeyadnotes.dev/hosting</guid>
     <description>&lt;p&gt;Quartz effectively turns your Markdown files and other resources into a bundle of HTML, JS, and CSS files (a website!).&lt;/p&gt;
 &lt;p&gt;However, if you’d like to publish your site to the world, you need a way to host it online. This guide will detail how to deploy with either GitHub Pages or Cloudflare pages but any service that allows you to deploy static HTML should work as well (e.g. Netlify, Replit, etc.)&lt;/p&gt;
 &lt;blockquote class=&quot;callout&quot; data-callout=&quot;tip&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Some Quartz features (like &lt;a href=&quot;./features/RSS-Feed&quot; class=&quot;internal&quot; data-slug=&quot;features/RSS-Feed&quot;&gt;RSS Feed&lt;/a&gt; and sitemap generation) require &lt;code&gt;baseUrl&lt;/code&gt; to be configured properly in your &lt;a href=&quot;./configuration&quot; class=&quot;internal&quot; data-slug=&quot;configuration&quot;&gt;configuration&lt;/a&gt; to work properly. Make sure you set this before deploying!&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1703,7 +1703,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Quartz generates files in the format of &lt;code&gt;file.html&lt;/code&gt; instead of &lt;code&gt;file/index.html&lt;/code&gt; which means the trailing slashes for &lt;em&gt;non-folder paths&lt;/em&gt; are dropped. As GitHub pages does not do this redirect, this may cause existing links to your site that use trailing slashes to break. If not breaking existing links is important to you, consider using &lt;a href=&quot;#cloudflare-pages&quot; class=&quot;internal&quot;&gt;Cloudflare Pages&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1762,7 +1762,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;If you get an error about not being allowed to deploy to &lt;code&gt;github-pages&lt;/code&gt; due to environment protection rules, make sure you remove any existing GitHub pages environments.&lt;/p&gt;
 &lt;p&gt;You can do this by going to your Settings page on your GitHub fork and going to the Environments tab and pressing the trash icon. The GitHub action will recreate the environment for you correctly the next time you sync your Quartz.&lt;/p&gt;
@@ -1793,7 +1793,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;path d=&quot;M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Why aren&#039;t my changes showing up? &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;There could be many different reasons why your changes aren’t showing up but the most likely reason is that you forgot to push your changes to GitHub.&lt;/p&gt;
 &lt;p&gt;Make sure you save your changes to Git and sync it to GitHub by doing &lt;code&gt;npx quartz sync&lt;/code&gt;. This will also make sure to pull any updates you may have made from other devices so you have them locally.&lt;/p&gt;
@@ -1841,7 +1841,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;If there is something already hosted on the domain, these steps will not work without replacing the previous content. As a workaround, you could use Next.js rewrites or use the next section to create a subdomain.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1866,8 +1866,8 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
     <pubDate>Wed, 23 Aug 2023 22:14:23 GMT</pubDate>
   </item><item>
     <title>Welcome to Quartz 4</title>
-    <link>https://notes.zeyadetman.com/</link>
-    <guid>https://notes.zeyadetman.com/</guid>
+    <link>https://notes.zeyadnotes.dev/</link>
+    <guid>https://notes.zeyadnotes.dev/</guid>
     <description>&lt;p&gt;Quartz is a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites. Thousands of students, developers, and teachers are &lt;a href=&quot;./showcase&quot; class=&quot;internal&quot; data-slug=&quot;showcase&quot;&gt;already using Quartz&lt;/a&gt; to publish personal notes, wikis, and &lt;a href=&quot;https://jzhao.xyz/posts/networked-thought&quot; class=&quot;external&quot;&gt;digital gardens&lt;/a&gt; to the web.&lt;/p&gt;
 &lt;h2 id=&quot;-get-started&quot;&gt;🪴 Get Started&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#-get-started&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Quartz requires &lt;strong&gt;at least &lt;a href=&quot;https://nodejs.org/&quot; class=&quot;external&quot;&gt;Node&lt;/a&gt; v18.14&lt;/strong&gt; and &lt;code&gt;npm&lt;/code&gt; v9.3.1 to function correctly. Ensure you have this installed on your machine before continuing.&lt;/p&gt;
@@ -1888,7 +1888,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12.01&quot; y2=&quot;8&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Info &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Coming from Quartz 3? See the &lt;a href=&quot;./migrating-from-Quartz-3&quot; class=&quot;internal&quot; data-slug=&quot;migrating-from-Quartz-3&quot;&gt;migration guide&lt;/a&gt; for the differences between Quartz 3 and Quartz 4 and how to migrate.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1907,8 +1907,8 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
     <pubDate>Sun, 08 Oct 2023 16:59:18 GMT</pubDate>
   </item><item>
     <title>Layout</title>
-    <link>https://notes.zeyadetman.com/layout</link>
-    <guid>https://notes.zeyadetman.com/layout</guid>
+    <link>https://notes.zeyadnotes.dev/layout</link>
+    <guid>https://notes.zeyadnotes.dev/layout</guid>
     <description>&lt;p&gt;Certain emitters may also output &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML&quot; class=&quot;external&quot;&gt;HTML&lt;/a&gt; files. To enable easy customization, these emitters allow you to fully rearrange the layout of the page. The default page layouts can be found in &lt;code&gt;quartz.layout.ts&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Each page is composed of multiple different sections which contain &lt;code&gt;QuartzComponents&lt;/code&gt;. The following code snippet lists all of the valid sections that you can add components to:&lt;/p&gt;
 &lt;div data-rehype-pretty-code-fragment=&quot;&quot;&gt;&lt;div data-rehype-pretty-code-title=&quot;&quot; data-language=&quot;typescript&quot; data-theme=&quot;default&quot;&gt;quartz/cfg.ts&lt;/div&gt;&lt;pre style=&quot;background-color: var(--shiki-color-background)&quot; tabindex=&quot;0&quot; data-language=&quot;typescript&quot; data-theme=&quot;default&quot;&gt;&lt;code data-language=&quot;typescript&quot; data-theme=&quot;default&quot;&gt;&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;export&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;interface&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;FullPageLayout&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; {&lt;/span&gt;&lt;/span&gt;
@@ -1926,7 +1926,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;There are two additional layout fields that are &lt;em&gt;not&lt;/em&gt; shown in the above diagram.&lt;/p&gt;
 &lt;ol&gt;
@@ -1943,15 +1943,15 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Some components may provide their own styling as well! For example, &lt;code&gt;quartz/components/Darkmode.tsx&lt;/code&gt; imports styles from &lt;code&gt;quartz/components/styles/darkmode.scss&lt;/code&gt;. If you’d like to customize styling for a specific component, double check the component definition to see how its styles are defined.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Migrating from Quartz 3</title>
-    <link>https://notes.zeyadetman.com/migrating-from-Quartz-3</link>
-    <guid>https://notes.zeyadetman.com/migrating-from-Quartz-3</guid>
+    <link>https://notes.zeyadnotes.dev/migrating-from-Quartz-3</link>
+    <guid>https://notes.zeyadnotes.dev/migrating-from-Quartz-3</guid>
     <description>&lt;p&gt;As you already have Quartz locally, you don’t need to fork or clone it again. Simply just checkout the alpha branch, install the dependencies, and import your old vault.&lt;/p&gt;
 &lt;div data-rehype-pretty-code-fragment=&quot;&quot;&gt;&lt;pre style=&quot;background-color: var(--shiki-color-background)&quot; tabindex=&quot;0&quot; data-language=&quot;bash&quot; data-theme=&quot;default&quot;&gt;&lt;code data-language=&quot;bash&quot; data-theme=&quot;default&quot;&gt;&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;fetch&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;git&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;checkout&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string)&quot;&gt;v4&lt;/span&gt;&lt;/span&gt;
@@ -1965,7 +1965,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;If the existing content folder you’d like to use is at the &lt;em&gt;same&lt;/em&gt; path on a different branch, clone the repo again somewhere at a &lt;em&gt;different&lt;/em&gt; path in order to use it.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1992,8 +1992,8 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Philosophy of Quartz</title>
-    <link>https://notes.zeyadetman.com/philosophy</link>
-    <guid>https://notes.zeyadetman.com/philosophy</guid>
+    <link>https://notes.zeyadnotes.dev/philosophy</link>
+    <guid>https://notes.zeyadnotes.dev/philosophy</guid>
     <description>&lt;h2 id=&quot;a-garden-should-be-a-true-hypertext&quot;&gt;A garden should be a true hypertext&lt;a aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot; href=&quot;#a-garden-should-be-a-true-hypertext&quot; class=&quot;internal&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The garden is the web as topology. Every walk through the garden creates new paths, new meanings, and when we add things to the garden we add them in a way that allows many future, unpredicted relationships.&lt;/p&gt;
@@ -2014,8 +2014,8 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Quartz Showcase</title>
-    <link>https://notes.zeyadetman.com/showcase</link>
-    <guid>https://notes.zeyadetman.com/showcase</guid>
+    <link>https://notes.zeyadnotes.dev/showcase</link>
+    <guid>https://notes.zeyadnotes.dev/showcase</guid>
     <description>&lt;p&gt;Want to see what Quartz can do? Here are some cool community gardens:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://quartz.jzhao.xyz/&quot; class=&quot;external&quot;&gt;Quartz Documentation (this site!)&lt;/a&gt;&lt;/li&gt;
@@ -2039,19 +2039,19 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
     <pubDate>Wed, 18 Oct 2023 02:43:41 GMT</pubDate>
   </item><item>
     <title>Components</title>
-    <link>https://notes.zeyadetman.com/tags/component</link>
-    <guid>https://notes.zeyadetman.com/tags/component</guid>
+    <link>https://notes.zeyadnotes.dev/tags/component</link>
+    <guid>https://notes.zeyadnotes.dev/tags/component</guid>
     <description>&lt;p&gt;Want to create your own custom component? Check out the advanced guide on &lt;a href=&quot;../advanced/creating-components&quot; class=&quot;internal&quot; data-slug=&quot;advanced/creating-components&quot;&gt;creating components&lt;/a&gt; for more information.&lt;/p&gt;</description>
     <pubDate>Wed, 23 Aug 2023 19:09:04 GMT</pubDate>
   </item><item>
     <title>Upgrading Quartz</title>
-    <link>https://notes.zeyadetman.com/upgrading</link>
-    <guid>https://notes.zeyadetman.com/upgrading</guid>
+    <link>https://notes.zeyadnotes.dev/upgrading</link>
+    <guid>https://notes.zeyadnotes.dev/upgrading</guid>
     <description>&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;This is specifically a guide for upgrading Quartz 4 version to a more recent update. If you are coming from Quartz 3, check out the &lt;a href=&quot;./migrating-from-Quartz-3&quot; class=&quot;internal&quot; data-slug=&quot;migrating-from-Quartz-3&quot;&gt;migration guide&lt;/a&gt; for more info.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2062,7 +2062,7 @@ You can also hide the table of contents on a page by adding &lt;code&gt;showToc:
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip &lt;/p&gt;&lt;/div&gt;
-                  
+
                 &lt;/div&gt;
 &lt;p&gt;Quartz will try to cache your content before updating to try and prevent merge conflicts. If you get a conflict mid-merge, you can stop the merge and then run &lt;code&gt;npx quartz restore&lt;/code&gt; to restore your content from the cache.&lt;/p&gt;
 &lt;/blockquote&gt;

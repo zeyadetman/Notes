@@ -8,7 +8,7 @@
   <meta property="og:title" content="Recent Notes" />
   <meta property="og:description"
     content="Quartz can generate a list of recent notes for based on some filtering and sorting criteria. Though this component isn’t included in any layout by default, you can add it by using Component." />
-  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:image" content="https://notes.zeyadnotes.dev/static/og-image.png" />
   <meta property="og:width" content="1200" />
   <meta property="og:height" content="675" />
   <link rel="icon" href="../static/icon.png" />
@@ -256,7 +256,7 @@
         </ul>
       </div>
     </div><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Recent Notes&amp;url=https://notes.zeyadetman.com/features/recent-notes&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Recent Notes&amp;url=https://notes.zeyadnotes.dev/features/recent-notes&amp;via=zeyadetman">Share
       it on Twitter</a>
     <article class="popover-hint">
       <p>Quartz can generate a list of recent notes for based on some filtering and sorting criteria. Though this
@@ -266,25 +266,30 @@
           §</a></h2>
       <ul>
         <li>Changing the title from “Recent notes”: pass in an additional parameter to
-          <code>Component.RecentNotes({ title: &quot;Recent writing&quot; })</code></li>
+          <code>Component.RecentNotes({ title: &quot;Recent writing&quot; })</code>
+        </li>
         <li>Changing the number of recent notes: pass in an additional parameter to
-          <code>Component.RecentNotes({ limit: 5 })</code></li>
+          <code>Component.RecentNotes({ limit: 5 })</code>
+        </li>
         <li>Show a ‘see more’ link: pass in an additional parameter to
           <code>Component.RecentNotes({ linkToMore: &quot;tags/components&quot; })</code>. This field should be a full
-          slug to a page that exists.</li>
+          slug to a page that exists.
+        </li>
         <li>Customize filtering: pass in an additional parameter to
           <code>Component.RecentNotes({ filter: someFilterFunction })</code>. The filter function should be a function
-          that has the signature <code>(f: QuartzPluginData) => boolean</code>.</li>
+          that has the signature <code>(f: QuartzPluginData) => boolean</code>.
+        </li>
         <li>Customize sorting: pass in an additional parameter to
           <code>Component.RecentNotes({ sort: someSortFunction })</code>. By default, Quartz will sort by date and then
           tie break lexographically. The sort function should be a function that has the signature
           <code>(f1: QuartzPluginData, f2: QuartzPluginData) => number</code>. See <code>byDateAndAlphabetical</code> in
-          <code>quartz/components/PageList.tsx</code> for an example.</li>
+          <code>quartz/components/PageList.tsx</code> for an example.
+        </li>
         <li>Component: <code>quartz/components/RecentNotes.tsx</code></li>
         <li>Style: <code>quartz/components/styles/recentNotes.scss</code></li>
       </ul>
     </article><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Recent Notes&amp;url=https://notes.zeyadetman.com/features/recent-notes&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Recent Notes&amp;url=https://notes.zeyadnotes.dev/features/recent-notes&amp;via=zeyadetman">Share
       it on Twitter</a>
     <div class="backlinks ">
       <h3>Backlinks</h3>
@@ -364,7 +369,7 @@
     <ul>
       <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
       <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
-      <li><a href="https://zeyadetman.com">Blog</a></li>
+      <li><a href="https://zeyadnotes.dev">Blog</a></li>
     </ul>
   </footer>
   </div>

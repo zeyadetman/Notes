@@ -8,7 +8,7 @@
   <meta property="og:title" content="Architecture" />
   <meta property="og:description"
     content="Quartz is a static site generator. How does it work? This question is best answered by tracing what happens when a user (you!) runs npx quartz build in the command line: On the server § After running npx quartz build, npm will look at package." />
-  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:image" content="https://notes.zeyadnotes.dev/static/og-image.png" />
   <meta property="og:width" content="1200" />
   <meta property="og:height" content="675" />
   <link rel="icon" href="../static/icon.png" />
@@ -267,7 +267,7 @@
         </div>
       </div>
     </div><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Architecture&amp;url=https://notes.zeyadetman.com/advanced/architecture&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Architecture&amp;url=https://notes.zeyadnotes.dev/advanced/architecture&amp;via=zeyadetman">Share
       it on Twitter</a>
     <article class="popover-hint">
       <p>Quartz is a static site generator. How does it work?</p>
@@ -277,7 +277,8 @@
           §</a></h2>
       <ol>
         <li>After running <code>npx quartz build</code>, npm will look at <code>package.json</code> to find the
-          <code>bin</code> entry for <code>quartz</code> which points at <code>./quartz/bootstrap-cli.mjs</code>.</li>
+          <code>bin</code> entry for <code>quartz</code> which points at <code>./quartz/bootstrap-cli.mjs</code>.
+        </li>
         <li>This file has a <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" class="external">shebang</a> line at
           the top which tells npm to execute it using Node.</li>
         <li><code>bootstrap-cli.mjs</code> is responsible for a few things:
@@ -395,7 +396,8 @@
           (emitted to <code>public/index.css</code>) and page-critical JS (emitted to <code>public/prescript.js</code>)
         </li>
         <li>Then, once the body is loaded, the browser loads the non-critical JS (emitted to
-          <code>public/postscript.js</code>)</li>
+          <code>public/postscript.js</code>)
+        </li>
         <li>Once the page is done loading, the page will then dispatch a custom synthetic browser event
           <code>&quot;nav&quot;</code>. This is used so client-side scripts declared by components can ‘setup’ anything
           that requires access to the page DOM.
@@ -414,7 +416,7 @@
         in much more depth in the guide on <a href="../advanced/making-plugins" class="internal"
           data-slug="advanced/making-plugins">making your own plugin</a>.</p>
     </article><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Architecture&amp;url=https://notes.zeyadetman.com/advanced/architecture&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Architecture&amp;url=https://notes.zeyadnotes.dev/advanced/architecture&amp;via=zeyadetman">Share
       it on Twitter</a>
     <div class="backlinks ">
       <h3>Backlinks</h3>
@@ -494,7 +496,7 @@
     <ul>
       <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
       <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
-      <li><a href="https://zeyadetman.com">Blog</a></li>
+      <li><a href="https://zeyadnotes.dev">Blog</a></li>
     </ul>
   </footer>
   </div>

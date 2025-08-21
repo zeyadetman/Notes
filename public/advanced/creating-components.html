@@ -8,7 +8,7 @@
   <meta property="og:title" content="Creating your own Quartz components" />
   <meta property="og:description"
     content="Warning This guide assumes you have experience writing JavaScript and are familiar with TypeScript. Normally on the web, we write layout code using HTML which looks something like the following: &amp;lt;article&amp;gt; &amp;lt;h1&amp;gt;An article header&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;Some content&amp;lt;/p&amp;gt; &amp;lt;/article&amp;gt; This piece of HTML represents an article with a leading header that says “An article header” and a paragraph that contains the text “Some content”." />
-  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:image" content="https://notes.zeyadnotes.dev/static/og-image.png" />
   <meta property="og:width" content="1200" />
   <meta property="og:height" content="675" />
   <link rel="icon" href="../static/icon.png" />
@@ -273,7 +273,7 @@
         </div>
       </div>
     </div><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Creating your own Quartz components&amp;url=https://notes.zeyadetman.com/advanced/creating-components&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Creating your own Quartz components&amp;url=https://notes.zeyadnotes.dev/advanced/creating-components&amp;via=zeyadetman">Share
       it on Twitter</a>
     <article class="popover-hint">
       <blockquote class="callout" data-callout="warning">
@@ -324,7 +324,8 @@
         which you as the component creator also decide.</p>
       <p>In your component, you can use the values from the configuration option to change the rendering behaviour
         inside of your component. For example, the component in the code snippet below will not render if the
-        <code>favouriteNumber</code> option is below 0.</p>
+        <code>favouriteNumber</code> option is below 0.
+      </p>
       <div data-rehype-pretty-code-fragment>
         <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
           data-theme="default"><code data-language="tsx" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">interface</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);"> {</span></span>
@@ -387,7 +388,8 @@
       <h3 id="styling">Styling<a aria-hidden="true" tabindex="-1" href="#styling" class="internal"> §</a></h3>
       <p>Quartz components can also define a <code>.css</code> property on the actual function component which will get
         picked up by Quartz. This is expected to be a CSS string which can either be inlined or imported from a
-        <code>.scss</code> file.</p>
+        <code>.scss</code> file.
+      </p>
       <p>Note that inlined styles <strong>must</strong> be plain vanilla CSS:</p>
       <div data-rehype-pretty-code-fragment>
         <div data-rehype-pretty-code-title data-language="tsx" data-theme="default">quartz/components/YourComponent.tsx
@@ -557,7 +559,8 @@
       </div>
       <p>Then, you can use it like any other component in <code>quartz.layout.ts</code> via
         <code>Component.YourComponent()</code>. See the <a href="../configuration#layout" class="internal"
-          data-slug="configuration">layout</a> section for more details.</p>
+          data-slug="configuration">layout</a> section for more details.
+      </p>
       <p>As Quartz components are just functions that return React components, you can compositionally use them in other
         Quartz components.</p>
       <div data-rehype-pretty-code-fragment>
@@ -597,7 +600,7 @@
           components!</p>
       </blockquote>
     </article><a class="twitter-share-button"
-      href="https://twitter.com/intent/tweet?text=Creating your own Quartz components&amp;url=https://notes.zeyadetman.com/advanced/creating-components&amp;via=zeyadetman">Share
+      href="https://twitter.com/intent/tweet?text=Creating your own Quartz components&amp;url=https://notes.zeyadnotes.dev/advanced/creating-components&amp;via=zeyadetman">Share
       it on Twitter</a>
     <div class="backlinks ">
       <h3>Backlinks</h3>
@@ -683,7 +686,7 @@
     <ul>
       <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
       <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
-      <li><a href="https://zeyadetman.com">Blog</a></li>
+      <li><a href="https://zeyadnotes.dev">Blog</a></li>
     </ul>
   </footer>
   </div>

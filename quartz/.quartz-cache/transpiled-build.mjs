@@ -8885,7 +8885,7 @@ var sharedPageComponents = {
       links: {
         GitHub: "https://github.com/zeyadetman/notes",
         Twitter: "https://twitter.com/zeyadelmarsafy",
-        Blog: "https://zeyadetman.com",
+        Blog: "https://zeyadnotes.dev",
       },
     }),
   },
@@ -11250,7 +11250,7 @@ var config = {
       enableSPA: !0,
       enablePopovers: !0,
       analytics: { provider: "google", tagId: "G-QEXV76M819" },
-      baseUrl: "notes.zeyadetman.com",
+      baseUrl: "notes.zeyadnotes.dev",
       ignorePatterns: ["private", "templates", ".obsidian"],
       defaultDateType: "modified",
       theme: {

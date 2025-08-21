@@ -1,115 +1,115 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://notes.zeyadetman.com/advanced/architecture</loc>
+    <loc>https://notes.zeyadnotes.dev/advanced/architecture</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/advanced/creating-components</loc>
+    <loc>https://notes.zeyadnotes.dev/advanced/creating-components</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/advanced/</loc>
+    <loc>https://notes.zeyadnotes.dev/advanced/</loc>
     <lastmod>2023-09-20T23:08:54.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/advanced/making-plugins</loc>
+    <loc>https://notes.zeyadnotes.dev/advanced/making-plugins</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/advanced/paths</loc>
+    <loc>https://notes.zeyadnotes.dev/advanced/paths</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/authoring-content</loc>
+    <loc>https://notes.zeyadnotes.dev/authoring-content</loc>
     <lastmod>2023-08-24T15:14:52.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/build</loc>
+    <loc>https://notes.zeyadnotes.dev/build</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/configuration</loc>
+    <loc>https://notes.zeyadnotes.dev/configuration</loc>
     <lastmod>2023-09-20T20:52:45.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/Docker-Support</loc>
+    <loc>https://notes.zeyadnotes.dev/features/Docker-Support</loc>
     <lastmod>2023-10-08T16:59:18.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/Latex</loc>
+    <loc>https://notes.zeyadnotes.dev/features/Latex</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/Mermaid-diagrams</loc>
+    <loc>https://notes.zeyadnotes.dev/features/Mermaid-diagrams</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/Obsidian-compatibility</loc>
+    <loc>https://notes.zeyadnotes.dev/features/Obsidian-compatibility</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/OxHugo-compatibility</loc>
+    <loc>https://notes.zeyadnotes.dev/features/OxHugo-compatibility</loc>
     <lastmod>2023-09-29T18:35:26.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/RSS-Feed</loc>
+    <loc>https://notes.zeyadnotes.dev/features/RSS-Feed</loc>
     <lastmod>2023-09-13T04:44:03.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/SPA-Routing</loc>
+    <loc>https://notes.zeyadnotes.dev/features/SPA-Routing</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/backlinks</loc>
+    <loc>https://notes.zeyadnotes.dev/features/backlinks</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/breadcrumbs</loc>
+    <loc>https://notes.zeyadnotes.dev/features/breadcrumbs</loc>
     <lastmod>2023-09-29T15:19:10.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/callouts</loc>
+    <loc>https://notes.zeyadnotes.dev/features/callouts</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/darkmode</loc>
+    <loc>https://notes.zeyadnotes.dev/features/darkmode</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/explorer</loc>
+    <loc>https://notes.zeyadnotes.dev/features/explorer</loc>
     <lastmod>2023-10-18T02:43:20.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/folder-and-tag-listings</loc>
+    <loc>https://notes.zeyadnotes.dev/features/folder-and-tag-listings</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/full-text-search</loc>
+    <loc>https://notes.zeyadnotes.dev/features/full-text-search</loc>
     <lastmod>2023-09-04T05:36:30.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/graph-view</loc>
+    <loc>https://notes.zeyadnotes.dev/features/graph-view</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/</loc>
+    <loc>https://notes.zeyadnotes.dev/features/</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/popover-previews</loc>
+    <loc>https://notes.zeyadnotes.dev/features/popover-previews</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/private-pages</loc>
+    <loc>https://notes.zeyadnotes.dev/features/private-pages</loc>
     <lastmod>2023-09-07T15:13:41.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/recent-notes</loc>
+    <loc>https://notes.zeyadnotes.dev/features/recent-notes</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/syntax-highlighting</loc>
+    <loc>https://notes.zeyadnotes.dev/features/syntax-highlighting</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/table-of-contents</loc>
+    <loc>https://notes.zeyadnotes.dev/features/table-of-contents</loc>
     <lastmod>2023-09-20T18:58:52.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/features/wikilinks</loc>
+    <loc>https://notes.zeyadnotes.dev/features/wikilinks</loc>
     <lastmod>2023-09-13T18:28:53.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/hosting</loc>
+    <loc>https://notes.zeyadnotes.dev/hosting</loc>
     <lastmod>2023-08-23T22:14:23.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/</loc>
+    <loc>https://notes.zeyadnotes.dev/</loc>
     <lastmod>2023-10-08T16:59:18.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/layout</loc>
+    <loc>https://notes.zeyadnotes.dev/layout</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/migrating-from-Quartz-3</loc>
+    <loc>https://notes.zeyadnotes.dev/migrating-from-Quartz-3</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/philosophy</loc>
+    <loc>https://notes.zeyadnotes.dev/philosophy</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/showcase</loc>
+    <loc>https://notes.zeyadnotes.dev/showcase</loc>
     <lastmod>2023-10-18T02:43:41.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/tags/component</loc>
+    <loc>https://notes.zeyadnotes.dev/tags/component</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url><url>
-    <loc>https://notes.zeyadetman.com/upgrading</loc>
+    <loc>https://notes.zeyadnotes.dev/upgrading</loc>
     <lastmod>2023-08-23T19:09:04.000Z</lastmod>
   </url></urlset>
