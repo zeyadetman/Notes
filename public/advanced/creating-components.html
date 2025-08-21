@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Creating your own Quartz components</title>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Creating your own Quartz components" />
+  <meta property="og:description"
+    content="Warning This guide assumes you have experience writing JavaScript and are familiar with TypeScript. Normally on the web, we write layout code using HTML which looks something like the following: &amp;lt;article&amp;gt; &amp;lt;h1&amp;gt;An article header&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;Some content&amp;lt;/p&amp;gt; &amp;lt;/article&amp;gt; This piece of HTML represents an article with a leading header that says “An article header” and a paragraph that contains the text “Some content”." />
+  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:width" content="1200" />
+  <meta property="og:height" content="675" />
+  <link rel="icon" href="../static/icon.png" />
+  <meta name="description"
+    content="Warning This guide assumes you have experience writing JavaScript and are familiar with TypeScript. Normally on the web, we write layout code using HTML which looks something like the following: &amp;lt;article&amp;gt; &amp;lt;h1&amp;gt;An article header&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;Some content&amp;lt;/p&amp;gt; &amp;lt;/article&amp;gt; This piece of HTML represents an article with a leading header that says “An article header” and a paragraph that contains the text “Some content”." />
+  <meta name="generator" content="Quartz" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="../index.css" rel="stylesheet" type="text/css" spa-preserve />
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css"
+    spa-preserve />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"
+    rel="stylesheet" type="text/css" spa-preserve />
+  <script src="../prescript.js" type="application/javascript" spa-preserve></script>
+  <script type="application/javascript"
+    spa-preserve>const fetchData = fetch(`../static/contentIndex.json`).then(data => data.json())</script>
+</head>
+
+<body data-slug="advanced/creating-components">
+  <div id="quartz-root" class="page">
+    <div id="quartz-body">
+      <div class="left sidebar">
+        <h1 class="page-title "><a href="..">👨🏻‍💻 Zeyad's Notes</a></h1>
+        <div class="darkmode "><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1" /><label
+            id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35"
+              style="enable-background:new 0 0 35 35;" xmlSpace="preserve">
+              <title>Light mode</title>
+              <path
+                d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z">
+              </path>
+            </svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg
+              xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon"
+              x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve">
+              <title>Dark mode</title>
+              <path
+                d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z">
+              </path>
+            </svg></label></div>
+        <div class="search ">
+          <div id="search-icon">
+            <p>Search</p>
+            <div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 19.9 19.7">
+              <title id="title">Search</title>
+              <desc id="desc">Search</desc>
+              <g class="search-path" fill="none">
+                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path>
+                <circle cx="8" cy="8" r="7"></circle>
+              </g>
+            </svg>
+          </div>
+          <div id="search-container">
+            <div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text"
+                aria-label="Search for something" placeholder="Search for something" />
+              <div id="results-container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer mobile-only"></div>
+        <div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse"
+            data-collapsed="collapsed" data-savestate="true"
+            data-tree="[{&quot;path&quot;:&quot;advanced&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;features&quot;,&quot;collapsed&quot;:true}]">
+            <h1>All Notes</h1><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="fold">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="explorer-content">
+            <ul class="overflow" id="explorer-ul">
+              <li>
+                <div>
+                  <div class="folder-outer open">
+                    <ul style="padding-left:0;" class="content" data-folderul>
+                      <li>
+                        <div>
+                          <div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                              viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" class="folder-icon">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            <div data-folderpath="/advanced"><button class="folder-button">
+                                <p class="folder-title">Advanced</p>
+                              </button></div>
+                          </div>
+                          <div class="folder-outer ">
+                            <ul style="padding-left:1.4rem;" class="content" data-folderul="/advanced">
+                              <li>
+                              <li><a href="../advanced/architecture" data-for="advanced/architecture">Architecture</a>
+                              </li>
+                      </li>
+                      <li>
+                      <li><a href="../advanced/creating-components" data-for="advanced/creating-components">Creating
+                          your own Quartz components</a></li>
+              </li>
+              <li>
+              <li><a href="../advanced/making-plugins" data-for="advanced/making-plugins">Making your own plugins</a>
+              </li>
+              </li>
+              <li>
+              <li><a href="../advanced/paths" data-for="advanced/paths">Paths in Quartz</a></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </li>
+        <li>
+          <div>
+            <div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="folder-icon">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+              <div data-folderpath="/features"><button class="folder-button">
+                  <p class="folder-title">Feature List</p>
+                </button></div>
+            </div>
+            <div class="folder-outer ">
+              <ul style="padding-left:1.4rem;" class="content" data-folderul="/features">
+                <li>
+                <li><a href="../features/backlinks" data-for="features/backlinks">Backlinks</a></li>
+        </li>
+        <li>
+        <li><a href="../features/breadcrumbs" data-for="features/breadcrumbs">Breadcrumbs</a></li>
+        </li>
+        <li>
+        <li><a href="../features/callouts" data-for="features/callouts">Callouts</a></li>
+        </li>
+        <li>
+        <li><a href="../features/darkmode" data-for="features/darkmode">Darkmode</a></li>
+        </li>
+        <li>
+        <li><a href="../features/Docker-Support" data-for="features/Docker-Support">Docker Support</a></li>
+        </li>
+        <li>
+        <li><a href="../features/explorer" data-for="features/explorer">Explorer</a></li>
+        </li>
+        <li>
+        <li><a href="../features/folder-and-tag-listings" data-for="features/folder-and-tag-listings">Folder and Tag
+            Listings</a></li>
+        </li>
+        <li>
+        <li><a href="../features/full-text-search" data-for="features/full-text-search">Full-text Search</a></li>
+        </li>
+        <li>
+        <li><a href="../features/graph-view" data-for="features/graph-view">Graph View</a></li>
+        </li>
+        <li>
+        <li><a href="../features/Latex" data-for="features/Latex">Latex</a></li>
+        </li>
+        <li>
+        <li><a href="../features/Mermaid-diagrams" data-for="features/Mermaid-diagrams">Mermaid diagrams</a></li>
+        </li>
+        <li>
+        <li><a href="../features/Obsidian-compatibility" data-for="features/Obsidian-compatibility">Obsidian
+            compatibility</a></li>
+        </li>
+        <li>
+        <li><a href="../features/OxHugo-compatibility" data-for="features/OxHugo-compatibility">OxHugo compatibility</a>
+        </li>
+        </li>
+        <li>
+        <li><a href="../features/popover-previews" data-for="features/popover-previews">Popover Previews</a></li>
+        </li>
+        <li>
+        <li><a href="../features/private-pages" data-for="features/private-pages">Private Pages</a></li>
+        </li>
+        <li>
+        <li><a href="../features/recent-notes" data-for="features/recent-notes">Recent Notes</a></li>
+        </li>
+        <li>
+        <li><a href="../features/RSS-Feed" data-for="features/RSS-Feed">RSS Feed</a></li>
+        </li>
+        <li>
+        <li><a href="../features/SPA-Routing" data-for="features/SPA-Routing">SPA Routing</a></li>
+        </li>
+        <li>
+        <li><a href="../features/syntax-highlighting" data-for="features/syntax-highlighting">Syntax Highlighting</a>
+        </li>
+        </li>
+        <li>
+        <li><a href="../features/table-of-contents" data-for="features/table-of-contents">Table of Contents</a></li>
+        </li>
+        <li>
+        <li><a href="../features/wikilinks" data-for="features/wikilinks">Wikilinks</a></li>
+        </li>
+        </ul>
+      </div>
+    </div>
+    </li>
+    <li>
+    <li><a href="../authoring-content" data-for="authoring-content">Authoring Content</a></li>
+    </li>
+    <li>
+    <li><a href="../build" data-for="build">Building your Quartz</a></li>
+    </li>
+    <li>
+    <li><a href="../configuration" data-for="configuration">Configuration</a></li>
+    </li>
+    <li>
+    <li><a href="../hosting" data-for="hosting">Hosting</a></li>
+    </li>
+    <li>
+    <li><a href="../layout" data-for="layout">Layout</a></li>
+    </li>
+    <li>
+    <li><a href="../migrating-from-Quartz-3" data-for="migrating-from-Quartz-3">Migrating from Quartz 3</a></li>
+    </li>
+    <li>
+    <li><a href="../philosophy" data-for="philosophy">Philosophy of Quartz</a></li>
+    </li>
+    <li>
+    <li><a href="../showcase" data-for="showcase">Quartz Showcase</a></li>
+    </li>
+    <li>
+    <li><a href="../upgrading" data-for="upgrading">Upgrading Quartz</a></li>
+    </li>
+    </ul>
+  </div>
+  </div>
+  </li>
+  <li id="explorer-end"></li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  <div class="center">
+    <div class="page-header">
+      <div class="popover-hint">
+        <nav class="breadcrumb-container " aria-label="breadcrumbs">
+          <div class="breadcrumb-element"><a href="..">Home</a>
+            <p> > </p>
+          </div>
+          <div class="breadcrumb-element"><a href="../advanced/">advanced</a>
+            <p> > </p>
+          </div>
+          <div class="breadcrumb-element"><a href>Creating your own Quartz components</a></div>
+        </nav>
+        <h1 class="article-title ">Creating your own Quartz components</h1>
+        <p class="content-meta ">Aug 23, 2023, 7 min read</p>
+        <div class="toc mobile-only"><button type="button" id="toc">
+            <h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="fold">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="toc-content">
+            <ul class="overflow">
+              <li class="depth-0"><a href="#an-example-component" data-for="an-example-component">An Example
+                  Component</a></li>
+              <li class="depth-1"><a href="#constructor" data-for="constructor">Constructor</a></li>
+              <li class="depth-1"><a href="#props" data-for="props">Props</a></li>
+              <li class="depth-1"><a href="#styling" data-for="styling">Styling</a></li>
+              <li class="depth-1"><a href="#scripts-and-interactivity" data-for="scripts-and-interactivity">Scripts and
+                  Interactivity</a></li>
+              <li class="depth-1"><a href="#using-a-component" data-for="using-a-component">Using a Component</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet?text=Creating your own Quartz components&amp;url=https://notes.zeyadetman.com/advanced/creating-components&amp;via=zeyadetman">Share
+      it on Twitter</a>
+    <article class="popover-hint">
+      <blockquote class="callout" data-callout="warning">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Warning </p>
+          </div>
+
+        </div>
+        <p>This guide assumes you have experience writing JavaScript and are familiar with TypeScript.</p>
+      </blockquote>
+      <p>Normally on the web, we write layout code using HTML which looks something like the following:</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html"
+          data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">article</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  &lt;</span><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);">>An article header&lt;/</span><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  &lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">>Some content&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">article</span><span style="color:var(--shiki-color-text);">></span></span></code></pre>
+      </div>
+      <p>This piece of HTML represents an article with a leading header that says “An article header” and a paragraph
+        that contains the text “Some content”. This is combined with CSS to style the page and JavaScript to add
+        interactivity.</p>
+      <p>However, HTML doesn’t let you create reusable templates. If you wanted to create a new page, you would need to
+        copy and paste the above snippet and edit the header and content yourself. This isn’t great if we have a lot of
+        content on our site that shares a lot of similar layout. The smart people who created React also had similar
+        complaints and invented the concept of Components — JavaScript functions that return JSX — to solve the code
+        duplication problem.</p>
+      <p>In effect, components allow you to write a JavaScript function that takes some data and produces HTML as an
+        output. <strong>While Quartz doesn’t use React, it uses the same component concept to allow you to easily
+          express layout templates in your Quartz site.</strong></p>
+      <h2 id="an-example-component">An Example Component<a aria-hidden="true" tabindex="-1" href="#an-example-component"
+          class="internal"> §</a></h2>
+      <h3 id="constructor">Constructor<a aria-hidden="true" tabindex="-1" href="#constructor" class="internal"> §</a>
+      </h3>
+      <p>Component files are written in <code>.tsx</code> files that live in the <code>quartz/components</code> folder.
+        These are re-exported in <code>quartz/components/index.ts</code> so you can use them in layouts and other
+        components more easily.</p>
+      <p>Each component file should have a default export that satisfies the <code>QuartzComponentConstructor</code>
+        function signature. It’s a function that takes in a single optional parameter <code>opts</code> and returns a
+        Quartz Component. The type of the parameters <code>opts</code> is defined by the interface <code>Options</code>
+        which you as the component creator also decide.</p>
+      <p>In your component, you can use the values from the configuration option to change the rendering behaviour
+        inside of your component. For example, the component in the code snippet below will not render if the
+        <code>favouriteNumber</code> option is below 0.</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
+          data-theme="default"><code data-language="tsx" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">interface</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  favouriteNumber</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">number</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">defaultOptions</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  favouriteNumber</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">42</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">default</span><span style="color:var(--shiki-color-text);"> ((userOpts</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">opts</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> { </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">userOpts</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">defaultOpts }</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">function</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">YourComponent</span><span style="color:var(--shiki-color-text);">(props</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentProps</span><span style="color:var(--shiki-color-text);">) {</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">if</span><span style="color:var(--shiki-color-text);"> (</span><span style="color:var(--shiki-token-constant);">opts</span><span style="color:var(--shiki-color-text);">.favouriteNumber </span><span style="color:var(--shiki-token-keyword);">&lt;</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">0</span><span style="color:var(--shiki-color-text);">) {</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">null</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line data-highlighted-line> </span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> &lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">>My favourite number is {</span><span style="color:var(--shiki-token-constant);">opts</span><span style="color:var(--shiki-color-text);">.favouriteNumber}&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> YourComponent</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}) </span><span style="color:var(--shiki-token-keyword);">satisfies</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentConstructor</span></span></code></pre>
+      </div>
+      <h3 id="props">Props<a aria-hidden="true" tabindex="-1" href="#props" class="internal"> §</a></h3>
+      <p>The Quartz component itself (lines 11-17 highlighted above) looks like a React component. It takes in
+        properties (sometimes called <a href="https://react.dev/learn/passing-props-to-a-component"
+          class="external">props</a>) and returns JSX.</p>
+      <p>All Quartz components accept the same set of props:</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="tsx" data-theme="default">quartz/components/types.ts</div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
+          data-theme="default"><code data-language="tsx" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">// simplified for sake of demonstration</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentProps</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  fileData</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzPluginData</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  cfg</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">GlobalConfiguration</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  tree</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Node</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">QuartzPluginData</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  allFiles</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzPluginData</span><span style="color:var(--shiki-color-text);">[]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  displayClass</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;mobile-only&quot;</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;desktop-only&quot;</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <ul>
+        <li><code>fileData</code>: Any metadata <a href="../advanced/making-plugins" class="internal"
+            data-slug="advanced/making-plugins">plugins</a> may have added to the current page.
+          <ul>
+            <li><code>fileData.slug</code>: slug of the current page.</li>
+            <li><code>fileData.frontmatter</code>: any frontmatter parsed.</li>
+          </ul>
+        </li>
+        <li><code>cfg</code>: The <code>configuration</code> field in <code>quartz.config.ts</code>.</li>
+        <li><code>tree</code>: the resulting <a href="https://github.com/syntax-tree/hast" class="external">HTML AST</a>
+          after processing and transforming the file. This is useful if you’d like to render the content using <a
+            href="https://github.com/syntax-tree/hast-util-to-jsx-runtime" class="external">hast-util-to-jsx-runtime</a>
+          (you can find an example of this in <code>quartz/components/pages/Content.tsx</code>).</li>
+        <li><code>allFiles</code>: Metadata for all files that have been parsed. Useful for doing page listings or
+          figuring out the overall site structure.</li>
+        <li><code>displayClass</code>: a utility class that indicates a preference from the user about how to render it
+          in a mobile or desktop setting. Helpful if you want to conditionally hide a component on mobile or desktop.
+        </li>
+      </ul>
+      <h3 id="styling">Styling<a aria-hidden="true" tabindex="-1" href="#styling" class="internal"> §</a></h3>
+      <p>Quartz components can also define a <code>.css</code> property on the actual function component which will get
+        picked up by Quartz. This is expected to be a CSS string which can either be inlined or imported from a
+        <code>.scss</code> file.</p>
+      <p>Note that inlined styles <strong>must</strong> be plain vanilla CSS:</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="tsx" data-theme="default">quartz/components/YourComponent.tsx
+        </div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
+          data-theme="default"><code data-language="tsx" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">default</span><span style="color:var(--shiki-color-text);"> (() </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">function</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">YourComponent</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> &lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;red-text&quot;</span><span style="color:var(--shiki-color-text);">>Example Component&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line> </span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">YourComponent</span><span style="color:var(--shiki-color-text);">.css </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">`</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-token-string-expression);">  p.red-text {</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-token-string-expression);">    color: red;</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-token-string-expression);">  }</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-token-string-expression);">  `</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> YourComponent</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}) </span><span style="color:var(--shiki-token-keyword);">satisfies</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentConstructor</span></span></code></pre>
+      </div>
+      <p>Imported styles, however, can be from SCSS files:</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="tsx" data-theme="default">quartz/components/YourComponent.tsx
+        </div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
+          data-theme="default"><code data-language="tsx" data-theme="default"><span data-line data-highlighted-line><span style="color:var(--shiki-token-comment);">// assuming your stylesheet is in quartz/components/styles/YourComponent.scss</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> styles </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;./styles/YourComponent.scss&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">default</span><span style="color:var(--shiki-color-text);"> (() </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">function</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">YourComponent</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> &lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">>Example Component&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line> </span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">YourComponent</span><span style="color:var(--shiki-color-text);">.css </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> styles</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> YourComponent</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}) </span><span style="color:var(--shiki-token-keyword);">satisfies</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentConstructor</span></span></code></pre>
+      </div>
+      <blockquote class="callout" data-callout="warning">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Warning </p>
+          </div>
+
+        </div>
+        <p>Quartz does not use CSS modules so any styles you declare here apply <em>globally</em>. If you only want it
+          to apply to your component, make sure you use specific class names and selectors.</p>
+      </blockquote>
+      <h3 id="scripts-and-interactivity">Scripts and Interactivity<a aria-hidden="true" tabindex="-1"
+          href="#scripts-and-interactivity" class="internal"> §</a></h3>
+      <p>What about interactivity? Suppose you want to add an-click handler for example. Like the <code>.css</code>
+        property on the component, you can also declare <code>.beforeDOMLoaded</code> and <code>.afterDOMLoaded</code>
+        properties that are strings that contain the script.</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="tsx" data-theme="default">quartz/components/YourComponent.tsx
+        </div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
+          data-theme="default"><code data-language="tsx" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">default</span><span style="color:var(--shiki-color-text);"> (() </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">function</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">YourComponent</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> &lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">id</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;btn&quot;</span><span style="color:var(--shiki-color-text);">>Click me&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">YourComponent</span><span style="color:var(--shiki-color-text);">.beforeDOM </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">`</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  console.log(&quot;hello from before the page loads!&quot;)</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  `</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">YourComponent</span><span style="color:var(--shiki-color-text);">.afterDOM </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">`</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  document.getElementById('btn').onclick = () => {</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">    alert('button clicked!')</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  }</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  `</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> YourComponent</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}) </span><span style="color:var(--shiki-token-keyword);">satisfies</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentConstructor</span></span></code></pre>
+      </div>
+      <blockquote class="callout" data-callout="tip">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+              </path>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Tip </p>
+          </div>
+
+        </div>
+        <p>For those coming from React, Quartz components are different from React components in that it only uses JSX
+          for templating and layout. Hooks like <code>useEffect</code>, <code>useState</code>, etc. are not rendered and
+          other properties that accept functions like <code>onClick</code> handlers will not work. Instead, do it using
+          a regular JS script that modifies the DOM element directly.</p>
+      </blockquote>
+      <p>As the names suggest, the <code>.beforeDOMLoaded</code> scripts are executed <em>before</em> the page is done
+        loading so it doesn’t have access to any elements on the page. This is mostly used to prefetch any critical
+        data.</p>
+      <p>The <code>.afterDOMLoaded</code> script executes once the page has been completely loaded. This is a good place
+        to setup anything that should last for the duration of a site visit (e.g. getting something saved from local
+        storage).</p>
+      <p>If you need to create an <code>afterDOMLoaded</code> script that depends on <em>page specific</em> elements
+        that may change when navigating to a new page, you can listen for the <code>&quot;nav&quot;</code> event that
+        gets fired whenever a page loads (which may happen on navigation if <a href="../features/SPA-Routing"
+          class="internal" data-slug="features/SPA-Routing">SPA Routing</a> is enabled).</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-constant);">document</span><span style="color:var(--shiki-token-function);">.addEventListener</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">&quot;nav&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> () </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">// do page specific logic here</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">// e.g. attach event listeners</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">toggleSwitch</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">document</span><span style="color:var(--shiki-token-function);">.querySelector</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">&quot;#switch&quot;</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">as</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">HTMLInputElement</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">toggleSwitch</span><span style="color:var(--shiki-token-function);">.removeEventListener</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">&quot;change&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> switchTheme)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">toggleSwitch</span><span style="color:var(--shiki-token-function);">.addEventListener</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">&quot;change&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> switchTheme)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span></code></pre>
+      </div>
+      <p>It is best practice to also unmount any existing event handlers to prevent memory leaks.</p>
+      <h4 id="importing-code">Importing Code<a aria-hidden="true" tabindex="-1" href="#importing-code" class="internal">
+          §</a></h4>
+      <p>Of course, it isn’t always practical (nor desired!) to write your code as a string literal in the component.
+      </p>
+      <p>Quartz supports importing component code through <code>.inline.ts</code> files.</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="tsx" data-theme="default">quartz/components/YourComponent.tsx
+        </div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
+          data-theme="default"><code data-language="tsx" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">// @ts-ignore: typescript doesn't know about our inline bundling system</span></span>
+<span data-line><span style="color:var(--shiki-token-comment);">// so we need to silence the error</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> script </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;./scripts/graph.inline&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">default</span><span style="color:var(--shiki-color-text);"> (() </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">function</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">YourComponent</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> &lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">id</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;btn&quot;</span><span style="color:var(--shiki-color-text);">>Click me&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">YourComponent</span><span style="color:var(--shiki-color-text);">.afterDOM </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> script</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> YourComponent</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}) </span><span style="color:var(--shiki-token-keyword);">satisfies</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentConstructor</span></span></code></pre>
+      </div>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="ts" data-theme="default">
+          quartz/components/scripts/graph.inline.ts</div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">// any imports here are bundled for the browser</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">*</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">as</span><span style="color:var(--shiki-color-text);"> d3 </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;d3&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-constant);">document</span><span style="color:var(--shiki-token-function);">.getElementById</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">&quot;btn&quot;</span><span style="color:var(--shiki-color-text);">).</span><span style="color:var(--shiki-token-function);">onclick</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> () </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">alert</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">&quot;button clicked!&quot;</span><span style="color:var(--shiki-color-text);">)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <p>Additionally, like what is shown in the example above, you can import packages in <code>.inline.ts</code>
+        files. This will be bundled by Quartz and included in the actual script.</p>
+      <h3 id="using-a-component">Using a Component<a aria-hidden="true" tabindex="-1" href="#using-a-component"
+          class="internal"> §</a></h3>
+      <p>After creating your custom component, re-export it in <code>quartz/components/index.ts</code>:</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="ts" data-theme="default">quartz/components/index.ts</div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> ArticleTitle </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;./ArticleTitle&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> Content </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;./pages/Content&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> Darkmode </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;./Darkmode&quot;</span></span>
+<span data-line data-highlighted-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> YourComponent </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;./YourComponent&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> { ArticleTitle</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> Content</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> Darkmode</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> YourComponent }</span></span></code></pre>
+      </div>
+      <p>Then, you can use it like any other component in <code>quartz.layout.ts</code> via
+        <code>Component.YourComponent()</code>. See the <a href="../configuration#layout" class="internal"
+          data-slug="configuration">layout</a> section for more details.</p>
+      <p>As Quartz components are just functions that return React components, you can compositionally use them in other
+        Quartz components.</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="tsx" data-theme="default">
+          quartz/components/AnotherComponent.tsx</div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
+          data-theme="default"><code data-language="tsx" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> YourComponent </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;./YourComponent&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">default</span><span style="color:var(--shiki-color-text);"> (() </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">function</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">AnotherComponent</span><span style="color:var(--shiki-color-text);">(props</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentProps</span><span style="color:var(--shiki-color-text);">) {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> (</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      &lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        &lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">>It's nested!&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        &lt;</span><span style="color:var(--shiki-token-constant);">YourComponent</span><span style="color:var(--shiki-color-text);"> {</span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">props} /></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      &lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    )</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> AnotherComponent</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}) </span><span style="color:var(--shiki-token-keyword);">satisfies</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentConstructor</span></span></code></pre>
+      </div>
+      <blockquote class="callout" data-callout="tip">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+              </path>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Tip </p>
+          </div>
+
+        </div>
+        <p>Look in <code>quartz/components</code> for more examples of components in Quartz as reference for your own
+          components!</p>
+      </blockquote>
+    </article><a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet?text=Creating your own Quartz components&amp;url=https://notes.zeyadetman.com/advanced/creating-components&amp;via=zeyadetman">Share
+      it on Twitter</a>
+    <div class="backlinks ">
+      <h3>Backlinks</h3>
+      <ul class="overflow">
+        <li><a href="../advanced/making-plugins" class="internal">Making your own plugins</a></li>
+        <li><a href="../features/folder-and-tag-listings" class="internal">Folder and Tag Listings</a></li>
+        <li><a href="../features/popover-previews" class="internal">Popover Previews</a></li>
+        <li><a href=".." class="internal">Welcome to Quartz 4</a></li>
+        <li><a href="../layout" class="internal">Layout</a></li>
+        <li><a href="../migrating-from-Quartz-3" class="internal">Migrating from Quartz 3</a></li>
+        <li><a href="../tags/component" class="internal">Components</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="right sidebar">
+    <div class="graph ">
+      <h3>Graph View</h3>
+      <div class="graph-outer">
+        <div id="graph-container"
+          data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[]}">
+        </div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor"
+          xmlSpace="preserve">
+          <path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z">
+          </path>
+        </svg>
+      </div>
+      <div id="global-graph-outer">
+        <div id="global-graph-container"
+          data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[]}">
+        </div>
+      </div>
+    </div>
+    <div class="recent-notes desktop-only">
+      <h3>Recent Notes</h3>
+      <ul class="recent-ul">
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="../showcase" class="internal">Quartz Showcase</a></h3>
+            </div>
+            <p class="meta">Oct 18, 2023</p>
+            <ul class="tags"></ul>
+          </div>
+        </li>
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="../features/explorer" class="internal">Explorer</a></h3>
+            </div>
+            <p class="meta">Oct 18, 2023</p>
+            <ul class="tags">
+              <li><a class="internal tag-link" href="../tags/component">#component</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="../features/Docker-Support" class="internal">Docker Support</a></h3>
+            </div>
+            <p class="meta">Oct 08, 2023</p>
+            <ul class="tags"></ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <footer class>
+    <hr />
+    <p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.1.0</a>, © 2025</p>
+    <ul>
+      <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
+      <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
+      <li><a href="https://zeyadetman.com">Blog</a></li>
+    </ul>
+  </footer>
+  </div>
+  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+</body>
+<script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+  function toggleCallout() {
+    const outerBlock = this.parentElement;
+    outerBlock.classList.toggle(`is-collapsed`);
+    const collapsed = outerBlock.classList.contains(`is-collapsed`);
+    const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+    outerBlock.style.maxHeight = height + `px`;
+    let current = outerBlock;
+    let parent = outerBlock.parentElement;
+    while (parent) {
+      if (!parent.classList.contains(`callout`)) {
+        return;
+      }
+      const collapsed2 = parent.classList.contains(`is-collapsed`);
+      const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+      parent.style.maxHeight = height2 + `px`;
+      current = parent;
+      parent = parent.parentElement;
+    }
+  }
+  function setupCallout() {
+    const collapsible = document.getElementsByClassName(
+      `callout is-collapsible`
+    );
+    for (const div of collapsible) {
+      const title = div.firstElementChild;
+      if (title) {
+        title.removeEventListener(`click`, toggleCallout);
+        title.addEventListener(`click`, toggleCallout);
+        const collapsed = div.classList.contains(`is-collapsed`);
+        const height = collapsed ? title.scrollHeight : div.scrollHeight;
+        div.style.maxHeight = height + `px`;
+      }
+    }
+  }
+  document.addEventListener(`nav`, setupCallout);
+  window.addEventListener(`resize`, setupCallout);
+</script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+  mermaid.initialize({
+    startOnLoad: false,
+    securityLevel: 'loose',
+    theme: darkMode ? 'dark' : 'default'
+  });
+  document.addEventListener('nav', async () => {
+    await mermaid.run({
+      querySelector: '.mermaid'
+    })
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js"
+  type="application/javascript"></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=G-QEXV76M819" type="application/javascript"></script>
+<script type="application/javascript">
+  const socket = new WebSocket('ws://localhost:3001')
+  socket.addEventListener('message', () => document.location.reload())
+</script>
+<script src="../postscript.js" type="module"></script>
+
+</html>

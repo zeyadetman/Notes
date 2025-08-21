@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hosting</title>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Hosting" />
+  <meta property="og:description"
+    content="Quartz effectively turns your Markdown files and other resources into a bundle of HTML, JS, and CSS files (a website!). However, if you’d like to publish your site to the world, you need a way to host it online." />
+  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:width" content="1200" />
+  <meta property="og:height" content="675" />
+  <link rel="icon" href="./static/icon.png" />
+  <meta name="description"
+    content="Quartz effectively turns your Markdown files and other resources into a bundle of HTML, JS, and CSS files (a website!). However, if you’d like to publish your site to the world, you need a way to host it online." />
+  <meta name="generator" content="Quartz" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="./index.css" rel="stylesheet" type="text/css" spa-preserve />
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css"
+    spa-preserve />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"
+    rel="stylesheet" type="text/css" spa-preserve />
+  <script src="./prescript.js" type="application/javascript" spa-preserve></script>
+  <script type="application/javascript"
+    spa-preserve>const fetchData = fetch(`./static/contentIndex.json`).then(data => data.json())</script>
+</head>
+
+<body data-slug="hosting">
+  <div id="quartz-root" class="page">
+    <div id="quartz-body">
+      <div class="left sidebar">
+        <h1 class="page-title "><a href=".">👨🏻‍💻 Zeyad's Notes</a></h1>
+        <div class="darkmode "><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1" /><label
+            id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35"
+              style="enable-background:new 0 0 35 35;" xmlSpace="preserve">
+              <title>Light mode</title>
+              <path
+                d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z">
+              </path>
+            </svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg
+              xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon"
+              x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve">
+              <title>Dark mode</title>
+              <path
+                d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z">
+              </path>
+            </svg></label></div>
+        <div class="search ">
+          <div id="search-icon">
+            <p>Search</p>
+            <div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 19.9 19.7">
+              <title id="title">Search</title>
+              <desc id="desc">Search</desc>
+              <g class="search-path" fill="none">
+                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path>
+                <circle cx="8" cy="8" r="7"></circle>
+              </g>
+            </svg>
+          </div>
+          <div id="search-container">
+            <div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text"
+                aria-label="Search for something" placeholder="Search for something" />
+              <div id="results-container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer mobile-only"></div>
+        <div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse"
+            data-collapsed="collapsed" data-savestate="true"
+            data-tree="[{&quot;path&quot;:&quot;advanced&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;features&quot;,&quot;collapsed&quot;:true}]">
+            <h1>All Notes</h1><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="fold">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="explorer-content">
+            <ul class="overflow" id="explorer-ul">
+              <li>
+                <div>
+                  <div class="folder-outer open">
+                    <ul style="padding-left:0;" class="content" data-folderul>
+                      <li>
+                        <div>
+                          <div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                              viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" class="folder-icon">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            <div data-folderpath="/advanced"><button class="folder-button">
+                                <p class="folder-title">Advanced</p>
+                              </button></div>
+                          </div>
+                          <div class="folder-outer ">
+                            <ul style="padding-left:1.4rem;" class="content" data-folderul="/advanced">
+                              <li>
+                              <li><a href="./advanced/architecture" data-for="advanced/architecture">Architecture</a>
+                              </li>
+                      </li>
+                      <li>
+                      <li><a href="./advanced/creating-components" data-for="advanced/creating-components">Creating your
+                          own Quartz components</a></li>
+              </li>
+              <li>
+              <li><a href="./advanced/making-plugins" data-for="advanced/making-plugins">Making your own plugins</a>
+              </li>
+              </li>
+              <li>
+              <li><a href="./advanced/paths" data-for="advanced/paths">Paths in Quartz</a></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </li>
+        <li>
+          <div>
+            <div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="folder-icon">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+              <div data-folderpath="/features"><button class="folder-button">
+                  <p class="folder-title">Feature List</p>
+                </button></div>
+            </div>
+            <div class="folder-outer ">
+              <ul style="padding-left:1.4rem;" class="content" data-folderul="/features">
+                <li>
+                <li><a href="./features/backlinks" data-for="features/backlinks">Backlinks</a></li>
+        </li>
+        <li>
+        <li><a href="./features/breadcrumbs" data-for="features/breadcrumbs">Breadcrumbs</a></li>
+        </li>
+        <li>
+        <li><a href="./features/callouts" data-for="features/callouts">Callouts</a></li>
+        </li>
+        <li>
+        <li><a href="./features/darkmode" data-for="features/darkmode">Darkmode</a></li>
+        </li>
+        <li>
+        <li><a href="./features/Docker-Support" data-for="features/Docker-Support">Docker Support</a></li>
+        </li>
+        <li>
+        <li><a href="./features/explorer" data-for="features/explorer">Explorer</a></li>
+        </li>
+        <li>
+        <li><a href="./features/folder-and-tag-listings" data-for="features/folder-and-tag-listings">Folder and Tag
+            Listings</a></li>
+        </li>
+        <li>
+        <li><a href="./features/full-text-search" data-for="features/full-text-search">Full-text Search</a></li>
+        </li>
+        <li>
+        <li><a href="./features/graph-view" data-for="features/graph-view">Graph View</a></li>
+        </li>
+        <li>
+        <li><a href="./features/Latex" data-for="features/Latex">Latex</a></li>
+        </li>
+        <li>
+        <li><a href="./features/Mermaid-diagrams" data-for="features/Mermaid-diagrams">Mermaid diagrams</a></li>
+        </li>
+        <li>
+        <li><a href="./features/Obsidian-compatibility" data-for="features/Obsidian-compatibility">Obsidian
+            compatibility</a></li>
+        </li>
+        <li>
+        <li><a href="./features/OxHugo-compatibility" data-for="features/OxHugo-compatibility">OxHugo compatibility</a>
+        </li>
+        </li>
+        <li>
+        <li><a href="./features/popover-previews" data-for="features/popover-previews">Popover Previews</a></li>
+        </li>
+        <li>
+        <li><a href="./features/private-pages" data-for="features/private-pages">Private Pages</a></li>
+        </li>
+        <li>
+        <li><a href="./features/recent-notes" data-for="features/recent-notes">Recent Notes</a></li>
+        </li>
+        <li>
+        <li><a href="./features/RSS-Feed" data-for="features/RSS-Feed">RSS Feed</a></li>
+        </li>
+        <li>
+        <li><a href="./features/SPA-Routing" data-for="features/SPA-Routing">SPA Routing</a></li>
+        </li>
+        <li>
+        <li><a href="./features/syntax-highlighting" data-for="features/syntax-highlighting">Syntax Highlighting</a>
+        </li>
+        </li>
+        <li>
+        <li><a href="./features/table-of-contents" data-for="features/table-of-contents">Table of Contents</a></li>
+        </li>
+        <li>
+        <li><a href="./features/wikilinks" data-for="features/wikilinks">Wikilinks</a></li>
+        </li>
+        </ul>
+      </div>
+    </div>
+    </li>
+    <li>
+    <li><a href="./authoring-content" data-for="authoring-content">Authoring Content</a></li>
+    </li>
+    <li>
+    <li><a href="./build" data-for="build">Building your Quartz</a></li>
+    </li>
+    <li>
+    <li><a href="./configuration" data-for="configuration">Configuration</a></li>
+    </li>
+    <li>
+    <li><a href="./hosting" data-for="hosting">Hosting</a></li>
+    </li>
+    <li>
+    <li><a href="./layout" data-for="layout">Layout</a></li>
+    </li>
+    <li>
+    <li><a href="./migrating-from-Quartz-3" data-for="migrating-from-Quartz-3">Migrating from Quartz 3</a></li>
+    </li>
+    <li>
+    <li><a href="./philosophy" data-for="philosophy">Philosophy of Quartz</a></li>
+    </li>
+    <li>
+    <li><a href="./showcase" data-for="showcase">Quartz Showcase</a></li>
+    </li>
+    <li>
+    <li><a href="./upgrading" data-for="upgrading">Upgrading Quartz</a></li>
+    </li>
+    </ul>
+  </div>
+  </div>
+  </li>
+  <li id="explorer-end"></li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  <div class="center">
+    <div class="page-header">
+      <div class="popover-hint">
+        <nav class="breadcrumb-container " aria-label="breadcrumbs">
+          <div class="breadcrumb-element"><a href=".">Home</a>
+            <p> > </p>
+          </div>
+          <div class="breadcrumb-element"><a href>Hosting</a></div>
+        </nav>
+        <h1 class="article-title ">Hosting</h1>
+        <p class="content-meta ">Aug 24, 2023, 6 min read</p>
+        <div class="toc mobile-only"><button type="button" id="toc">
+            <h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="fold">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="toc-content">
+            <ul class="overflow">
+              <li class="depth-0"><a href="#cloudflare-pages" data-for="cloudflare-pages">Cloudflare Pages</a></li>
+              <li class="depth-0"><a href="#github-pages" data-for="github-pages">GitHub Pages</a></li>
+              <li class="depth-1"><a href="#custom-domain" data-for="custom-domain">Custom Domain</a></li>
+              <li class="depth-0"><a href="#vercel" data-for="vercel">Vercel</a></li>
+              <li class="depth-1"><a href="#fix-urls" data-for="fix-urls">Fix URLs</a></li>
+              <li class="depth-1"><a href="#deploy-to-vercel" data-for="deploy-to-vercel">Deploy to Vercel</a></li>
+              <li class="depth-1"><a href="#custom-domain-1" data-for="custom-domain-1">Custom Domain</a></li>
+              <li class="depth-1"><a href="#use-a-subdomain" data-for="use-a-subdomain">Use a Subdomain</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet?text=Hosting&amp;url=https://notes.zeyadetman.com/hosting&amp;via=zeyadetman">Share
+      it on Twitter</a>
+    <article class="popover-hint">
+      <p>Quartz effectively turns your Markdown files and other resources into a bundle of HTML, JS, and CSS files (a
+        website!).</p>
+      <p>However, if you’d like to publish your site to the world, you need a way to host it online. This guide will
+        detail how to deploy with either GitHub Pages or Cloudflare pages but any service that allows you to deploy
+        static HTML should work as well (e.g. Netlify, Replit, etc.)</p>
+      <blockquote class="callout" data-callout="tip">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+              </path>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Tip </p>
+          </div>
+
+        </div>
+        <p>Some Quartz features (like <a href="./features/RSS-Feed" class="internal" data-slug="features/RSS-Feed">RSS
+            Feed</a> and sitemap generation) require <code>baseUrl</code> to be configured properly in your <a
+            href="./configuration" class="internal" data-slug="configuration">configuration</a> to work properly. Make
+          sure you set this before deploying!</p>
+      </blockquote>
+      <h2 id="cloudflare-pages">Cloudflare Pages<a aria-hidden="true" tabindex="-1" href="#cloudflare-pages"
+          class="internal"> §</a></h2>
+      <ol>
+        <li>Log in to the <a href="https://dash.cloudflare.com/" class="external">Cloudflare dashboard</a> and select
+          your account.</li>
+        <li>In Account Home, select <strong>Workers &amp; Pages</strong> > <strong>Create
+            application</strong> > <strong>Pages</strong> > <strong>Connect to Git</strong>.</li>
+        <li>Select the new GitHub repository that you created and, in the <strong>Set up builds and
+            deployments</strong> section, provide the following information:</li>
+      </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>Configuration option</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Production branch</td>
+            <td><code>v4</code></td>
+          </tr>
+          <tr>
+            <td>Framework preset</td>
+            <td><code>None</code></td>
+          </tr>
+          <tr>
+            <td>Build command</td>
+            <td><code>npx quartz build</code></td>
+          </tr>
+          <tr>
+            <td>Build output directory</td>
+            <td><code>public</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Press “Save and deploy” and Cloudflare should have a deployed version of your site in about a minute. Then,
+        every time you sync your Quartz changes to GitHub, your site should be updated.</p>
+      <p>To add a custom domain, check out <a href="https://developers.cloudflare.com/pages/platform/custom-domains/"
+          class="external">Cloudflare’s documentation</a>.</p>
+      <h2 id="github-pages">GitHub Pages<a aria-hidden="true" tabindex="-1" href="#github-pages" class="internal"> §</a>
+      </h2>
+      <p>Like Quartz 3, you can deploy the site generated by Quartz 4 via GitHub Pages.</p>
+      <blockquote class="callout" data-callout="warning">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Warning </p>
+          </div>
+
+        </div>
+        <p>Quartz generates files in the format of <code>file.html</code> instead of <code>file/index.html</code> which
+          means the trailing slashes for <em>non-folder paths</em> are dropped. As GitHub pages does not do this
+          redirect, this may cause existing links to your site that use trailing slashes to break. If not breaking
+          existing links is important to you, consider using <a href="#cloudflare-pages" class="internal">Cloudflare
+            Pages</a>.</p>
+      </blockquote>
+      <p>In your local Quartz, create a new file <code>quartz/.github/workflows/deploy.yml</code>.</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="yaml" data-theme="default">quartz/.github/workflows/deploy.yml
+        </div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="yaml"
+          data-theme="default"><code data-language="yaml" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">Deploy Quartz site to GitHub Pages</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-constant);">on</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">push</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">branches</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      - </span><span style="color:var(--shiki-token-string-expression);">v4</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">permissions</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">contents</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">read</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">pages</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">write</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">id-token</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">write</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">concurrency</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">group</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;pages&quot;</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">cancel-in-progress</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">false</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">jobs</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">build</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">runs-on</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">ubuntu-22.04</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">steps</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      - </span><span style="color:var(--shiki-token-keyword);">uses</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">actions/checkout@v3</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">with</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          </span><span style="color:var(--shiki-token-keyword);">fetch-depth</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">0</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-comment);"># Fetch all history for git info</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      - </span><span style="color:var(--shiki-token-keyword);">uses</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">actions/setup-node@v3</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">with</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          </span><span style="color:var(--shiki-token-keyword);">node-version</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">18.14</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      - </span><span style="color:var(--shiki-token-keyword);">name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">Install Dependencies</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">run</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">npm ci</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      - </span><span style="color:var(--shiki-token-keyword);">name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">Build Quartz</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">run</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">npx quartz build</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      - </span><span style="color:var(--shiki-token-keyword);">name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">Upload artifact</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">uses</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">actions/upload-pages-artifact@v2</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">with</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          </span><span style="color:var(--shiki-token-keyword);">path</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">public</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">deploy</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">needs</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">build</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">environment</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">github-pages</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">url</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">${{ steps.deployment.outputs.page_url }}</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">runs-on</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">ubuntu-latest</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">steps</span><span style="color:var(--shiki-token-keyword);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      - </span><span style="color:var(--shiki-token-keyword);">name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">Deploy to GitHub Pages</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">id</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">deployment</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">uses</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">actions/deploy-pages@v2</span></span></code></pre>
+      </div>
+      <p>Then:</p>
+      <ol>
+        <li>Head to “Settings” tab of your forked repository and in the sidebar, click “Pages”. Under “Source”, select
+          “GitHub Actions”.</li>
+        <li>Commit these changes by doing <code>npx quartz sync</code>. This should deploy your site to
+          <code>&lt;github-username>.github.io/&lt;repository-name></code>.</li>
+      </ol>
+      <blockquote class="callout" data-callout="tip">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+              </path>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Tip </p>
+          </div>
+
+        </div>
+        <p>If you get an error about not being allowed to deploy to <code>github-pages</code> due to environment
+          protection rules, make sure you remove any existing GitHub pages environments.</p>
+        <p>You can do this by going to your Settings page on your GitHub fork and going to the Environments tab and
+          pressing the trash icon. The GitHub action will recreate the environment for you correctly the next time you
+          sync your Quartz.</p>
+      </blockquote>
+      <h3 id="custom-domain">Custom Domain<a aria-hidden="true" tabindex="-1" href="#custom-domain" class="internal">
+          §</a></h3>
+      <p>Here’s how to add a custom domain to your GitHub pages deployment.</p>
+      <ol>
+        <li>Head to the “Settings” tab of your forked repository.</li>
+        <li>In the “Code and automation” section of the sidebar, click “Pages”.</li>
+        <li>Under “Custom Domain”, type your custom domain and click “Save”.</li>
+        <li>This next step depends on whether you are using an apex domain (<code>example.com</code>) or a subdomain
+          (<code>subdomain.example.com</code>).
+          <ul>
+            <li>If you are using an apex domain, navigate to your DNS provider and create an <code>A</code> record that
+              points your apex domain to GitHub’s name servers which have the following IP addresses:
+              <ul>
+                <li><code>185.199.108.153</code></li>
+                <li><code>185.199.109.153</code></li>
+                <li><code>185.199.110.153</code></li>
+                <li><code>185.199.111.153</code></li>
+              </ul>
+            </li>
+            <li>If you are using a subdomain, navigate to your DNS provider and create a <code>CNAME</code> record that
+              points your subdomain to the default domain for your site. For example, if you want to use the
+              subdomain <code>quartz.example.com</code> for your user site, create a <code>CNAME</code> record that
+              points <code>quartz.example.com</code> to <code>&lt;github-username>.github.io</code>.</li>
+          </ul>
+        </li>
+      </ol>
+      <p><img src="./images/dns-records.png" width="auto" height="auto" /><em>The above shows a screenshot of Google
+          Domains configured for both <code>jzhao.xyz</code> (an apex domain) and <code>quartz.jzhao.xyz</code> (a
+          subdomain).</em></p>
+      <p>See the <a
+          href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain"
+          class="external">GitHub documentation</a> for more detail about how to setup your own custom domain with
+        GitHub Pages.</p>
+      <blockquote class="callout" data-callout="question">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Why aren't my changes showing up? </p>
+          </div>
+
+        </div>
+        <p>There could be many different reasons why your changes aren’t showing up but the most likely reason is that
+          you forgot to push your changes to GitHub.</p>
+        <p>Make sure you save your changes to Git and sync it to GitHub by doing <code>npx quartz sync</code>. This will
+          also make sure to pull any updates you may have made from other devices so you have them locally.</p>
+      </blockquote>
+      <h2 id="vercel">Vercel<a aria-hidden="true" tabindex="-1" href="#vercel" class="internal"> §</a></h2>
+      <h3 id="fix-urls">Fix URLs<a aria-hidden="true" tabindex="-1" href="#fix-urls" class="internal"> §</a></h3>
+      <p>Before deploying to Vercel, a <code>vercel.json</code> file is required at the root of the project directory.
+        It needs to contain the following configuration so that URLs don’t require the <code>.html</code> extension:</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="json" data-theme="default">vercel.json</div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="json"
+          data-theme="default"><code data-language="json" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">{</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">&quot;cleanUrls&quot;</span><span style="color:var(--shiki-token-punctuation);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">true</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <h3 id="deploy-to-vercel">Deploy to Vercel<a aria-hidden="true" tabindex="-1" href="#deploy-to-vercel"
+          class="internal"> §</a></h3>
+      <ol>
+        <li>Log in to the <a href="https://vercel.com/dashboard" class="external">Vercel Dashboard</a> and click “Add
+          New…” > Project</li>
+        <li>Import the Git repository containing your Quartz project.</li>
+        <li>Give the project a name (lowercase characters and hyphens only)</li>
+        <li>Check that these configuration options are set:</li>
+      </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>Configuration option</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Framework Preset</td>
+            <td><code>Other</code></td>
+          </tr>
+          <tr>
+            <td>Root Directory</td>
+            <td><code>./</code></td>
+          </tr>
+          <tr>
+            <td>Build and Output Settings > Build Command</td>
+            <td><code>npx quartz build</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <ol start="5">
+        <li>Press Deploy. Once it’s live, you’ll have 2 <code>*.vercel.app</code> URLs to view the page.</li>
+      </ol>
+      <h3 id="custom-domain-1">Custom Domain<a aria-hidden="true" tabindex="-1" href="#custom-domain-1"
+          class="internal"> §</a></h3>
+      <blockquote class="callout" data-callout="note">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="18" y1="2" x2="22" y2="6"></line>
+              <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Note </p>
+          </div>
+
+        </div>
+        <p>If there is something already hosted on the domain, these steps will not work without replacing the previous
+          content. As a workaround, you could use Next.js rewrites or use the next section to create a subdomain.</p>
+      </blockquote>
+      <ol>
+        <li>Update the <code>baseUrl</code> in <code>quartz.config.js</code> if necessary.</li>
+        <li>Go to the <a href="https://vercel.com/dashboard/domains" class="external">Domains - Dashboard</a> page in
+          Vercel.</li>
+        <li>Connect the domain to Vercel</li>
+        <li>Press “Add” to connect a custom domain to Vercel.</li>
+        <li>Select your Quartz repository and press Continue.</li>
+        <li>Enter the domain you want to connect it to.</li>
+        <li>Follow the instructions to update your DNS records until you see “Valid Configuration”</li>
+      </ol>
+      <h3 id="use-a-subdomain">Use a Subdomain<a aria-hidden="true" tabindex="-1" href="#use-a-subdomain"
+          class="internal"> §</a></h3>
+      <p>Using <code>docs.example.com</code> is an example of a subdomain. They’re a simple way of connecting multiple
+        deployments to one domain.</p>
+      <ol>
+        <li>Update the <code>baseUrl</code> in <code>quartz.config.js</code> if necessary.</li>
+        <li>Ensure your domain has been added to the <a href="https://vercel.com/dashboard/domains"
+            class="external">Domains - Dashboard</a> page in Vercel.</li>
+        <li>Go to the <a href="https://vercel.com/dashboard" class="external">Vercel Dashboard</a> and select your
+          Quartz project.</li>
+        <li>Go to the Settings tab and then click Domains in the sidebar</li>
+        <li>Enter your subdomain into the field and press Add</li>
+      </ol>
+    </article><a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet?text=Hosting&amp;url=https://notes.zeyadetman.com/hosting&amp;via=zeyadetman">Share
+      it on Twitter</a>
+    <div class="backlinks ">
+      <h3>Backlinks</h3>
+      <ul class="overflow">
+        <li><a href="./configuration" class="internal">Configuration</a></li>
+        <li><a href="." class="internal">Welcome to Quartz 4</a></li>
+        <li><a href="./migrating-from-Quartz-3" class="internal">Migrating from Quartz 3</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="right sidebar">
+    <div class="graph ">
+      <h3>Graph View</h3>
+      <div class="graph-outer">
+        <div id="graph-container"
+          data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[]}">
+        </div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor"
+          xmlSpace="preserve">
+          <path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z">
+          </path>
+        </svg>
+      </div>
+      <div id="global-graph-outer">
+        <div id="global-graph-container"
+          data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[]}">
+        </div>
+      </div>
+    </div>
+    <div class="recent-notes desktop-only">
+      <h3>Recent Notes</h3>
+      <ul class="recent-ul">
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="./showcase" class="internal">Quartz Showcase</a></h3>
+            </div>
+            <p class="meta">Oct 18, 2023</p>
+            <ul class="tags"></ul>
+          </div>
+        </li>
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="./features/explorer" class="internal">Explorer</a></h3>
+            </div>
+            <p class="meta">Oct 18, 2023</p>
+            <ul class="tags">
+              <li><a class="internal tag-link" href="./tags/component">#component</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="./features/Docker-Support" class="internal">Docker Support</a></h3>
+            </div>
+            <p class="meta">Oct 08, 2023</p>
+            <ul class="tags"></ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <footer class>
+    <hr />
+    <p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.1.0</a>, © 2025</p>
+    <ul>
+      <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
+      <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
+      <li><a href="https://zeyadetman.com">Blog</a></li>
+    </ul>
+  </footer>
+  </div>
+  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+</body>
+<script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+  function toggleCallout() {
+    const outerBlock = this.parentElement;
+    outerBlock.classList.toggle(`is-collapsed`);
+    const collapsed = outerBlock.classList.contains(`is-collapsed`);
+    const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+    outerBlock.style.maxHeight = height + `px`;
+    let current = outerBlock;
+    let parent = outerBlock.parentElement;
+    while (parent) {
+      if (!parent.classList.contains(`callout`)) {
+        return;
+      }
+      const collapsed2 = parent.classList.contains(`is-collapsed`);
+      const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+      parent.style.maxHeight = height2 + `px`;
+      current = parent;
+      parent = parent.parentElement;
+    }
+  }
+  function setupCallout() {
+    const collapsible = document.getElementsByClassName(
+      `callout is-collapsible`
+    );
+    for (const div of collapsible) {
+      const title = div.firstElementChild;
+      if (title) {
+        title.removeEventListener(`click`, toggleCallout);
+        title.addEventListener(`click`, toggleCallout);
+        const collapsed = div.classList.contains(`is-collapsed`);
+        const height = collapsed ? title.scrollHeight : div.scrollHeight;
+        div.style.maxHeight = height + `px`;
+      }
+    }
+  }
+  document.addEventListener(`nav`, setupCallout);
+  window.addEventListener(`resize`, setupCallout);
+</script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+  mermaid.initialize({
+    startOnLoad: false,
+    securityLevel: 'loose',
+    theme: darkMode ? 'dark' : 'default'
+  });
+  document.addEventListener('nav', async () => {
+    await mermaid.run({
+      querySelector: '.mermaid'
+    })
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js"
+  type="application/javascript"></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=G-QEXV76M819" type="application/javascript"></script>
+<script type="application/javascript">
+  const socket = new WebSocket('ws://localhost:3001')
+  socket.addEventListener('message', () => document.location.reload())
+</script>
+<script src="./postscript.js" type="module"></script>
+
+</html>

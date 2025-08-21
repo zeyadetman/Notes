@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Making your own plugins</title>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Making your own plugins" />
+  <meta property="og:description"
+    content="Warning This part of the documentation will assume you have working knowledge in TypeScript and will include code snippets that describe the interface of what Quartz plugins should look like." />
+  <meta property="og:image" content="https://notes.zeyadetman.com/static/og-image.png" />
+  <meta property="og:width" content="1200" />
+  <meta property="og:height" content="675" />
+  <link rel="icon" href="../static/icon.png" />
+  <meta name="description"
+    content="Warning This part of the documentation will assume you have working knowledge in TypeScript and will include code snippets that describe the interface of what Quartz plugins should look like." />
+  <meta name="generator" content="Quartz" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="../index.css" rel="stylesheet" type="text/css" spa-preserve />
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css"
+    spa-preserve />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"
+    rel="stylesheet" type="text/css" spa-preserve />
+  <script src="../prescript.js" type="application/javascript" spa-preserve></script>
+  <script type="application/javascript"
+    spa-preserve>const fetchData = fetch(`../static/contentIndex.json`).then(data => data.json())</script>
+</head>
+
+<body data-slug="advanced/making-plugins">
+  <div id="quartz-root" class="page">
+    <div id="quartz-body">
+      <div class="left sidebar">
+        <h1 class="page-title "><a href="..">👨🏻‍💻 Zeyad's Notes</a></h1>
+        <div class="darkmode "><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1" /><label
+            id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35"
+              style="enable-background:new 0 0 35 35;" xmlSpace="preserve">
+              <title>Light mode</title>
+              <path
+                d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z">
+              </path>
+            </svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg
+              xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon"
+              x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve">
+              <title>Dark mode</title>
+              <path
+                d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z">
+              </path>
+            </svg></label></div>
+        <div class="search ">
+          <div id="search-icon">
+            <p>Search</p>
+            <div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 19.9 19.7">
+              <title id="title">Search</title>
+              <desc id="desc">Search</desc>
+              <g class="search-path" fill="none">
+                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path>
+                <circle cx="8" cy="8" r="7"></circle>
+              </g>
+            </svg>
+          </div>
+          <div id="search-container">
+            <div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text"
+                aria-label="Search for something" placeholder="Search for something" />
+              <div id="results-container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer mobile-only"></div>
+        <div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse"
+            data-collapsed="collapsed" data-savestate="true"
+            data-tree="[{&quot;path&quot;:&quot;advanced&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;features&quot;,&quot;collapsed&quot;:true}]">
+            <h1>All Notes</h1><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="fold">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="explorer-content">
+            <ul class="overflow" id="explorer-ul">
+              <li>
+                <div>
+                  <div class="folder-outer open">
+                    <ul style="padding-left:0;" class="content" data-folderul>
+                      <li>
+                        <div>
+                          <div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                              viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" class="folder-icon">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            <div data-folderpath="/advanced"><button class="folder-button">
+                                <p class="folder-title">Advanced</p>
+                              </button></div>
+                          </div>
+                          <div class="folder-outer ">
+                            <ul style="padding-left:1.4rem;" class="content" data-folderul="/advanced">
+                              <li>
+                              <li><a href="../advanced/architecture" data-for="advanced/architecture">Architecture</a>
+                              </li>
+                      </li>
+                      <li>
+                      <li><a href="../advanced/creating-components" data-for="advanced/creating-components">Creating
+                          your own Quartz components</a></li>
+              </li>
+              <li>
+              <li><a href="../advanced/making-plugins" data-for="advanced/making-plugins">Making your own plugins</a>
+              </li>
+              </li>
+              <li>
+              <li><a href="../advanced/paths" data-for="advanced/paths">Paths in Quartz</a></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </li>
+        <li>
+          <div>
+            <div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="folder-icon">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+              <div data-folderpath="/features"><button class="folder-button">
+                  <p class="folder-title">Feature List</p>
+                </button></div>
+            </div>
+            <div class="folder-outer ">
+              <ul style="padding-left:1.4rem;" class="content" data-folderul="/features">
+                <li>
+                <li><a href="../features/backlinks" data-for="features/backlinks">Backlinks</a></li>
+        </li>
+        <li>
+        <li><a href="../features/breadcrumbs" data-for="features/breadcrumbs">Breadcrumbs</a></li>
+        </li>
+        <li>
+        <li><a href="../features/callouts" data-for="features/callouts">Callouts</a></li>
+        </li>
+        <li>
+        <li><a href="../features/darkmode" data-for="features/darkmode">Darkmode</a></li>
+        </li>
+        <li>
+        <li><a href="../features/Docker-Support" data-for="features/Docker-Support">Docker Support</a></li>
+        </li>
+        <li>
+        <li><a href="../features/explorer" data-for="features/explorer">Explorer</a></li>
+        </li>
+        <li>
+        <li><a href="../features/folder-and-tag-listings" data-for="features/folder-and-tag-listings">Folder and Tag
+            Listings</a></li>
+        </li>
+        <li>
+        <li><a href="../features/full-text-search" data-for="features/full-text-search">Full-text Search</a></li>
+        </li>
+        <li>
+        <li><a href="../features/graph-view" data-for="features/graph-view">Graph View</a></li>
+        </li>
+        <li>
+        <li><a href="../features/Latex" data-for="features/Latex">Latex</a></li>
+        </li>
+        <li>
+        <li><a href="../features/Mermaid-diagrams" data-for="features/Mermaid-diagrams">Mermaid diagrams</a></li>
+        </li>
+        <li>
+        <li><a href="../features/Obsidian-compatibility" data-for="features/Obsidian-compatibility">Obsidian
+            compatibility</a></li>
+        </li>
+        <li>
+        <li><a href="../features/OxHugo-compatibility" data-for="features/OxHugo-compatibility">OxHugo compatibility</a>
+        </li>
+        </li>
+        <li>
+        <li><a href="../features/popover-previews" data-for="features/popover-previews">Popover Previews</a></li>
+        </li>
+        <li>
+        <li><a href="../features/private-pages" data-for="features/private-pages">Private Pages</a></li>
+        </li>
+        <li>
+        <li><a href="../features/recent-notes" data-for="features/recent-notes">Recent Notes</a></li>
+        </li>
+        <li>
+        <li><a href="../features/RSS-Feed" data-for="features/RSS-Feed">RSS Feed</a></li>
+        </li>
+        <li>
+        <li><a href="../features/SPA-Routing" data-for="features/SPA-Routing">SPA Routing</a></li>
+        </li>
+        <li>
+        <li><a href="../features/syntax-highlighting" data-for="features/syntax-highlighting">Syntax Highlighting</a>
+        </li>
+        </li>
+        <li>
+        <li><a href="../features/table-of-contents" data-for="features/table-of-contents">Table of Contents</a></li>
+        </li>
+        <li>
+        <li><a href="../features/wikilinks" data-for="features/wikilinks">Wikilinks</a></li>
+        </li>
+        </ul>
+      </div>
+    </div>
+    </li>
+    <li>
+    <li><a href="../authoring-content" data-for="authoring-content">Authoring Content</a></li>
+    </li>
+    <li>
+    <li><a href="../build" data-for="build">Building your Quartz</a></li>
+    </li>
+    <li>
+    <li><a href="../configuration" data-for="configuration">Configuration</a></li>
+    </li>
+    <li>
+    <li><a href="../hosting" data-for="hosting">Hosting</a></li>
+    </li>
+    <li>
+    <li><a href="../layout" data-for="layout">Layout</a></li>
+    </li>
+    <li>
+    <li><a href="../migrating-from-Quartz-3" data-for="migrating-from-Quartz-3">Migrating from Quartz 3</a></li>
+    </li>
+    <li>
+    <li><a href="../philosophy" data-for="philosophy">Philosophy of Quartz</a></li>
+    </li>
+    <li>
+    <li><a href="../showcase" data-for="showcase">Quartz Showcase</a></li>
+    </li>
+    <li>
+    <li><a href="../upgrading" data-for="upgrading">Upgrading Quartz</a></li>
+    </li>
+    </ul>
+  </div>
+  </div>
+  </li>
+  <li id="explorer-end"></li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  <div class="center">
+    <div class="page-header">
+      <div class="popover-hint">
+        <nav class="breadcrumb-container " aria-label="breadcrumbs">
+          <div class="breadcrumb-element"><a href="..">Home</a>
+            <p> > </p>
+          </div>
+          <div class="breadcrumb-element"><a href="../advanced/">advanced</a>
+            <p> > </p>
+          </div>
+          <div class="breadcrumb-element"><a href>Making your own plugins</a></div>
+        </nav>
+        <h1 class="article-title ">Making your own plugins</h1>
+        <p class="content-meta ">Aug 23, 2023, 8 min read</p>
+        <div class="toc mobile-only"><button type="button" id="toc">
+            <h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="fold">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="toc-content">
+            <ul class="overflow">
+              <li class="depth-0"><a href="#transformers" data-for="transformers">Transformers</a></li>
+              <li class="depth-0"><a href="#filters" data-for="filters">Filters</a></li>
+              <li class="depth-0"><a href="#emitters" data-for="emitters">Emitters</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet?text=Making your own plugins&amp;url=https://notes.zeyadetman.com/advanced/making-plugins&amp;via=zeyadetman">Share
+      it on Twitter</a>
+    <article class="popover-hint">
+      <blockquote class="callout" data-callout="warning">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Warning </p>
+          </div>
+
+        </div>
+        <p>This part of the documentation will assume you have working knowledge in TypeScript and will include code
+          snippets that describe the interface of what Quartz plugins should look like.</p>
+      </blockquote>
+      <p>Quartz’s plugins are a series of transformations over content. This is illustrated in the diagram of the
+        processing pipeline below:</p>
+      <p><img src="../images/quartz-transform-pipeline.png" width="auto" height="auto" /></p>
+      <p>All plugins are defined as a function that takes in a single parameter for options
+        <code>type OptionType = object | undefined</code> and return an object that corresponds to the type of plugin it
+        is.</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">OptionType</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">object</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">undefined</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzPlugin</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">extends</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">OptionType</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">undefined</span><span style="color:var(--shiki-color-text);">> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> (opts</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzPluginInstance</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzPluginInstance</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzTransformerPluginInstance</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzFilterPluginInstance</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzEmitterPluginInstance</span></span></code></pre>
+      </div>
+      <p>The following sections will go into detail for what methods can be implemented for each plugin type. Before we
+        do that, let’s clarify a few more ambiguous types:</p>
+      <ul>
+        <li><code>BuildCtx</code> is defined in <code>quartz/ctx.ts</code>. It consists of
+          <ul>
+            <li><code>argv</code>: The command line arguments passed to the Quartz <a href="../build" class="internal"
+                data-slug="build">build</a> command</li>
+            <li><code>cfg</code>: The full Quartz <a href="../configuration" class="internal"
+                data-slug="configuration">configuration</a></li>
+            <li><code>allSlugs</code>: a list of all the valid content slugs (see <a href="../advanced/paths"
+                class="internal" data-slug="advanced/paths">paths</a> for more information on what a
+              <code>ServerSlug</code> is)</li>
+          </ul>
+        </li>
+        <li><code>StaticResources</code> is defined in <code>quartz/resources.tsx</code>. It consists of
+          <ul>
+            <li><code>css</code>: a list of URLs for stylesheets that should be loaded</li>
+            <li><code>js</code>: a list of scripts that should be loaded. A script is described with the
+              <code>JSResource</code> type which is also defined in <code>quartz/resources.tsx</code>. It allows you to
+              define a load time (either before or after the DOM has been loaded), whether it should be a module, and
+              either the source URL or the inline content of the script.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2 id="transformers">Transformers<a aria-hidden="true" tabindex="-1" href="#transformers" class="internal"> §</a>
+      </h2>
+      <p>Transformers <strong>map</strong> over content, taking a Markdown file and outputting modified content or
+        adding metadata to the file itself.</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzTransformerPluginInstance</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">string</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">textTransform</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> (ctx</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">BuildCtx</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> src</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">string</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Buffer</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">string</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Buffer</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">markdownPlugins</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> (ctx</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">BuildCtx</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">PluggableList</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">htmlPlugins</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> (ctx</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">BuildCtx</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">PluggableList</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">externalResources</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> (ctx</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">BuildCtx</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Partial</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">StaticResources</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <p>All transformer plugins must define at least a <code>name</code> field to register the plugin and a few
+        optional functions that allow you to hook into various parts of transforming a single Markdown file.</p>
+      <ul>
+        <li><code>textTransform</code> performs a text-to-text transformation <em>before</em> a file is parsed into the
+          <a href="https://github.com/syntax-tree/mdast" class="external">Markdown AST</a>.</li>
+        <li><code>markdownPlugins</code> defines a list of <a
+            href="https://github.com/remarkjs/remark/blob/main/doc/plugins.md" class="external">remark plugins</a>.
+          <code>remark</code> is a tool that transforms Markdown to Markdown in a structured way.</li>
+        <li><code>htmlPlugins</code> defines a list of <a
+            href="https://github.com/rehypejs/rehype/blob/main/doc/plugins.md" class="external">rehype plugins</a>.
+          Similar to how <code>remark</code> works, <code>rehype</code> is a tool that transforms HTML to HTML in a
+          structured way.</li>
+        <li><code>externalResources</code> defines any external resources the plugin may need to load on the client-side
+          for it to work properly.</li>
+      </ul>
+      <p>Normally for both <code>remark</code> and <code>rehype</code>, you can find existing plugins that you can use
+        to . If you’d like to create your own <code>remark</code> or <code>rehype</code> plugin, checkout the <a
+          href="https://unifiedjs.com/learn/guide/create-a-plugin/" class="external">guide to creating a plugin</a>
+        using <code>unified</code> (the underlying AST parser and transformer library).</p>
+      <p>A good example of a transformer plugin that borrows from the <code>remark</code> and <code>rehype</code>
+        ecosystems is the <a href="../features/Latex" class="internal" data-slug="features/Latex">Latex</a> plugin:</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="ts" data-theme="default">quartz/plugins/transformers/latex.ts
+        </div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> remarkMath </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;remark-math&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> rehypeKatex </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;rehype-katex&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> rehypeMathjax </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;rehype-mathjax/svg.js&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> { QuartzTransformerPlugin } </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;../types&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">interface</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  renderEngine</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;katex&quot;</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;mathjax&quot;</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Latex</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzTransformerPlugin</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);">> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> (opts</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">engine</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">opts</span><span style="color:var(--shiki-color-text);">?.renderEngine </span><span style="color:var(--shiki-token-keyword);">??</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;katex&quot;</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;Latex&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-function);">markdownPlugins</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> [remarkMath]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-function);">htmlPlugins</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">if</span><span style="color:var(--shiki-color-text);"> (engine </span><span style="color:var(--shiki-token-keyword);">===</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;katex&quot;</span><span style="color:var(--shiki-color-text);">) {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-comment);">// if you need to pass options into a plugin, you</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-comment);">// can use a tuple of [plugin, options]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> [[rehypeKatex</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> { output</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;html&quot;</span><span style="color:var(--shiki-color-text);"> }]]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      } </span><span style="color:var(--shiki-token-keyword);">else</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> [rehypeMathjax]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-function);">externalResources</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">if</span><span style="color:var(--shiki-color-text);"> (engine </span><span style="color:var(--shiki-token-keyword);">===</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;katex&quot;</span><span style="color:var(--shiki-color-text);">) {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          css</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> [</span><span style="color:var(--shiki-token-string-expression);">&quot;https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css&quot;</span><span style="color:var(--shiki-color-text);">]</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          js</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> [</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">              src</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">              loadTime</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;afterDOMReady&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">              contentType</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;external&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          ]</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      } </span><span style="color:var(--shiki-token-keyword);">else</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {}</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <p>Another common thing that transformer plugins will do is parse a file and add extra data for that file:</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">AddWordCount</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzTransformerPlugin</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> () </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;AddWordCount&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-function);">markdownPlugins</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> [</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        () </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> (tree</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> file) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-comment);">// tree is an `mdast` root element</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-comment);">// file is a `vfile`</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">text</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">file</span><span style="color:var(--shiki-color-text);">.value</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">words</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">text</span><span style="color:var(--shiki-token-function);">.split</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">&quot; &quot;</span><span style="color:var(--shiki-color-text);">).</span><span style="color:var(--shiki-token-constant);">length</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-constant);">file</span><span style="color:var(--shiki-color-text);">.</span><span style="color:var(--shiki-token-constant);">data</span><span style="color:var(--shiki-color-text);">.wordcount </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> words</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      ]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">// tell typescript about our custom data fields we are adding</span></span>
+<span data-line><span style="color:var(--shiki-token-comment);">// other plugins will then also be aware of this data field</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">declare</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">module</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;vfile&quot;</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">interface</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">DataMap</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    wordcount</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">number</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <p>Finally, you can also perform transformations over Markdown or HTML ASTs using the <code>visit</code> function
+        from the <code>unist-util-visit</code> package or the <code>findAndReplace</code> function from the
+        <code>mdast-util-find-and-replace</code> package.</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">TextTransforms</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzTransformerPlugin</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> () </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;TextTransforms&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-function);">markdownPlugins</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> [() </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> (tree</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> file) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          </span><span style="color:var(--shiki-token-comment);">// replace _text_ with the italics version</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          </span><span style="color:var(--shiki-token-function);">findAndReplace</span><span style="color:var(--shiki-color-text);">(tree</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-string-expression);"> /_(.</span><span style="color:var(--shiki-token-keyword);">+</span><span style="color:var(--shiki-token-string-expression);">)_/</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> (_value</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">string</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">capture</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">string</span><span style="color:var(--shiki-color-text);">[]) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-comment);">// inner is the text inside of the () of the regex</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> [</span><span style="color:var(--shiki-token-constant);">inner</span><span style="color:var(--shiki-color-text);">] </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> capture</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-comment);">// return an mdast node</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-comment);">// https://github.com/syntax-tree/mdast</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">              type</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;emphasis&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">              children</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> [{ type</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'text'</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> value</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> inner }]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          })</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">         </span><span style="color:var(--shiki-token-comment);">// remove all links (replace with just the link content)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">         </span><span style="color:var(--shiki-token-comment);">// match by 'type' field on an mdast node</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">         </span><span style="color:var(--shiki-token-comment);">// https://github.com/syntax-tree/mdast#link in this example</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          </span><span style="color:var(--shiki-token-function);">visit</span><span style="color:var(--shiki-color-text);">(tree</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;link&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> (link</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Link</span><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">              type</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;paragraph&quot;</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">              children: [{ type</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'text'</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> value</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">link</span><span style="color:var(--shiki-color-text);">.title }]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">            }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          })</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      }]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <p>All transformer plugins can be found under <code>quartz/plugins/transformers</code>. If you decide to write
+        your own transformer plugin, don’t forget to re-export it under
+        <code>quartz/plugins/transformers/index.ts</code></p>
+      <p>A parting word: transformer plugins are quite complex so don’t worry if you don’t get them right away. Take a
+        look at the built in transformers and see how they operate over content to get a better sense for how to
+        accomplish what you are trying to do.</p>
+      <h2 id="filters">Filters<a aria-hidden="true" tabindex="-1" href="#filters" class="internal"> §</a></h2>
+      <p>Filters <strong>filter</strong> content, taking the output of all the transformers and determining what files
+        to actually keep and what to discard.</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzFilterPlugin</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">extends</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">OptionType</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">undefined</span><span style="color:var(--shiki-color-text);">> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> (</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  opts</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzFilterPluginInstance</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzFilterPluginInstance</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">string</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">shouldPublish</span><span style="color:var(--shiki-color-text);">(ctx</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">BuildCtx</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> content</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">ProcessedContent</span><span style="color:var(--shiki-color-text);">)</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">boolean</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <p>A filter plugin must define a <code>name</code> field and a <code>shouldPublish</code> function that takes in a
+        piece of content that has been processed by all the transformers and returns a <code>true</code> or
+        <code>false</code> depending on whether it should be passed to the emitter plugins or not.</p>
+      <p>For example, here is the built-in plugin for removing drafts:</p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="ts" data-theme="default">quartz/plugins/filters/draft.ts</div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">import</span><span style="color:var(--shiki-color-text);"> { QuartzFilterPlugin } </span><span style="color:var(--shiki-token-keyword);">from</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;../types&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">RemoveDrafts</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzFilterPlugin</span><span style="color:var(--shiki-color-text);">&lt;{}> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> () </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> ({</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;RemoveDrafts&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">shouldPublish</span><span style="color:var(--shiki-color-text);">(_ctx</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> [_tree</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> vfile]) {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-comment);">// uses frontmatter parsed from transformers</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">draftFlag</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">boolean</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">vfile</span><span style="color:var(--shiki-color-text);">.</span><span style="color:var(--shiki-token-constant);">data</span><span style="color:var(--shiki-color-text);">?.</span><span style="color:var(--shiki-token-constant);">frontmatter</span><span style="color:var(--shiki-color-text);">?.draft </span><span style="color:var(--shiki-token-keyword);">??</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">false</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">!</span><span style="color:var(--shiki-color-text);">draftFlag</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span></code></pre>
+      </div>
+      <h2 id="emitters">Emitters<a aria-hidden="true" tabindex="-1" href="#emitters" class="internal"> §</a></h2>
+      <p>Emitters <strong>reduce</strong> over content, taking in a list of all the transformed and filtered content and
+        creating output files.</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzEmitterPlugin</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">extends</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">OptionType</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">undefined</span><span style="color:var(--shiki-color-text);">> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> (</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  opts</span><span style="color:var(--shiki-token-keyword);">?:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Options</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzEmitterPluginInstance</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzEmitterPluginInstance</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">string</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">emit</span><span style="color:var(--shiki-color-text);">(</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    ctx</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">BuildCtx</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    content</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">ProcessedContent</span><span style="color:var(--shiki-color-text);">[]</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    resources</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">StaticResources</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    emitCallback</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">EmitCallback</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  )</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Promise</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">FilePath</span><span style="color:var(--shiki-color-text);">[]></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">getQuartzComponents</span><span style="color:var(--shiki-color-text);">(ctx</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">BuildCtx</span><span style="color:var(--shiki-color-text);">)</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponent</span><span style="color:var(--shiki-color-text);">[]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <p>An emitter plugin must define a <code>name</code> field an <code>emit</code> function and a
+        <code>getQuartzComponents</code> function. <code>emit</code> is responsible for looking at all the parsed and
+        filtered content and then appropriately creating files and returning a list of paths to files the plugin
+        created.</p>
+      <p>Creating new files can be done via regular Node <a href="https://nodejs.org/api/fs.html" class="external">fs
+          module</a> (i.e. <code>fs.cp</code> or <code>fs.writeFile</code>) or via the <code>emitCallback</code> if you
+        are creating files that contain text. The <code>emitCallback</code> function is the 4th argument of the emit
+        function. It’s interface looks something like this:</p>
+      <div data-rehype-pretty-code-fragment>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="ts"
+          data-theme="default"><code data-language="ts" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">type</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">EmitCallback</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> (data</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">// the name of the file to emit (not including the file extension)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  slug</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">ServerSlug</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">// the file extension</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  ext</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">`.</span><span style="color:var(--shiki-token-keyword);">${</span><span style="color:var(--shiki-token-constant);">string</span><span style="color:var(--shiki-token-keyword);">}</span><span style="color:var(--shiki-token-string-expression);">`</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">|</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;&quot;</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">// the file content to add</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  content</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">string</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Promise</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">FilePath</span><span style="color:var(--shiki-color-text);">></span></span></code></pre>
+      </div>
+      <p>This is a thin wrapper around writing to the appropriate output folder and ensuring that intermediate
+        directories exist. If you choose to use the native Node <code>fs</code> APIs, ensure you emit to the
+        <code>argv.output</code> folder as well.</p>
+      <p>If you are creating an emitter plugin that needs to render components, there are three more things to be aware
+        of:</p>
+      <ul>
+        <li>Your component should use <code>getQuartzComponents</code> to declare a list of
+          <code>QuartzComponents</code> that it uses to construct the page. See the page on <a
+            href="../advanced/creating-components" class="internal" data-slug="advanced/creating-components">creating
+            components</a> for more information.</li>
+        <li>You can use the <code>renderPage</code> function defined in <code>quartz/components/renderPage.tsx</code> to
+          render Quartz components into HTML.</li>
+        <li>If you need to render an HTML AST to JSX, you can use the <code>toJsxRuntime</code> function from
+          <code>hast-util-to-jsx-runtime</code> library. An example of this can be found in
+          <code>quartz/components/pages/Content.tsx</code>.</li>
+      </ul>
+      <p>For example, the following is a simplified version of the content page plugin that renders every single page.
+      </p>
+      <div data-rehype-pretty-code-fragment>
+        <div data-rehype-pretty-code-title data-language="tsx" data-theme="default">
+          quartz/plugins/emitters/contentPage.tsx</div>
+        <pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="tsx"
+          data-theme="default"><code data-language="tsx" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">export</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">ContentPage</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzEmitterPlugin</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> () </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">// construct the layout</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">layout</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">FullPageLayout</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">sharedPageComponents</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">defaultContentPageLayout</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    pageBody</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Content</span><span style="color:var(--shiki-color-text);">()</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> { </span><span style="color:var(--shiki-token-constant);">head</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">header</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">beforeBody</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">pageBody</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">left</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">right</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">footer</span><span style="color:var(--shiki-color-text);"> } </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> layout</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    name</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;ContentPage&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-function);">getQuartzComponents</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> [head</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">header</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">beforeBody</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> pageBody</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">left</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">...</span><span style="color:var(--shiki-color-text);">right</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> footer]</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">async</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">emit</span><span style="color:var(--shiki-color-text);">(ctx</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> content</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> resources</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> emit)</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">Promise</span><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-function);">FilePath</span><span style="color:var(--shiki-color-text);">[]> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">cfg</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">ctx</span><span style="color:var(--shiki-color-text);">.</span><span style="color:var(--shiki-token-constant);">cfg</span><span style="color:var(--shiki-color-text);">.configuration</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">fps</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">FilePath</span><span style="color:var(--shiki-color-text);">[] </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> []</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">allFiles</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">content</span><span style="color:var(--shiki-token-function);">.map</span><span style="color:var(--shiki-color-text);">((c) </span><span style="color:var(--shiki-token-keyword);">=></span><span style="color:var(--shiki-color-text);"> c[</span><span style="color:var(--shiki-token-constant);">1</span><span style="color:var(--shiki-color-text);">].data)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">for</span><span style="color:var(--shiki-color-text);"> (</span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> [</span><span style="color:var(--shiki-token-constant);">tree</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">file</span><span style="color:var(--shiki-color-text);">] </span><span style="color:var(--shiki-token-keyword);">of</span><span style="color:var(--shiki-color-text);"> content) {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">slug</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">canonicalizeServer</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-constant);">file</span><span style="color:var(--shiki-color-text);">.</span><span style="color:var(--shiki-token-constant);">data</span><span style="color:var(--shiki-color-text);">.slug</span><span style="color:var(--shiki-token-keyword);">!</span><span style="color:var(--shiki-color-text);">)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">externalResources</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">pageResources</span><span style="color:var(--shiki-color-text);">(slug</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> resources)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">componentData</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">QuartzComponentProps</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          fileData</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">file</span><span style="color:var(--shiki-color-text);">.data</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          externalResources</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          cfg</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          children</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> []</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          tree</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          allFiles</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        }</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">content</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">renderPage</span><span style="color:var(--shiki-color-text);">(slug</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> componentData</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> opts</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> externalResources)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">fp</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">await</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">emit</span><span style="color:var(--shiki-color-text);">({</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          content</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          slug</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">file</span><span style="color:var(--shiki-color-text);">.</span><span style="color:var(--shiki-token-constant);">data</span><span style="color:var(--shiki-color-text);">.slug</span><span style="color:var(--shiki-token-keyword);">!</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">          ext</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">&quot;.html&quot;</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">        })</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">        </span><span style="color:var(--shiki-token-constant);">fps</span><span style="color:var(--shiki-token-function);">.push</span><span style="color:var(--shiki-color-text);">(fp)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> fps</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre>
+      </div>
+      <p>Note that it takes in a <code>FullPageLayout</code> as the options. It’s made by combining a
+        <code>SharedLayout</code> and a <code>PageLayout</code> both of which are provided through the
+        <code>quartz.layout.ts</code> file.</p>
+      <blockquote class="callout" data-callout="tip">
+        <div class="callout-title">
+          <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+              </path>
+            </svg></div>
+          <div class="callout-title-inner">
+            <p>Tip </p>
+          </div>
+
+        </div>
+        <p>Look in <code>quartz/plugins</code> for more examples of plugins in Quartz as reference for your own plugins!
+        </p>
+      </blockquote>
+    </article><a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet?text=Making your own plugins&amp;url=https://notes.zeyadetman.com/advanced/making-plugins&amp;via=zeyadetman">Share
+      it on Twitter</a>
+    <div class="backlinks ">
+      <h3>Backlinks</h3>
+      <ul class="overflow">
+        <li><a href="../advanced/architecture" class="internal">Architecture</a></li>
+        <li><a href="../advanced/creating-components" class="internal">Creating your own Quartz components</a></li>
+        <li><a href="../configuration" class="internal">Configuration</a></li>
+        <li><a href="../features/OxHugo-compatibility" class="internal">OxHugo compatibility</a></li>
+        <li><a href="../features/private-pages" class="internal">Private Pages</a></li>
+        <li><a href=".." class="internal">Welcome to Quartz 4</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="right sidebar">
+    <div class="graph ">
+      <h3>Graph View</h3>
+      <div class="graph-outer">
+        <div id="graph-container"
+          data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[]}">
+        </div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor"
+          xmlSpace="preserve">
+          <path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z">
+          </path>
+        </svg>
+      </div>
+      <div id="global-graph-outer">
+        <div id="global-graph-container"
+          data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[]}">
+        </div>
+      </div>
+    </div>
+    <div class="recent-notes desktop-only">
+      <h3>Recent Notes</h3>
+      <ul class="recent-ul">
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="../showcase" class="internal">Quartz Showcase</a></h3>
+            </div>
+            <p class="meta">Oct 18, 2023</p>
+            <ul class="tags"></ul>
+          </div>
+        </li>
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="../features/explorer" class="internal">Explorer</a></h3>
+            </div>
+            <p class="meta">Oct 18, 2023</p>
+            <ul class="tags">
+              <li><a class="internal tag-link" href="../tags/component">#component</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="recent-li">
+          <div class="section">
+            <div class="desc">
+              <h3><a href="../features/Docker-Support" class="internal">Docker Support</a></h3>
+            </div>
+            <p class="meta">Oct 08, 2023</p>
+            <ul class="tags"></ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <footer class>
+    <hr />
+    <p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.1.0</a>, © 2025</p>
+    <ul>
+      <li><a href="https://github.com/zeyadetman/notes">GitHub</a></li>
+      <li><a href="https://twitter.com/zeyadelmarsafy">Twitter</a></li>
+      <li><a href="https://zeyadetman.com">Blog</a></li>
+    </ul>
+  </footer>
+  </div>
+  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+</body>
+<script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+  function toggleCallout() {
+    const outerBlock = this.parentElement;
+    outerBlock.classList.toggle(`is-collapsed`);
+    const collapsed = outerBlock.classList.contains(`is-collapsed`);
+    const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+    outerBlock.style.maxHeight = height + `px`;
+    let current = outerBlock;
+    let parent = outerBlock.parentElement;
+    while (parent) {
+      if (!parent.classList.contains(`callout`)) {
+        return;
+      }
+      const collapsed2 = parent.classList.contains(`is-collapsed`);
+      const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+      parent.style.maxHeight = height2 + `px`;
+      current = parent;
+      parent = parent.parentElement;
+    }
+  }
+  function setupCallout() {
+    const collapsible = document.getElementsByClassName(
+      `callout is-collapsible`
+    );
+    for (const div of collapsible) {
+      const title = div.firstElementChild;
+      if (title) {
+        title.removeEventListener(`click`, toggleCallout);
+        title.addEventListener(`click`, toggleCallout);
+        const collapsed = div.classList.contains(`is-collapsed`);
+        const height = collapsed ? title.scrollHeight : div.scrollHeight;
+        div.style.maxHeight = height + `px`;
+      }
+    }
+  }
+  document.addEventListener(`nav`, setupCallout);
+  window.addEventListener(`resize`, setupCallout);
+</script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+  mermaid.initialize({
+    startOnLoad: false,
+    securityLevel: 'loose',
+    theme: darkMode ? 'dark' : 'default'
+  });
+  document.addEventListener('nav', async () => {
+    await mermaid.run({
+      querySelector: '.mermaid'
+    })
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js"
+  type="application/javascript"></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=G-QEXV76M819" type="application/javascript"></script>
+<script type="application/javascript">
+  const socket = new WebSocket('ws://localhost:3001')
+  socket.addEventListener('message', () => document.location.reload())
+</script>
+<script src="../postscript.js" type="module"></script>
+
+</html>
