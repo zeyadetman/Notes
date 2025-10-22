@@ -15,7 +15,7 @@ After that I tried different apps to take notes and tracking things, Until I set
 
 ### Tools
 - macbook pro 2019 - 2.4 GHz Quad-Core Intel Core i5 💻
-- iPhone 13 Pro Max📱
+- iPhone 15 Pro Max📱
 - Apple Watch SE ⌚️
 
 ### Apps
