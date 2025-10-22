@@ -9,7 +9,7 @@ Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) buil
 > Give the notes a star on [GitHub](https://github.com/zeyadetman/Notes) or keep informed with the notes updates using [RSS Feed](https://notes.zeyadnotes.dev/index.xml)
 
 ## About me
-I'm Zeyad a software engineer from [Egypt 🇪🇬](https://en.wikipedia.org/wiki/Kafr_El_Dawwar), working as a Fullstack engineer ([[frontend]] heavily). My type is [INTJ](https://www.crystalknows.com/personality-type/intj) Currently I spend most of my time learning [[programming-languages|Coding]]
+I'm Zeyad a software engineer from [Egypt 🇪🇬](https://en.wikipedia.org/wiki/Kafr_El_Dawwar), working as a Fullstack engineer ([[frontend]] heavily). My type is [INTJ](https://www.crystalknows.com/personality-type/intj) Currently I spend most of my time learning new stuff, and [[programming-languages|Coding]]
 
 [QA](QA.md)
 
