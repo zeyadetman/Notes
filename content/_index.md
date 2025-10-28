@@ -3,7 +3,7 @@ title: "Zeyad's Notes"
 ---
 # Welcome to my notes
 
-Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the powerful project [Quartz 4](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/) code hosted on [GitHub](https://github.com/zeyadetman/Notes) and deployed and published with [Cloudflare Pages](https://pages.cloudflare.com/).
+Hi, This is my [digital garden](https://jzhao.xyz/posts/networked-thought/) built using the powerful project [Quartz 4](https://quartz.jzhao.xyz/) and [obsidian app](https://obsidian.md/) code hosted on [GitHub](https://github.com/zeyadetman/Notes) and deployed and published with [Cloudflare Pages](https://pages.cloudflare.com/)..
 
 >[!tip] Keep informed
 > Give the notes a star on [GitHub](https://github.com/zeyadetman/Notes) or keep informed with the notes updates using [RSS Feed](https://notes.zeyadnotes.dev/index.xml)
