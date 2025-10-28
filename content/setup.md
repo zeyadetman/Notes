@@ -26,7 +26,7 @@ After that I tried different apps to take notes and tracking things, Until I set
 	- [obsidian-git](https://github.com/denolehov/obsidian-git) I use it to sync between obsidian vault and github, to automate the deployment process, it's also helpful to sync the vault data between devices.
 
 > [!NOTE] Sync your vault on all of your devices
-> If you're using iPhone, then you don't need to use extra apps with [obsidian-git](https://github.com/denolehov/obsidian-git), It can do all what you want to do to sync your data among devices.
+> If you're using iPhone, then you don't need to use extra apps with [obsidian-git](https://github.com/denolehov/obsidian-git), It can do all what you want to do to sync your data among devices. You need to see [this comment](https://github.com/Vinzent03/obsidian-git/issues/911#issuecomment-2952442836) as well 
 
 - [remotely-save](https://github.com/remotely-save/remotely-save) I use it to backup the vaults on dropbox, to avoid losing data that may happen by the previous tool.
 
