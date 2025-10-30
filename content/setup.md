@@ -17,6 +17,7 @@ After that I tried different apps to take notes and tracking things, Until I set
 - macbook pro 2019 - 2.4 GHz Quad-Core Intel Core i5 💻
 - iPhone 15 Pro Max📱
 - Apple Watch SE ⌚️
+- [10000 mAh Mi Power Bank 3 ultra compact](https://www.mi.com/global/product/10000mah-mi-power-bank-3-ultra-compact/)
 
 ### Apps
 - [streaks](https://streaksapp.com/) is one of the main apps for my setup, I use it to track the habits, including reading, sleeping times, work and breaks, and other small tasks. This app is running on all of my devices and they all share same tasks, I'm keeping them private.
